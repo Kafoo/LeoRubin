@@ -1,0 +1,59 @@
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/;
+}
+
+.selectable-text, input, textarea{
+  -webkit-touch-callout: text; /* iOS Safari */
+    -webkit-user-select: text; /* Safari */
+     -khtml-user-select: text; /* Konqueror HTML */
+       -moz-user-select: text; /* Old versions of Firefox */
+        -ms-user-select: text; /* Internet Explorer/Edge */
+            user-select: text; /* Non-prefixed version, currently*/
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.centering{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.centering-column{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.relative{
+  position: relative;
+}
+
+.mb-100{
+  margin-bottom: 120px !important;
+}
+
+.mt-100{
+  margin-top: 120px !important;
+}
+
+@media (min-width: 601px) {
+
+  .mobile{
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .desktop{
+    display: none !important;
+  }
+}
