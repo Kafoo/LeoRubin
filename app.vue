@@ -5,3 +5,11 @@
     </NuxtLayout>
   </v-app>
 </template>
+
+<style scoped>
+
+.v-application {
+  background-color: #dddddd;
+}
+
+</style>

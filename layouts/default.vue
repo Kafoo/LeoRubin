@@ -1,6 +1,6 @@
 <template>
 
-  <OrganHeader/>
+  <OrganHeader v-if="false"/>
 
   <v-main>
     <slot/>

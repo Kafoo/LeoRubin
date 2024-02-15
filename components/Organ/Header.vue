@@ -2,7 +2,7 @@
 
 
   <v-app-bar>
-    <img class="mr-3 ml-6" src="/logo.png" height="33"/>
+    <img class="mr-3 ml-6" src="/logo.jpg" height="45"/>
     <v-toolbar-title>Léo Rubin</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
