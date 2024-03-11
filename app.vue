@@ -9,7 +9,7 @@
 <style scoped>
 
 .v-application {
-  background-color: #dddddd;
+  background-color: #eeeeee;
 }
 
 </style>
