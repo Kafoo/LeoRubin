@@ -16,6 +16,28 @@
             user-select: text; /* Non-prefixed version, currently*/
 }
 
+
+
+.v-application.pratiques{
+  background-color: #8d633d !important;
+}
+ 
+.v-application.actualites{
+  background-color: #50327f !important;
+}
+
+.v-application.ressources{
+  background-color: #7F1D1D !important;
+}
+
+.v-application.contact{
+  background-color: #4c775d !important;
+}
+
+.v-application.temoignages{
+  background-color: #4f7b97 !important;
+}
+
 .pointer{
   cursor: pointer;
 }
