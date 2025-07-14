@@ -102,7 +102,7 @@
   --element-base-transition-duration: 0.2s;
   --element-hover-transition-duration: 0.15s;
   --element-active-transition-duration: 400ms;
-  --element-base-font-size: 2vw;
+  --element-base-font-size: 3vw;
   --element-base-letter-spacing: 2px;
   --element-base-color: #e0e0e0;
   --element-base-bg: #222222;
@@ -128,12 +128,6 @@
  to{
   transform: rotate(-360deg) translateY(-4px) rotate(360deg);
  }
-}
-
-
-
-.plop{
-  display: none !important;
 }
 
 .v-img{
@@ -256,6 +250,8 @@
   /* Sizing & Positioning */
   width: 400%;
   z-index: var(--element-active-z-index);
+  top: -150%;
+  left: -150%;
 
   /* Visuals */
   opacity: 1;
@@ -265,32 +261,6 @@
 
   /* Transitions */
   transition: all var(--element-active-transition-duration) ease-in-out, backdrop-filter 0s;
-}
-
-.element-1.active,
-.element-5.active{
-  top: -150%;
-  left: -150%;
-}
-
-.element-2.active{
-  top: -150%;
-  right: -150%;
-}
-
-.element-3.active{
-  bottom: -150%;
-  right: -150%;
-}
-
-.element-4.active{
-  bottom: -150%;
-  left: -150%;
-}
-
-.element-6.active{
-  top: -150%;
-  left: -150%;
 }
 
 .close{
