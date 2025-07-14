@@ -182,37 +182,37 @@
 }
 
 .element-1{
-  top: 5%; /* Moved down */
+  top: 2.5%; /* Medium position */
   left: calc(50% - var(--element-width)/2);
   background-color: #6a4a3a; /* Solid brown */
   animation: shaking-1 8s infinite linear;
 }
 
 .element-2{
-  top: 30%; /* Moved down */
-  right: 8%; /* Moved left */
+  top: 28.25%; /* Medium position */
+  right: 5.5%; /* Medium position */
   left: auto;
   background-color: #4a3a6a; /* Solid purple */
   animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
-  bottom: 12%; /* Moved up */
-  right: 18%; /* Moved left */
+  bottom: 9.5%; /* Medium position */
+  right: 15.5%; /* Medium position */
   background-color: #6a3a3a; /* Solid red */
   animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
-  bottom: 12%; /* Moved up */
-  left: 18%; /* Moved right */
+  bottom: 9.5%; /* Medium position */
+  left: 15.5%; /* Medium position */
   background-color: #3a6a4a; /* Solid green */
   animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
-  top: 30%; /* Moved down */
-  left: 8%; /* Moved right */
+  top: 28.25%; /* Medium position */
+  left: 5.5%; /* Medium position */
   background-color: #3a4a6a; /* Solid blue */
   animation: shaking-1 6s infinite linear;
 }
