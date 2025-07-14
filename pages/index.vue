@@ -159,7 +159,6 @@
   width: var(--element-width-hover);
   transition: 0.2s ease-in-out; /* Smoother transition */
   opacity: 1;
-  border: none;
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6); /* More pronounced but soft shadow on hover */
   text-shadow: none;
 }
