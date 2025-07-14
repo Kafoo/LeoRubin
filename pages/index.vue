@@ -69,7 +69,7 @@
     setTimeout(() => {
     const router = useRouter()
       router.push(pages[page-1].path)
-    }, 500);
+    }, 750);
   }
 
   const close = () => {
@@ -230,7 +230,7 @@
   z-index: 10;
   opacity: 1;
   color: transparent;
-  transition: 750ms;
+  transition: 750ms ease-in-out;
   text-shadow: none;
 }
 

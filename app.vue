@@ -46,6 +46,7 @@ const backgroundClass = computed({
 
 .v-application {
   background-color: #d1d1bd;
+  transition: background-color 0.75s ease-in-out;
 }
 
 </style>
