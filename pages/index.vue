@@ -142,7 +142,7 @@
   letter-spacing: 2px;
   color: #e0e0e0; /* Lighter text for dark background */
   text-shadow: none; /* Remove text shadow for cleaner look */
-  background-color: rgba(255, 255, 255, 0.05); /* Very subtle base for glass */
+  background-color: #222222; /* Solid dark grey background */
   backdrop-filter: blur(8px) saturate(150%); /* Glass effect */
   -webkit-backdrop-filter: blur(8px) saturate(150%); /* For Safari */
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
@@ -165,7 +165,7 @@
 .element-1{
   top: 0%;
   left: calc(50% - var(--element-width)/2);
-  background-color: rgba(106, 74, 58, 0.7); /* Semi-transparent brown */
+  background-color: #6a4a3a; /* Solid brown */
   animation: shaking-1 8s infinite linear;
 }
 
@@ -173,28 +173,28 @@
   top: 26.5%;
   right: 3%;
   left: auto;
-  background-color: rgba(74, 58, 106, 0.7); /* Semi-transparent purple */
+  background-color: #4a3a6a; /* Solid purple */
   animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
   bottom: 7%;
   right: 13%;
-  background-color: rgba(106, 58, 58, 0.7); /* Semi-transparent red */
+  background-color: #6a3a3a; /* Solid red */
   animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
   bottom: 7%;
   left: 13%;
-  background-color: rgba(58, 106, 74, 0.7); /* Semi-transparent green */
+  background-color: #3a6a4a; /* Solid green */
   animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
   top: 26.5%;
   left: 3%;
-  background-color: rgba(58, 74, 106, 0.7); /* Semi-transparent blue */
+  background-color: #3a4a6a; /* Solid blue */
   animation: shaking-1 6s infinite linear;
 }
 
@@ -203,7 +203,7 @@
   width: 15%;
   top: 44.4%;
   left: 42.5%;
-  background-color: rgba(74, 74, 74, 0.7); /* Semi-transparent grey for central element */
+  background-color: #4a4a4a; /* Solid grey for central element */
   backdrop-filter: blur(8px) saturate(150%); /* Apply glass effect to central element too */
   -webkit-backdrop-filter: blur(8px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.1);
