@@ -184,7 +184,7 @@
 .element-1{
   top: 2.5%; /* Medium position */
   left: calc(50% - var(--element-width)/2);
-  background-color: #6a4a3a; /* Solid brown */
+  background-color: #3a2a1a; /* Much darker brown */
   animation: shaking-1 8s infinite linear;
 }
 
@@ -192,28 +192,28 @@
   top: 28.25%; /* Medium position */
   right: 5.5%; /* Medium position */
   left: auto;
-  background-color: #4a3a6a; /* Solid purple */
+  background-color: #2a1a3a; /* Much darker purple */
   animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
   bottom: 9.5%; /* Medium position */
   right: 15.5%; /* Medium position */
-  background-color: #6a3a3a; /* Solid red */
+  background-color: #3a1a1a; /* Much darker red */
   animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
   bottom: 9.5%; /* Medium position */
   left: 15.5%; /* Medium position */
-  background-color: #3a6a4a; /* Solid green */
+  background-color: #1a3a2a; /* Much darker green */
   animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
   top: 28.25%; /* Medium position */
   left: 5.5%; /* Medium position */
-  background-color: #3a4a6a; /* Solid blue */
+  background-color: #1a2a3a; /* Much darker blue */
   animation: shaking-1 6s infinite linear;
 }
 
@@ -225,7 +225,7 @@
   padding-left: 0px; /* Remove padding-left for better centering */
 
   /* Visuals */
-  background-color: #4a4a4a; /* Solid grey for central element */
+  background-color: #2a2a2a; /* Much darker grey for central element */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
 
