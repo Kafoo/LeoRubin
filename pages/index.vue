@@ -135,7 +135,7 @@
   border-radius: 1000px;
   cursor: pointer;
   transition: 0.2s;
-  opacity: 0.97;
+  opacity: 0.85;
   font-weight: bold;
   font-size: 2vw;
   word-spacing: 100vw;
