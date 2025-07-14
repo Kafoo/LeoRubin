@@ -230,7 +230,7 @@
   z-index: 10;
   opacity: 1;
   color: transparent;
-  transition: 1s;
+  transition: 750ms;
   text-shadow: none;
 }
 
