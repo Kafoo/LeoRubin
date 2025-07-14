@@ -105,7 +105,7 @@
   --element-base-font-size: 3vw;
   --element-base-letter-spacing: 2px;
   --element-base-color: #e0e0e0;
-  --element-base-box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.5);
+  --element-base-box-shadow: 0px 0px 20px 8px rgb(0 0 0 / 27%);;
   --element-hover-box-shadow: none;
   --element-active-z-index: 10;
 }
