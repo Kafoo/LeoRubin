@@ -105,7 +105,6 @@
   --element-base-font-size: 3vw;
   --element-base-letter-spacing: 2px;
   --element-base-color: #e0e0e0;
-  --element-base-bg: #222222;
   --element-base-box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.5);
   --element-hover-box-shadow: none;
   --element-active-z-index: 10;
@@ -144,8 +143,8 @@
   z-index: 1;
 
   /* Visuals */
-  opacity: 0.85;
-  background-color: var(--element-base-bg);
+  --bg-opacity: 0.85;
+  background-color: rgba(34, 34, 34, var(--bg-opacity));
   backdrop-filter: blur(8px) saturate(150%);
   -webkit-backdrop-filter: blur(8px) saturate(150%);
   box-shadow: var(--element-base-box-shadow);
@@ -172,42 +171,42 @@
 .element:hover{
   width: var(--element-width-hover);
   transition: var(--element-hover-transition-duration) ease-in-out;
-  opacity: 1;
+  --bg-opacity: 1;
   box-shadow: var(--element-hover-box-shadow);
 }
 
 .element-1{
   top: 2.5%; /* Medium position */
   left: calc(50% - var(--element-width)/2);
-  background-color: #3a2a1a; /* Much darker brown */
+  background-color: rgba(58, 42, 26, var(--bg-opacity)); /* Much darker brown */
   animation: shaking-1 8s infinite linear;
 }
 
 .element-2{
   top: 25.0%; /* Medium position */
   left: 65.9%; /* Medium position */
-  background-color: #2a1a3a; /* Much darker purple */
+  background-color: rgba(42, 26, 58, var(--bg-opacity)); /* Much darker purple */
   animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
   top: 61.3%; /* Medium position */
   left: 54.1%; /* Medium position */
-  background-color: #3a1a1a; /* Much darker red */
+  background-color: rgba(58, 26, 26, var(--bg-opacity)); /* Much darker red */
   animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
   top: 61.3%; /* Medium position */
   left: 15.9%; /* Medium position */
-  background-color: #1a3a2a; /* Much darker green */
+  background-color: rgba(26, 58, 42, var(--bg-opacity)); /* Much darker green */
   animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
   top: 25.0%; /* Medium position */
   left: 4.1%; /* Medium position */
-  background-color: #1a2a3a; /* Much darker blue */
+  background-color: rgba(26, 42, 58, var(--bg-opacity)); /* Much darker blue */
   animation: shaking-1 6s infinite linear;
 }
 
@@ -219,7 +218,7 @@
   padding-left: 0px; /* Remove padding-left for better centering */
 
   /* Visuals */
-  background-color: #2a2a2a; /* Much darker grey for central element */
+  background-color: rgba(42, 42, 42, var(--bg-opacity)); /* Much darker grey for central element */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
 
@@ -254,7 +253,7 @@
   left: -150%;
 
   /* Visuals */
-  opacity: 1;
+  --bg-opacity: 1;
   color: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
