@@ -234,7 +234,28 @@
 }
 
 .element-1:hover{
+  top: 1.0%;
   left: calc(50% - var(--element-width-hover)/2);
+}
+
+.element-2:hover{
+  top: 23.5%;
+  left: 64.4%;
+}
+
+.element-3:hover{
+  top: 59.8%;
+  left: 52.6%;
+}
+
+.element-4:hover{
+  top: 59.8%;
+  left: 14.4%;
+}
+
+.element-5:hover{
+  top: 23.5%;
+  left: 2.6%;
 }
 
 .element-6:hover{
