@@ -145,7 +145,6 @@
   background-color: rgba(255, 255, 255, 0.05); /* Very subtle base for glass */
   backdrop-filter: blur(8px) saturate(150%); /* Glass effect */
   -webkit-backdrop-filter: blur(8px) saturate(150%); /* For Safari */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
 }
 
@@ -157,7 +156,7 @@
 
 .element:hover{
   width: var(--element-width-hover);
-  transition: 0.2s ease-in-out; /* Smoother transition */
+  transition: 0.15s ease-in-out; /* Smoother transition */
   opacity: 1;
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6); /* More pronounced but soft shadow on hover */
   text-shadow: none;
