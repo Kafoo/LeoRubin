@@ -239,6 +239,8 @@
   color: transparent;
   transition: 400ms ease-in-out; /* Add ease-in-out for smoother effect */
   text-shadow: none;
+  backdrop-filter: none; /* Remove backdrop-filter for active state */
+  -webkit-backdrop-filter: none; /* Remove backdrop-filter for active state */
 }
 
 .element-1.active,
