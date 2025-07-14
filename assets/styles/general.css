@@ -19,23 +19,23 @@
 
 
 .v-application.pratiques{
-  background-color: #4a3a2d !important; /* Darker brown */
+  background-color: #6a4a3a !important; /* Matches element-1 */
 }
  
 .v-application.actualites{
-  background-color: #3a2d4a !important; /* Darker purple */
+  background-color: #4a3a6a !important; /* Matches element-2 */
 }
 
 .v-application.ressources{
-  background-color: #4a2d2d !important; /* Darker red */
+  background-color: #6a3a3a !important; /* Matches element-3 */
 }
 
 .v-application.contact{
-  background-color: #2d4a3a !important; /* Darker green */
+  background-color: #3a6a4a !important; /* Matches element-4 */
 }
 
 .v-application.temoignages{
-  background-color: #2d3a4a !important; /* Darker blue */
+  background-color: #3a4a6a !important; /* Matches element-5 */
 }
 
 .pointer{
