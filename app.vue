@@ -28,6 +28,8 @@ const backgroundClass = computed({
       return 'contact'
     } else if (page == '/temoignages') {
       return 'temoignages'
+    } else if (page == '/leo') {
+      return 'leo'
     } else {
       return null
     }
