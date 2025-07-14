@@ -237,7 +237,7 @@
   z-index: 10;
   opacity: 1;
   color: transparent;
-  transition: 400ms ease-in-out; /* Add ease-in-out for smoother effect */
+  transition: width 400ms ease-in-out, opacity 400ms ease-in-out, top 400ms ease-in-out, left 400ms ease-in-out, right 400ms ease-in-out, bottom 400ms ease-in-out, backdrop-filter 0s;
   text-shadow: none;
   backdrop-filter: none; /* Remove backdrop-filter for active state */
   -webkit-backdrop-filter: none; /* Remove backdrop-filter for active state */
