@@ -92,6 +92,18 @@
   width: 90%;
   max-width: 800px;
   margin: 70px auto;
+
+  /* New variables for better maintainability */
+  --element-base-transition-duration: 0.2s;
+  --element-hover-transition-duration: 0.15s;
+  --element-active-transition-duration: 400ms;
+  --element-base-font-size: 2vw;
+  --element-base-letter-spacing: 2px;
+  --element-base-color: #e0e0e0;
+  --element-base-bg: #222222;
+  --element-base-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  --element-hover-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+  --element-active-z-index: 10;
 }
 
 
@@ -129,23 +141,31 @@
 }
 
 .element{
+  /* Positioning & Sizing */
   position: absolute;
   width: var(--element-width);
   aspect-ratio : 1 / 1;
   border-radius: 1000px;
   cursor: pointer;
-  transition: 0.2s;
+
+  /* Visuals */
   opacity: 0.85;
+  background-color: var(--element-base-bg);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  box-shadow: var(--element-base-box-shadow);
+  filter: url(#glass-distortion);
+
+  /* Typography */
   font-weight: bold;
-  font-size: 2vw;
+  font-size: var(--element-base-font-size);
   word-spacing: 100vw;
-  letter-spacing: 2px;
-  color: #e0e0e0; /* Lighter text for dark background */
-  text-shadow: none; /* Remove text shadow for cleaner look */
-  background-color: #222222; /* Solid dark grey background */
-  backdrop-filter: blur(8px) saturate(150%); /* Glass effect */
-  -webkit-backdrop-filter: blur(8px) saturate(150%); /* For Safari */
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
+  letter-spacing: var(--element-base-letter-spacing);
+  color: var(--element-base-color);
+  text-shadow: none;
+
+  /* Transitions */
+  transition: var(--element-base-transition-duration);
 }
 
 @media (min-width: 1000px) {
@@ -156,10 +176,9 @@
 
 .element:hover{
   width: var(--element-width-hover);
-  transition: 0.15s ease-in-out; /* Smoother transition */
+  transition: var(--element-hover-transition-duration) ease-in-out;
   opacity: 1;
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6); /* More pronounced but soft shadow on hover */
-  text-shadow: none;
+  box-shadow: var(--element-hover-box-shadow);
 }
 
 .element-1{
@@ -199,20 +218,20 @@
 }
 
 .element-6{
-  border: 0px solid;
-  width: 15%;
+  /* Positioning & Sizing */
+  width: 15%; /* Override base width */
   top: 44.4%;
   left: 42.5%;
-  background-color: #4a4a4a; /* Solid grey for central element */
-  backdrop-filter: blur(8px) saturate(150%); /* Apply glass effect to central element too */
-  -webkit-backdrop-filter: blur(8px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Keep existing shadow for central element */
-  font-size: 1.5vw;
-  color: #e0e0e0; /* Lighter text */
-  text-shadow: none;
-  letter-spacing: 3px; /* Slightly less aggressive letter spacing */
   padding-left: 0px; /* Remove padding-left for better centering */
+
+  /* Visuals */
+  background-color: #4a4a4a; /* Solid grey for central element */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
+
+  /* Typography */
+  font-size: 1.5vw; /* Override base font-size */
+  letter-spacing: 3px; /* Override base letter-spacing */
 }
 
 @media (min-width: 1000px) {
@@ -233,14 +252,18 @@
 }
 
 .element.active{
+  /* Sizing & Positioning */
   width: 400%;
-  z-index: 10;
+  z-index: var(--element-active-z-index);
+
+  /* Visuals */
   opacity: 1;
   color: transparent;
-  transition: width 400ms ease-in-out, opacity 400ms ease-in-out, top 400ms ease-in-out, left 400ms ease-in-out, right 400ms ease-in-out, bottom 400ms ease-in-out, backdrop-filter 0s;
-  text-shadow: none;
-  backdrop-filter: none; /* Remove backdrop-filter for active state */
-  -webkit-backdrop-filter: none; /* Remove backdrop-filter for active state */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  /* Transitions */
+  transition: all var(--element-active-transition-duration) ease-in-out, backdrop-filter 0s;
 }
 
 .element-1.active,
