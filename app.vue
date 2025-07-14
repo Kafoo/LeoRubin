@@ -48,6 +48,7 @@ const backgroundClass = computed({
 
 .v-application {
   background-color: #1a1a1a; /* Darker, modern background */
+  position: relative; /* Establish positioning context for absolute children */
 }
 
 </style>

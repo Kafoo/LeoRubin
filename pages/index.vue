@@ -91,7 +91,12 @@
   overflow: visible;
   width: 100%;
   max-width: 800px;
-  margin: auto;
+
+  /* Centering with absolute positioning */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   /* New variables for better maintainability */
   --element-base-transition-duration: 0.2s;
@@ -126,11 +131,6 @@
 }
 
 
-@media (max-width: 600px) {
-  .penta-container {
-     margin: 40px auto;
-  }
-}
 
 .plop{
   display: none !important;
