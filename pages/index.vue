@@ -83,23 +83,6 @@
 
 <style scoped>
 
-@keyframes shaking-1 {
- from{
-  transform: rotate(0deg) translateY(-4px) rotate(0deg);
- }
- to{
-  transform: rotate(360deg) translateY(-4px) rotate(-360deg);
- }
-}
-
-@keyframes shaking-2 {
- from{
-  transform: rotate(0deg) translateY(-4px) rotate(0deg);
- }
- to{
-  transform: rotate(-360deg) translateY(-4px) rotate(360deg);
- }
-}
 
 
 .penta-container {
@@ -138,9 +121,9 @@
   font-size: 2vw;
   word-spacing: 100vw;
   letter-spacing: 2px;
-  color: #cacaca;
-  text-shadow: 0 0 7px black;
-  box-shadow: 1px 1px 20px 0px #000000a6;
+  color: #e0e0e0; /* Lighter text for dark background */
+  text-shadow: none; /* Remove text shadow for cleaner look */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Softer, modern shadow */
 }
 
 @media (min-width: 1000px) {
@@ -151,47 +134,47 @@
 
 .element:hover{
   width: var(--element-width-hover);
-  transition: 0.12s;
+  transition: 0.2s ease-in-out; /* Smoother transition */
   opacity: 1;
   border: none;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.568);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6); /* More pronounced but soft shadow on hover */
   text-shadow: none;
 }
 
 .element-1{
   top: 0%;
   left: calc(50% - var(--element-width)/2);
-  background-color: #8d633d;
-  animation: shaking-1 8s infinite linear;
+  background-color: #6a4a3a; /* Darker brown */
+  /* animation: shaking-1 8s infinite linear; Removed for smoother design */
 }
 
 .element-2{
   top: 26.5%;
   right: 3%;
   left: auto;
-  background-color: #50327f;
-  animation: shaking-2 7s infinite linear;
+  background-color: #4a3a6a; /* Darker purple */
+  /* animation: shaking-2 7s infinite linear; Removed for smoother design */
 }
 
 .element-3{
   bottom: 7%;
   right: 13%;
-  background-color: #7F1D1D;
-  animation: shaking-1 5s infinite linear;
+  background-color: #6a3a3a; /* Darker red */
+  /* animation: shaking-1 5s infinite linear; Removed for smoother design */
 }
 
 .element-4{
   bottom: 7%;
   left: 13%;
-  background-color: #4c775d;
-  animation: shaking-2 9s infinite linear;
+  background-color: #3a6a4a; /* Darker green */
+  /* animation: shaking-2 9s infinite linear; Removed for smoother design */
 }
 
 .element-5{
   top: 26.5%;
   left: 3%;
-  background-color: #4f7b97;
-  animation: shaking-1 6s infinite linear;
+  background-color: #3a4a6a; /* Darker blue */
+  /* animation: shaking-1 6s infinite linear; Removed for smoother design */
 }
 
 .element-6{
@@ -199,13 +182,13 @@
   width: 15%;
   top: 44.4%;
   left: 42.5%;
-  background-color: #e2e2d2;
-  box-shadow: 0px 1px 50px 10px #757575;
+  background-color: #4a4a4a; /* Darker grey for central element */
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* More prominent, soft shadow */
   font-size: 1.5vw;
-  color: #606060;
+  color: #e0e0e0; /* Lighter text */
   text-shadow: none;
-  letter-spacing: 5px;
-  padding-left: 4px;
+  letter-spacing: 3px; /* Slightly less aggressive letter spacing */
+  padding-left: 0px; /* Remove padding-left for better centering */
 }
 
 @media (min-width: 1000px) {
@@ -230,7 +213,7 @@
   z-index: 10;
   opacity: 1;
   color: transparent;
-  transition: 750ms;
+  transition: 750ms ease-in-out; /* Add ease-in-out for smoother effect */
   text-shadow: none;
 }
 

@@ -45,7 +45,7 @@ const backgroundClass = computed({
 <style scoped>
 
 .v-application {
-  background-color: #d1d1bd;
+  background-color: #1a1a1a; /* Darker, modern background */
 }
 
 </style>
