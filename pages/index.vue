@@ -95,6 +95,25 @@
 }
 
 
+@keyframes shaking-1 {
+ from{
+  transform: rotate(0deg) translateY(-4px) rotate(0deg);
+ }
+ to{
+  transform: rotate(360deg) translateY(-4px) rotate(-360deg);
+ }
+}
+
+@keyframes shaking-2 {
+ from{
+  transform: rotate(0deg) translateY(-4px) rotate(0deg);
+ }
+ to{
+  transform: rotate(-360deg) translateY(-4px) rotate(360deg);
+ }
+}
+
+
 @media (max-width: 600px) {
   .penta-container {
      margin: 40px auto;
@@ -145,7 +164,7 @@
   top: 0%;
   left: calc(50% - var(--element-width)/2);
   background-color: #6a4a3a; /* Darker brown */
-  /* animation: shaking-1 8s infinite linear; Removed for smoother design */
+  animation: shaking-1 8s infinite linear;
 }
 
 .element-2{
@@ -153,28 +172,28 @@
   right: 3%;
   left: auto;
   background-color: #4a3a6a; /* Darker purple */
-  /* animation: shaking-2 7s infinite linear; Removed for smoother design */
+  animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
   bottom: 7%;
   right: 13%;
   background-color: #6a3a3a; /* Darker red */
-  /* animation: shaking-1 5s infinite linear; Removed for smoother design */
+  animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
   bottom: 7%;
   left: 13%;
   background-color: #3a6a4a; /* Darker green */
-  /* animation: shaking-2 9s infinite linear; Removed for smoother design */
+  animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
   top: 26.5%;
   left: 3%;
   background-color: #3a4a6a; /* Darker blue */
-  /* animation: shaking-1 6s infinite linear; Removed for smoother design */
+  animation: shaking-1 6s infinite linear;
 }
 
 .element-6{
