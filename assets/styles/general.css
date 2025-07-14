@@ -19,27 +19,27 @@
 
 
 .v-application.pratiques{
-  background-color: #6a4a3a !important; /* Matches element-1 */
+  background-color: #3a2a1a !important; /* Matches element-1 */
 }
  
 .v-application.actualites{
-  background-color: #4a3a6a !important; /* Matches element-2 */
+  background-color: #2a1a3a !important; /* Matches element-2 */
 }
 
 .v-application.ressources{
-  background-color: #6a3a3a !important; /* Matches element-3 */
+  background-color: #3a1a1a !important; /* Matches element-3 */
 }
 
 .v-application.contact{
-  background-color: #3a6a4a !important; /* Matches element-4 */
+  background-color: #1a3a2a !important; /* Matches element-4 */
 }
 
 .v-application.temoignages{
-  background-color: #3a4a6a !important; /* Matches element-5 */
+  background-color: #1a2a3a !important; /* Matches element-5 */
 }
 
 .v-application.leo{
-  background-color: #4a4a4a !important; /* Matches element-5 */
+  background-color: #2a2a2a !important; /* Matches element-6 */
 }
 
 .pointer{
