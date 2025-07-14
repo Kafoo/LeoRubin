@@ -86,8 +86,8 @@
 
 
 .penta-container {
-  --element-width: 27%;
-  --element-width-hover: 30%;
+  --element-width: 30%;
+  --element-width-hover: 33%;
   overflow: visible;
   width: 100%;
   max-width: 800px;
