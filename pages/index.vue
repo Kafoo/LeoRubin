@@ -69,7 +69,7 @@
     setTimeout(() => {
     const router = useRouter()
       router.push(pages[page-1].path)
-    }, 500);
+    }, 300);
   }
 
   const close = () => {
