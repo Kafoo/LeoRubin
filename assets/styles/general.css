@@ -38,6 +38,10 @@
   background-color: #3a4a6a !important; /* Matches element-5 */
 }
 
+.v-application.leo{
+  background-color: #4a4a4a !important; /* Matches element-5 */
+}
+
 .pointer{
   cursor: pointer;
 }
