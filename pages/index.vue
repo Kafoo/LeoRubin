@@ -142,7 +142,11 @@
   letter-spacing: 2px;
   color: #e0e0e0; /* Lighter text for dark background */
   text-shadow: none; /* Remove text shadow for cleaner look */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Softer, modern shadow */
+  background-color: rgba(255, 255, 255, 0.05); /* Very subtle base for glass */
+  backdrop-filter: blur(8px) saturate(150%); /* Glass effect */
+  -webkit-backdrop-filter: blur(8px) saturate(150%); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
 }
 
 @media (min-width: 1000px) {
@@ -163,7 +167,7 @@
 .element-1{
   top: 0%;
   left: calc(50% - var(--element-width)/2);
-  background-color: #6a4a3a; /* Darker brown */
+  background-color: rgba(106, 74, 58, 0.7); /* Semi-transparent brown */
   animation: shaking-1 8s infinite linear;
 }
 
@@ -171,28 +175,28 @@
   top: 26.5%;
   right: 3%;
   left: auto;
-  background-color: #4a3a6a; /* Darker purple */
+  background-color: rgba(74, 58, 106, 0.7); /* Semi-transparent purple */
   animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
   bottom: 7%;
   right: 13%;
-  background-color: #6a3a3a; /* Darker red */
+  background-color: rgba(106, 58, 58, 0.7); /* Semi-transparent red */
   animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
   bottom: 7%;
   left: 13%;
-  background-color: #3a6a4a; /* Darker green */
+  background-color: rgba(58, 106, 74, 0.7); /* Semi-transparent green */
   animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
   top: 26.5%;
   left: 3%;
-  background-color: #3a4a6a; /* Darker blue */
+  background-color: rgba(58, 74, 106, 0.7); /* Semi-transparent blue */
   animation: shaking-1 6s infinite linear;
 }
 
@@ -201,8 +205,11 @@
   width: 15%;
   top: 44.4%;
   left: 42.5%;
-  background-color: #4a4a4a; /* Darker grey for central element */
-  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* More prominent, soft shadow */
+  background-color: rgba(74, 74, 74, 0.7); /* Semi-transparent grey for central element */
+  backdrop-filter: blur(8px) saturate(150%); /* Apply glass effect to central element too */
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Keep existing shadow for central element */
   font-size: 1.5vw;
   color: #e0e0e0; /* Lighter text */
   text-shadow: none;
