@@ -7,7 +7,7 @@
     </div>
     -->
 
-    <v-img src="/circle.png" width="100%" aspect-ratio="1">
+    <v-img src="/circle2.png" width="100%" aspect-ratio="1">
 
       <div v-for="page in pages" :key="page.id"
       class="element centering"
@@ -232,7 +232,7 @@
   z-index: 10;
   opacity: 1;
   color: transparent;
-  transition: 750ms ease-in-out; /* Add ease-in-out for smoother effect */
+  transition: 400ms ease-in-out; /* Add ease-in-out for smoother effect */
   text-shadow: none;
 }
 
