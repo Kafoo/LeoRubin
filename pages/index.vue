@@ -89,9 +89,9 @@
   --element-width: 27%;
   --element-width-hover: 30%;
   overflow: visible;
-  width: 90%;
+  width: 100%;
   max-width: 800px;
-  margin: 70px auto;
+  margin: auto;
 
   /* New variables for better maintainability */
   --element-base-transition-duration: 0.2s;
@@ -101,8 +101,8 @@
   --element-base-letter-spacing: 2px;
   --element-base-color: #e0e0e0;
   --element-base-bg: #222222;
-  --element-base-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  --element-hover-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+  --element-base-box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.5);
+  --element-hover-box-shadow: none;
   --element-active-z-index: 10;
 }
 
@@ -147,6 +147,7 @@
   aspect-ratio : 1 / 1;
   border-radius: 1000px;
   cursor: pointer;
+  z-index: 1;
 
   /* Visuals */
   opacity: 0.85;
@@ -245,10 +246,11 @@
 }
 
 .element-6:hover{
-  --width: 22%;
+  --width: 60%;
   width: var(--width);
   left: calc(50% - var(--width)/2);
-  top: calc(52% - var(--width)/2);
+  top: calc(50% - var(--width)/2);
+  z-index: 0;
 }
 
 .element.active{
