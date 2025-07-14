@@ -190,30 +190,29 @@
 }
 
 .element-2{
-  top: 28.25%; /* Medium position */
-  right: 5.5%; /* Medium position */
-  left: auto;
+  top: 25.0%; /* Medium position */
+  left: 65.9%; /* Medium position */
   background-color: #2a1a3a; /* Much darker purple */
   animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
-  bottom: 9.5%; /* Medium position */
-  right: 15.5%; /* Medium position */
+  top: 61.3%; /* Medium position */
+  left: 54.1%; /* Medium position */
   background-color: #3a1a1a; /* Much darker red */
   animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
-  bottom: 9.5%; /* Medium position */
-  left: 15.5%; /* Medium position */
+  top: 61.3%; /* Medium position */
+  left: 15.9%; /* Medium position */
   background-color: #1a3a2a; /* Much darker green */
   animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
-  top: 28.25%; /* Medium position */
-  left: 5.5%; /* Medium position */
+  top: 25.0%; /* Medium position */
+  left: 4.1%; /* Medium position */
   background-color: #1a2a3a; /* Much darker blue */
   animation: shaking-1 6s infinite linear;
 }
@@ -221,7 +220,7 @@
 .element-6{
   /* Positioning & Sizing */
   width: 15%; /* Override base width */
-  top: 44.4%;
+  top: 42.5%;
   left: 42.5%;
   padding-left: 0px; /* Remove padding-left for better centering */
 
