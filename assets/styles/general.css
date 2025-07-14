@@ -16,7 +16,11 @@
             user-select: text; /* Non-prefixed version, currently*/
 }
 
-
+.v-application:not(.pratiques):not(.actualites):not(.ressources):not(.contact):not(.temoignages):not(.leo) {
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #0a0a0a, #2a2a2a) !important;
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+}
 
 .v-application.pratiques{
   background-color: #3a2a1a !important; /* Matches element-1 */
