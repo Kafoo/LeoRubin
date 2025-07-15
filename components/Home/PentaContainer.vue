@@ -35,6 +35,8 @@
     isMobile.value = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   });
 
+  const hoveredId = ref<number | null>(null);
+
   watch(hoveredId, (newVal, oldVal) => {
     if (isMobile.value) {
       if (newVal !== null && oldVal === null) {
@@ -107,8 +109,6 @@
       color: 'rgb(42, 42, 42)'
     },
   ])
-
-  const hoveredId = ref<number | null>(null);
 
   const navigateToPage = (pageId: number) => {
     const page = pages.find(p => p.id === pageId);
@@ -274,10 +274,10 @@
 }
 
 
+:deep(.element-6.is-hovered),
 :deep(.element-6:hover){
-  --width: 60%;
-  width: var(--width);
-  z-index: 0;
+  width: 60%;
+  z-index: 5;
 }
 
 :deep(.element.active){
