@@ -7,7 +7,7 @@
     </div>
     -->
 
-    <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1" @load="imageLoaded = true" @click="handleClickOutside">
+    <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1" @load="imageLoaded = true">
 
       <template v-if="imageLoaded">
         <HomeInteractiveCircle
@@ -33,6 +33,23 @@
   onMounted(() => {
     // Simple check for touch support to identify mobile devices
     isMobile.value = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  });
+
+  watch(hoveredId, (newVal, oldVal) => {
+    if (isMobile.value) {
+      if (newVal !== null && oldVal === null) {
+        // A circle has been hovered, add listener for the next click outside.
+        // Use a timeout to prevent the current click from being caught immediately.
+        setTimeout(() => document.addEventListener('click', onOutsideClick), 0);
+      } else if (newVal === null && oldVal !== null) {
+        // All circles de-hovered, remove the listener.
+        document.removeEventListener('click', onOutsideClick);
+      }
+    }
+  });
+
+  onUnmounted(() => {
+    document.removeEventListener('click', onOutsideClick);
   });
 
   const pages = reactive([
@@ -104,10 +121,8 @@
     }
   };
 
-  const handleClickOutside = () => {
-    if (isMobile.value) {
-      hoveredId.value = null;
-    }
+  const onOutsideClick = () => {
+    hoveredId.value = null;
   };
 
   const newPage = (pageId: number, fromButton: boolean = false) => {
