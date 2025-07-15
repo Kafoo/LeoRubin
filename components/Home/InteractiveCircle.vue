@@ -9,7 +9,7 @@
     <div class="element-title ma-3">
       <transition name="fade-flip" mode="out-in">
         <span v-if="isHovered" :key="page.name" class="page-name">{{ page.name }}</span>
-        <v-icon v-else :key="page.icon" :icon="page.icon" class="page-icon"></v-icon>
+        <v-icon v-else :key="page.icon" :icon="page.icon" size="x-large"></v-icon>
       </transition>
     </div>
     <transition-group name="bubble-spawn" tag="div" class="bubbles-container">
