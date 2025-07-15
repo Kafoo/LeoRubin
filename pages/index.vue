@@ -16,7 +16,7 @@
       @click="newPage(page.id)"
       >
         <div class="element-title ma-3 text-center">
-          <MdiIcon :icon="page.icon" class="page-icon"/>
+          <v-icon :icon="page.icon" class="page-icon" />
           <div v-if="page.id !== 6">{{page.name}}</div>
         </div>
       </div>
