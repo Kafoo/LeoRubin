@@ -15,7 +15,10 @@
       pages[page.id-1]?.active?'active':'']"
       @click="newPage(page.id)"
       >
-        <div class="element-title ma-3 text-center">{{page.name}}</div>
+        <div class="element-title ma-3 text-center">
+          <MdiIcon :icon="page.icon" class="page-icon"/>
+          <div v-if="page.id !== 6">{{page.name}}</div>
+        </div>
       </div>
 
     </v-img>
@@ -30,37 +33,43 @@
       id: 1,
       name:'Création',
       active: false,
-      path: '/creation'
+      path: '/creation',
+      icon: 'mdi-palette'
     },
     {
       id: 2,
       name:'Projets',
       active: false,
-      path: '/projects'
+      path: '/projects',
+      icon: 'mdi-briefcase'
     },
     {
       id: 3,
       name:'Merci',
       active: false,
-      path: '/merci'
+      path: '/merci',
+      icon: 'mdi-heart'
     },
     {
       id: 4,
       name:'FAQ',
       active: false,
-      path: '/faq'
+      path: '/faq',
+      icon: 'mdi-help-circle'
     },
     {
       id: 5,
       name:'Support',
       active: false,
-      path: '/support'
+      path: '/support',
+      icon: 'mdi-lifebuoy'
     },
     {
       id: 6,
       name:'Kafoo',
       active: false,
-      path: '/kafoo'
+      path: '/kafoo',
+      icon: 'mdi-account'
     },
   ])
 
@@ -167,6 +176,10 @@
   transition: var(--element-hover-transition-duration) ease-in-out;
   --bg-opacity: 1;
   box-shadow: var(--element-hover-box-shadow);
+}
+
+.page-icon {
+  font-size: 2.5em;
 }
 
 .element-1{
