@@ -104,7 +104,7 @@
       id: 6,
       name:'Kafoo',
       active: false,
-      path: '/contact',
+      path: '/kafoo',
       icon: 'mdi-account',
       color: 'rgb(42, 42, 42)'
     },
@@ -150,7 +150,7 @@
 
 
 .penta-container {
-  --element-width: 28%;
+  --element-width: 25%;
   --element-width-hover: 36%;
   --radius: 32.5%;
   --center-element-width: 15%;
@@ -201,6 +201,7 @@
 
 :deep(.element-1), :deep(.element-2), :deep(.element-3), :deep(.element-4), :deep(.element-5) {
   width: var(--element-width);
+  z-index: 1;
 }
 
 :deep(.element-1){
@@ -277,7 +278,7 @@
 :deep(.element-6.is-hovered),
 :deep(.element-6:hover){
   width: 60%;
-  z-index: 5;
+  z-index: 0;
 }
 
 :deep(.element.active){

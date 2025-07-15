@@ -22,9 +22,8 @@
         </div>
         <span v-else-if="isHovered" :key="page.name" class="page-name">
           {{ page.name }}
-          <v-icon v-if="isMobile" icon="mdi-open-in-new" class="open-icon"></v-icon>
         </span>
-        <v-icon v-else :key="page.icon" :icon="page.icon" size="x-large"></v-icon>
+        <v-icon v-else :key="page.icon" :icon="page.icon" size="large"></v-icon>
       </transition>
     </div>
     <transition-group name="bubble-spawn" tag="div" class="bubbles-container">
@@ -151,14 +150,6 @@ const bubbleStyle = (index: number, total: number) => {
 
 .page-name {
   white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.open-icon {
-  font-size: 0.8em;
-  opacity: 0.7;
 }
 
 .contact-info {
@@ -167,7 +158,7 @@ const bubbleStyle = (index: number, total: number) => {
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-align: center;
 }
 
