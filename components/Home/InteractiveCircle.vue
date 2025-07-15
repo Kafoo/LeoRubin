@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { VIcon } from 'vuetify/components';
 
-defineProps({
+const props = defineProps({
   page: {
     type: Object,
     required: true
@@ -43,9 +43,19 @@ defineProps({
 defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
 
 const bubbleStyle = (index: number, total: number) => {
-  const angle = (360 / total) * index;
+  const baseAngle = (360 / total) * index;
+
+  // Pseudo-random but deterministic values
+  const seed = props.page.id * 100 + index;
+  const random1 = Math.sin(seed) * 10000;
+  const angleOffset = (random1 - Math.floor(random1) - 0.5) * 40; // -20 to 20 deg
+
+  const random2 = Math.sin(seed + 1) * 10000;
+  const distance = 140 + (random2 - Math.floor(random2) - 0.5) * 40; // 120% to 160%
+
   return {
-    '--angle': `${angle}deg`
+    '--angle': `${baseAngle + angleOffset}deg`,
+    '--distance': `-${distance}%`
   };
 };
 </script>
@@ -133,7 +143,7 @@ const bubbleStyle = (index: number, total: number) => {
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(4px);
-  transform: rotate(var(--angle)) translateY(-140%) rotate(calc(-1 * var(--angle)));
+  transform: rotate(var(--angle)) translateY(var(--distance, -140%)) rotate(calc(-1 * var(--angle)));
 }
 
 .bubble-icon {
@@ -149,6 +159,6 @@ const bubbleStyle = (index: number, total: number) => {
 .bubble-spawn-enter-from,
 .bubble-spawn-leave-to {
   opacity: 0;
-  transform: rotate(var(--angle)) translateY(-140%) rotate(calc(-1 * var(--angle))) scale(0);
+  transform: rotate(var(--angle)) translateY(var(--distance, -140%)) rotate(calc(-1 * var(--angle))) scale(0);
 }
 </style>
