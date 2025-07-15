@@ -16,7 +16,7 @@
       @click="newPage(page.id)"
       >
         <div class="element-title ma-3 text-center">
-          <v-icon :icon="page.icon" class="page-icon" />
+          <MdiIcon :icon="page.icon" class="page-icon"/>
           <div v-if="page.id !== 6">{{page.name}}</div>
         </div>
       </div>
@@ -34,42 +34,42 @@
       name:'Création',
       active: false,
       path: '/creation',
-      icon: 'mdi-palette'
+      icon: 'mdiPalette'
     },
     {
       id: 2,
       name:'Projets',
       active: false,
       path: '/projects',
-      icon: 'mdi-briefcase'
+      icon: 'mdiBriefcase'
     },
     {
       id: 3,
       name:'Merci',
       active: false,
       path: '/merci',
-      icon: 'mdi-heart'
+      icon: 'mdiHeart'
     },
     {
       id: 4,
       name:'FAQ',
       active: false,
       path: '/faq',
-      icon: 'mdi-help-circle'
+      icon: 'mdiHelpCircle'
     },
     {
       id: 5,
       name:'Support',
       active: false,
       path: '/support',
-      icon: 'mdi-lifebuoy'
+      icon: 'mdiLifebuoy'
     },
     {
       id: 6,
       name:'Kafoo',
       active: false,
       path: '/kafoo',
-      icon: 'mdi-account'
+      icon: 'mdiAccount'
     },
   ])
 
@@ -179,7 +179,7 @@
 }
 
 .page-icon {
-  font-size: 2.5em;
+  height: 22px !important;
 }
 
 .element-1{
