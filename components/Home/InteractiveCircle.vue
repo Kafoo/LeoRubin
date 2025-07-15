@@ -3,8 +3,8 @@
     class="element centering"
     :class="['element-'+page.id, page.active ? 'active' : '']"
     @click="$emit('circleClick', page.id)"
-    @mouseover="$emit('circleMouseover', page.id)"
-    @mouseleave="$emit('circleMouseleave')"
+    @mouseover="onMouseover"
+    @mouseleave="onMouseleave"
   >
     <div class="element-title ma-3">
       <transition name="fade-flip" mode="out-in">
@@ -37,10 +37,26 @@ const props = defineProps({
   isHovered: {
     type: Boolean,
     default: false
+  },
+  isMobile: {
+    type: Boolean,
+    default: false
   }
 });
 
-defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
+const emit = defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
+
+const onMouseover = () => {
+  if (!props.isMobile) {
+    emit('circleMouseover', props.page.id);
+  }
+};
+
+const onMouseleave = () => {
+  if (!props.isMobile) {
+    emit('circleMouseleave');
+  }
+};
 
 const bubbleStyle = (index: number, total: number) => {
   const baseAngle = (360 / total) * index;

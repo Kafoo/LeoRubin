@@ -15,6 +15,7 @@
           :key="page.id"
           :page="page"
           :is-hovered="hoveredId === page.id"
+          :is-mobile="isMobile"
           @circle-click="newPage"
           @circle-mouseover="hoveredId = page.id"
           @circle-mouseleave="hoveredId = null"
