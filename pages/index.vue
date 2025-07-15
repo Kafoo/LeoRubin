@@ -97,6 +97,7 @@ import { VIcon } from 'vuetify/components';
 
 .penta-container {
   --element-width: 30%;
+  --element-width-hover: 33%;
   --radius: 32.5%;
   --center-element-width: 15%;
   overflow: visible;
@@ -174,11 +175,10 @@ import { VIcon } from 'vuetify/components';
 }
 
 .element:hover{
-  transform: translate(-50%, -50%) scale(1.1);
-  transition: transform var(--element-hover-transition-duration) ease-in-out;
+  width: var(--element-width-hover);
+  transition: var(--element-hover-transition-duration) ease-in-out;
   --bg-opacity: 1;
   box-shadow: var(--element-hover-box-shadow);
-  z-index: 2;
 }
 
 
@@ -257,7 +257,8 @@ import { VIcon } from 'vuetify/components';
 
 
 .element-6:hover{
-  transform: translate(-50%, -50%) scale(4);
+  --width: 60%;
+  width: var(--width);
   z-index: 0;
 }
 
