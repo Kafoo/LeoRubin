@@ -172,7 +172,8 @@ const bubbleStyle = (index: number, total: number) => {
   padding: 0.5em 1em;                                                                                                                                                         
   border: 1px solid rgba(255, 255, 255, 0.5);                                                                                                                                 
   border-radius: 4px;                                                                                                                                                         
-  transition: background-color 0.2s;                                                                                                                                          
+  transition: background-color 0.2s;
+  cursor: pointer;
 }                                                                                                                                                                             
                                                                                                                                                                               
 .profil-button:hover {                                                                                                                                                       
