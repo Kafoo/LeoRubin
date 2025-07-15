@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
+
   modules: [
     'nuxt-mdi',
     (_options, nuxt) => {
@@ -23,6 +24,7 @@ export default defineNuxtConfig({
     },
     //...
   ],
+
   vite: {
     vue: {
       template: {
@@ -30,9 +32,12 @@ export default defineNuxtConfig({
       },
     },
   },
+
   app: {
     head:{
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     }
-  }
+  },
+
+  compatibilityDate: '2025-03-04'
 })

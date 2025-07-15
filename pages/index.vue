@@ -16,7 +16,7 @@
       @click="newPage(page.id)"
       >
         <div class="element-title ma-3 text-center">
-          <MdiIcon :icon="page.icon" class="page-icon"/>
+          <v-icon icon="mdi-home"></v-icon>
           <div v-if="page.id !== 6">{{page.name}}</div>
         </div>
       </div>
@@ -26,6 +26,8 @@
 </template>
 
 <script setup lang="ts">
+import { VIcon } from 'vuetify/components';
+
 
 
   const pages = reactive([
@@ -179,7 +181,7 @@
 }
 
 .page-icon {
-  font-size: 2.5em;
+  height: 22px !important;
 }
 
 .element-1{
@@ -232,14 +234,6 @@
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
   letter-spacing: 3px; /* Override base letter-spacing */
-}
-
-.element-6 .element-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  margin: 0;
 }
 
 @media (min-width: 1000px) {
