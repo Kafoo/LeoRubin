@@ -7,7 +7,7 @@
     </div>
     -->
 
-    <v-img src="/circle2.png" width="100%" aspect-ratio="1">
+    <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1">
 
       <div v-for="page in pages" :key="page.id"
       class="element centering"
