@@ -18,6 +18,7 @@
             <v-icon icon="mdi-email" size="small"></v-icon>
             <span>ant.guillard@gmail.com</span>
           </div>
+          <div class="profil-button">Découvrir mon profil</div> 
         </div>
         <span v-else-if="isHovered" :key="page.name" class="page-name">{{ page.name }}</span>
         <v-icon v-else :key="page.icon" :icon="page.icon" size="x-large"></v-icon>
@@ -142,7 +143,7 @@ const bubbleStyle = (index: number, total: number) => {
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  font-size: 0.5em;
+  font-size: 0.6em;
   text-align: center;
 }
 
@@ -159,6 +160,18 @@ const bubbleStyle = (index: number, total: number) => {
   opacity: 0.9;
   white-space: nowrap;
 }
+
+.profil-button {                                                                                                                                                             
+  margin-top: 1em;                                                                                                                                                            
+  padding: 0.5em 1em;                                                                                                                                                         
+  border: 1px solid rgba(255, 255, 255, 0.5);                                                                                                                                 
+  border-radius: 4px;                                                                                                                                                         
+  transition: background-color 0.2s;                                                                                                                                          
+}                                                                                                                                                                             
+                                                                                                                                                                              
+.profil-button:hover {                                                                                                                                                       
+  background-color: rgba(255, 255, 255, 0.1);                                                                                                                                 
+}       
 
 .fade-flip-enter-active,
 .fade-flip-leave-active {
