@@ -108,7 +108,6 @@ const bubbleStyle = (index: number, total: number) => {
   /* Typography */
   font-weight: bold;
   font-size: var(--element-base-font-size);
-  word-spacing: 100vw;
   letter-spacing: var(--element-base-letter-spacing);
   color: var(--element-base-color);
   text-shadow: none;
