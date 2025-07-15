@@ -95,6 +95,7 @@ const bubbleStyle = (index: number, total: number) => {
   transition: var(--element-hover-transition-duration) ease-in-out;
   --bg-opacity: 1;
   box-shadow: var(--element-hover-box-shadow);
+  z-index: 5;
 }
 
 .element-title {
