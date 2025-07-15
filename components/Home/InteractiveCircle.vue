@@ -137,7 +137,7 @@ const bubbleStyle = (index: number, total: number) => {
   aspect-ratio: 1/1;
   margin-top: -17.5%;
   margin-left: -17.5%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(170, 170, 170, 0.795);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@ const bubbleStyle = (index: number, total: number) => {
 
 .bubble-icon {
   font-size: 1.5em;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .bubble-spawn-enter-active,
