@@ -9,31 +9,21 @@
 
     <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1">
 
-      <div v-for="page in pages" :key="page.id"
-      class="element centering"
-      :class="['element-'+page.id,
-      pages[page.id-1]?.active?'active':'']"
-      @click="newPage(page.id)"
-      @mouseover="hoveredId = page.id"
-      @mouseleave="hoveredId = null"
-      >
-        <div class="element-title ma-3">
-          <transition name="fade-flip" mode="out-in">
-            <span v-if="hoveredId === page.id" :key="page.name" class="page-name">{{ page.name }}</span>
-            <v-icon v-else :key="page.icon" :icon="page.icon" class="page-icon"></v-icon>
-          </transition>
-        </div>
-      </div>
+      <HomeInteractiveCircle
+        v-for="page in pages"
+        :key="page.id"
+        :page="page"
+        :is-hovered="hoveredId === page.id"
+        @circle-click="newPage"
+        @circle-mouseover="hoveredId = page.id"
+        @circle-mouseleave="hoveredId = null"
+      />
 
     </v-img>
   </div>
 </template>
 
 <script setup lang="ts">
-import { VIcon } from 'vuetify/components';
-
-
-
   const pages = reactive([
     {
       id: 1,
@@ -81,21 +71,16 @@ import { VIcon } from 'vuetify/components';
 
   const hoveredId = ref<number | null>(null);
 
-  const newPage = (page:number) => {
-    pages[page-1].active = true
-    setTimeout(() => {
-    const router = useRouter()
-      router.push(pages[page-1].path)
-    }, 300);
+  const newPage = (pageId:number) => {
+    const page = pages.find(p => p.id === pageId);
+    if (page) {
+      page.active = true
+      setTimeout(() => {
+      const router = useRouter()
+        router.push(page.path)
+      }, 300);
+    }
   }
-
-  const close = () => {
-    pages.forEach(page => {
-      page.active = false
-    });
-  }
-
-
 </script>
 
 <style scoped>
@@ -152,56 +137,11 @@ import { VIcon } from 'vuetify/components';
   overflow: visible;
 }
 
-.element{
-  /* Positioning & Sizing */
-  position: absolute;
-  aspect-ratio : 1 / 1;
-  border-radius: 1000px;
-  cursor: pointer;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-
-  /* Visuals */
-  --bg-opacity: 0.85;
-  background-color: rgba(34, 34, 34, var(--bg-opacity));
-  backdrop-filter: blur(8px) saturate(150%);
-  -webkit-backdrop-filter: blur(8px) saturate(150%);
-  box-shadow: var(--element-base-box-shadow);
-  filter: url(#glass-distortion);
-
-  /* Typography */
-  font-weight: bold;
-  font-size: var(--element-base-font-size);
-  word-spacing: 100vw;
-  letter-spacing: var(--element-base-letter-spacing);
-  color: var(--element-base-color);
-  text-shadow: none;
-
-  /* Transitions */
-  transition: var(--element-base-transition-duration);
-}
-
-.element:hover{
-  width: var(--element-width-hover);
-  transition: var(--element-hover-transition-duration) ease-in-out;
-  --bg-opacity: 1;
-  box-shadow: var(--element-hover-box-shadow);
-}
-
-.element-title {
-  perspective: 300px;
-  min-height: 2.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.element-1, .element-2, .element-3, .element-4, .element-5 {
+:deep(.element-1), :deep(.element-2), :deep(.element-3), :deep(.element-4), :deep(.element-5) {
   width: var(--element-width);
 }
 
-.element-1{
+:deep(.element-1){
   --angle: -90deg;
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
@@ -209,7 +149,7 @@ import { VIcon } from 'vuetify/components';
   animation: shaking-1 8s infinite linear;
 }
 
-.element-2{
+:deep(.element-2){
   --angle: -18deg; /* -90 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
@@ -217,7 +157,7 @@ import { VIcon } from 'vuetify/components';
   animation: shaking-2 7s infinite linear;
 }
 
-.element-3{
+:deep(.element-3){
   --angle: 54deg; /* -18 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
@@ -225,7 +165,7 @@ import { VIcon } from 'vuetify/components';
   animation: shaking-1 5s infinite linear;
 }
 
-.element-4{
+:deep(.element-4){
   --angle: 126deg; /* 54 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
@@ -233,7 +173,7 @@ import { VIcon } from 'vuetify/components';
   animation: shaking-2 9s infinite linear;
 }
 
-.element-5{
+:deep(.element-5){
   --angle: 198deg; /* 126 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
@@ -241,7 +181,7 @@ import { VIcon } from 'vuetify/components';
   animation: shaking-1 6s infinite linear;
 }
 
-.element-6{
+:deep(.element-6){
   /* Positioning & Sizing */
   width: var(--center-element-width);
   top: 50%;
@@ -259,25 +199,25 @@ import { VIcon } from 'vuetify/components';
 }
 
 @media (min-width: 1000px) {
-  .element {
+  :deep(.element) {
      font-size: 1.5em;
   }
-  .element:hover {
+  :deep(.element:hover) {
      font-size: 1.6em;
   }
-  .element-6{
+  :deep(.element-6){
      font-size: 1.3em;
   }
 }
 
 
-.element-6:hover{
+:deep(.element-6:hover){
   --width: 60%;
   width: var(--width);
   z-index: 0;
 }
 
-.element.active{
+:deep(.element.active){
   /* Sizing & Positioning */
   width: 400%;
   z-index: var(--element-active-z-index);
@@ -301,21 +241,6 @@ import { VIcon } from 'vuetify/components';
   font-size: 30px;
   z-index: 10000;
   cursor: pointer;
-}
-
-.page-name {
-  white-space: nowrap;
-}
-
-.fade-flip-enter-active,
-.fade-flip-leave-active {
-  transition: all 0.15s ease-in-out;
-}
-
-.fade-flip-enter-from,
-.fade-flip-leave-to {
-  opacity: 0;
-  transform: rotateY(90deg);
 }
 
 

@@ -1,5 +1,5 @@
 <template>
-  <HomeInteractiveCircles />
+  <HomePentaContainer />
 </template>
 
 <script setup lang="ts">
