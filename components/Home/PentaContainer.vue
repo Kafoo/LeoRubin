@@ -150,8 +150,6 @@
 
 
 .penta-container {
-  --element-width: 25%;
-  --element-width-hover: 36%;
   --radius: 32.5%;
   --center-element-width: 15%;
   overflow: visible;
@@ -163,17 +161,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  /* New variables for better maintainability */
-  --element-base-transition-duration: 0.25s;
-  --element-hover-transition-duration: 0.15s;
-  --element-active-transition-duration: 400ms;
-  --element-base-font-size: 3vw;
-  --element-base-letter-spacing: 2px;
-  --element-base-color: #e0e0e0;
-  --element-base-box-shadow: 0px 0px 20px 8px rgb(0 0 0 / 27%);;
-  --element-hover-box-shadow: none;
-  --element-active-z-index: 10;
 }
 
 
