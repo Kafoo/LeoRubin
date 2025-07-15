@@ -14,7 +14,7 @@
     </div>
     <transition-group name="bubble-spawn" tag="div" class="bubbles-container">
       <div
-        v-if="isHovered && page.bubbles"
+        v-if="isHovered && page.bubbles && !page.active"
         v-for="(bubbleIcon, index) in page.bubbles"
         :key="bubbleIcon"
         class="bubble"
