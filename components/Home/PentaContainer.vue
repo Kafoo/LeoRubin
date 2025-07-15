@@ -27,6 +27,12 @@
 
 <script setup lang="ts">
   const imageLoaded = ref(false);
+  const isMobile = ref(false);
+
+  onMounted(() => {
+    // Simple check for touch support to identify mobile devices
+    isMobile.value = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  });
 
   const pages = reactive([
     {
@@ -86,14 +92,28 @@
 
   const hoveredId = ref<number | null>(null);
 
-  const newPage = (pageId:number) => {
+  const navigateToPage = (pageId: number) => {
     const page = pages.find(p => p.id === pageId);
     if (page) {
-      page.active = true
+      page.active = true;
       setTimeout(() => {
-      const router = useRouter()
-        router.push(page.path)
+        const router = useRouter();
+        router.push(page.path);
       }, 300);
+    }
+  };
+
+  const newPage = (pageId:number) => {
+    if (isMobile.value) {
+      // On mobile, first tap shows bubbles, second tap navigates.
+      if (hoveredId.value === pageId) {
+        navigateToPage(pageId);
+      } else {
+        hoveredId.value = pageId;
+      }
+    } else {
+      // On desktop, click navigates directly.
+      navigateToPage(pageId);
     }
   }
 </script>
