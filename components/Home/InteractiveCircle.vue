@@ -119,6 +119,7 @@ const bubbleStyle = (index: number, total: number) => {
 
   /* Positioning & Sizing */
   position: absolute;
+  width: var(--element-width);
   aspect-ratio : 1 / 1;
   border-radius: 1000px;
   cursor: pointer;
@@ -252,5 +253,115 @@ const bubbleStyle = (index: number, total: number) => {
 .bubble-spawn-leave-to {
   opacity: 0;
   transform: rotate(var(--angle)) translateY(var(--distance, -140%)) rotate(calc(-1 * var(--angle))) scale(0);
+}
+
+@keyframes shaking-1 {
+ from{
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-4px) rotate(0deg);
+ }
+ to{
+  transform: translate(-50%, -50%) rotate(360deg) translateY(-4px) rotate(-360deg);
+ }
+}
+
+@keyframes shaking-2 {
+ from{
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-4px) rotate(0deg);
+ }
+ to{
+  transform: translate(-50%, -50%) rotate(-360deg) translateY(-4px) rotate(360deg);
+ }
+}
+
+.element-1{
+  --angle: -90deg;
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
+  background-color: rgba(58, 42, 26, var(--bg-opacity)); /* Much darker brown */
+  animation: shaking-1 8s infinite linear;
+}
+
+.element-2{
+  --angle: -18deg; /* -90 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
+  background-color: rgba(42, 26, 58, var(--bg-opacity)); /* Much darker purple */
+  animation: shaking-2 7s infinite linear;
+}
+
+.element-3{
+  --angle: 54deg; /* -18 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
+  background-color: rgba(58, 26, 26, var(--bg-opacity)); /* Much darker red */
+  animation: shaking-1 5s infinite linear;
+}
+
+.element-4{
+  --angle: 126deg; /* 54 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
+  background-color: rgba(26, 58, 42, var(--bg-opacity)); /* Much darker green */
+  animation: shaking-2 9s infinite linear;
+}
+
+.element-5{
+  --angle: 198deg; /* 126 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
+  background-color: rgba(26, 42, 58, var(--bg-opacity)); /* Much darker blue */
+  animation: shaking-1 6s infinite linear;
+}
+
+.element-6{
+  /* Positioning & Sizing */
+  width: var(--center-element-width);
+  top: 50%;
+  left: 50%;
+  padding-left: 0px; /* Remove padding-left for better centering */
+
+  /* Visuals */
+  background-color: rgba(42, 42, 42, var(--bg-opacity)); /* Much darker grey for central element */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
+  cursor: default;
+
+  /* Typography */
+  font-size: 2.5vw; /* Override base font-size */
+  letter-spacing: 3px; /* Override base letter-spacing */
+}
+
+@media (min-width: 1000px) {
+  .element {
+     font-size: 1.5em;
+  }
+  .element:hover {
+     font-size: 1.6em;
+  }
+  .element-6{
+     font-size: 1.3em;
+  }
+}
+
+
+.element-6.is-hovered,
+.element-6:hover{
+  width: 60%;
+  z-index: 0;
+}
+
+.element.active{
+  /* Sizing & Positioning */
+  width: 400%;
+  z-index: var(--element-active-z-index);
+  top: 50%;
+  left: 50%;
+
+  /* Visuals */
+  --bg-opacity: 1;
+  color: transparent;
+
+  /* Transitions */
+  transition: all var(--element-active-transition-duration) ease-in-out;
 }
 </style>
