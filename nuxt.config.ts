@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@/assets/styles/main.css',
     'vuetify/lib/styles/main.sass',
     'vuetify/lib/styles/main.css',
+    '@mdi/font/css/materialdesignicons.css',
   ],
 
   build: {
@@ -15,7 +16,6 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    'nuxt-mdi',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error

@@ -16,7 +16,7 @@
       @click="newPage(page.id)"
       >
         <div class="element-title ma-3 text-center">
-          <v-icon icon="mdi-home"></v-icon>
+          <v-icon :icon="page.icon" class="page-icon"></v-icon>
           <div v-if="page.id !== 6">{{page.name}}</div>
         </div>
       </div>
@@ -36,42 +36,42 @@ import { VIcon } from 'vuetify/components';
       name:'Création',
       active: false,
       path: '/creation',
-      icon: 'mdiPalette'
+      icon: 'mdi-palette'
     },
     {
       id: 2,
       name:'Projets',
       active: false,
       path: '/projects',
-      icon: 'mdiBriefcase'
+      icon: 'mdi-briefcase'
     },
     {
       id: 3,
       name:'Merci',
       active: false,
       path: '/merci',
-      icon: 'mdiHeart'
+      icon: 'mdi-heart'
     },
     {
       id: 4,
       name:'FAQ',
       active: false,
       path: '/faq',
-      icon: 'mdiHelpCircle'
+      icon: 'mdi-help-circle'
     },
     {
       id: 5,
       name:'Support',
       active: false,
       path: '/support',
-      icon: 'mdiLifebuoy'
+      icon: 'mdi-lifebuoy'
     },
     {
       id: 6,
       name:'Kafoo',
       active: false,
       path: '/kafoo',
-      icon: 'mdiAccount'
+      icon: 'mdi-account'
     },
   ])
 
@@ -181,7 +181,7 @@ import { VIcon } from 'vuetify/components';
 }
 
 .page-icon {
-  height: 22px !important;
+  font-size: 2.5em;
 }
 
 .element-1{
@@ -234,6 +234,14 @@ import { VIcon } from 'vuetify/components';
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
   letter-spacing: 3px; /* Override base letter-spacing */
+}
+
+.element-6 .element-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 
 @media (min-width: 1000px) {
