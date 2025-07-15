@@ -41,8 +41,8 @@
       name:'Création',
       active: false,
       path: '/creation',
-      icon: 'mdi-palette',
-      bubbles: ['mdi-brush', 'mdi-rocket-launch', 'mdi-lightbulb-on'],
+      icon: 'mdi-xml',
+      bubbles: ['mdi-language-html5', 'mdi-language-css3', 'mdi-language-javascript'],
       color: 'rgb(58, 42, 26)'
     },
     {
@@ -50,7 +50,7 @@
       name:'Projets',
       active: false,
       path: '/projects',
-      icon: 'mdi-briefcase',
+      icon: 'mdi-folder-multiple-image',
       bubbles: ['mdi-github', 'mdi-docker'],
       color: 'rgb(42, 26, 58)'
     },
@@ -59,8 +59,8 @@
       name:'Merci',
       active: false,
       path: '/merci',
-      icon: 'mdi-heart',
-      bubbles: ['mdi-youtube', 'mdi-patreon', 'mdi-book'],
+      icon: 'mdi-book-edit-outline',
+      bubbles: ['mdi-thumb-up-outline', 'mdi-star-outline', 'mdi-message-text-outline'],
       color: 'rgb(58, 26, 26)'
     },
     {
@@ -68,8 +68,8 @@
       name:'FAQ',
       active: false,
       path: '/faq',
-      icon: 'mdi-help-circle',
-      bubbles: ['mdi-comment-question', 'mdi-book-open-variant', 'mdi-frequently-asked-questions'],
+      icon: 'mdi-robot-outline',
+      bubbles: ['mdi-chat-question-outline', 'mdi-head-question-outline', 'mdi-frequently-asked-questions'],
       color: 'rgb(26, 58, 42)'
     },
     {
@@ -77,8 +77,8 @@
       name:'Support',
       active: false,
       path: '/support',
-      icon: 'mdi-lifebuoy',
-      bubbles: ['mdi-forum', 'mdi-email', 'mdi-phone', 'mdi-comment-account'],
+      icon: 'mdi-face-agent',
+      bubbles: ['mdi-account-wrench-outline', 'mdi-server-network', 'mdi-school-outline', 'mdi-phone-outline'],
       color: 'rgb(26, 42, 58)'
     },
     {
