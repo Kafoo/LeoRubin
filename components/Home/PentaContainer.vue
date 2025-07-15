@@ -85,7 +85,7 @@
       id: 6,
       name:'Kafoo',
       active: false,
-      path: '/kafoo',
+      path: '/contact',
       icon: 'mdi-account',
       color: 'rgb(42, 42, 42)'
     },
@@ -234,6 +234,7 @@
   background-color: rgba(42, 42, 42, var(--bg-opacity)); /* Much darker grey for central element */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
+  cursor: default;
 
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
