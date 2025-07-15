@@ -53,7 +53,7 @@
       active: false,
       path: '/merci',
       icon: 'mdi-heart',
-      bubbles: ['mdi-youtube', 'mdi-patreon', 'mdi-discord'],
+      bubbles: ['mdi-youtube', 'mdi-patreon', 'mdi-book'],
       color: 'rgb(58, 26, 26)'
     },
     {
