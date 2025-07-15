@@ -85,7 +85,7 @@
       id: 6,
       name:'Kafoo',
       active: false,
-      path: '/kafoo',
+      path: '/contact',
       icon: 'mdi-account',
       color: 'rgb(42, 42, 42)'
     },
@@ -110,17 +110,22 @@
     }
   };
 
-  const newPage = (pageId:number) => {
+  const newPage = (pageId: number, fromButton: boolean = false) => {
     if (isMobile.value) {
       // On mobile, first tap shows bubbles, second tap navigates.
       if (hoveredId.value === pageId) {
-        navigateToPage(pageId);
+        // On second tap, navigate if it's a button click, or if it's not the central circle.
+        if (fromButton || pageId !== 6) {
+          navigateToPage(pageId);
+        }
       } else {
         hoveredId.value = pageId;
       }
     } else {
-      // On desktop, click navigates directly.
-      navigateToPage(pageId);
+      // On desktop, click navigates if it's a button click, or if it's not the central circle.
+      if (fromButton || pageId !== 6) {
+        navigateToPage(pageId);
+      }
     }
   }
 </script>

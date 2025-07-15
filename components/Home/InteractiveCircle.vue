@@ -18,7 +18,7 @@
             <v-icon icon="mdi-email" size="small"></v-icon>
             <span>ant.guillard@gmail.com</span>
           </div>
-          <div class="profil-button" @click.stop="$emit('circleClick', page.id)">Découvrir mon profil</div> 
+          <div class="profil-button" @click.stop="$emit('circleClick', page.id, true)">Découvrir mon profil</div> 
         </div>
         <span v-else-if="isHovered" :key="page.name" class="page-name">{{ page.name }}</span>
         <v-icon v-else :key="page.icon" :icon="page.icon" size="x-large"></v-icon>
@@ -59,8 +59,14 @@ const props = defineProps({
 const emit = defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
 
 const handleCircleClick = () => {
+  // On mobile, we want to trigger the hover state.
+  if (props.isMobile) {
+    emit('circleClick', props.page.id, false);
+    return;
+  }
+  // On desktop, only non-central circles are clickable.
   if (props.page.id !== 6) {
-    emit('circleClick', props.page.id);
+    emit('circleClick', props.page.id, false);
   }
 };
 
