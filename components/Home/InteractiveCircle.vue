@@ -8,11 +8,11 @@
   >
     <div class="element-title ma-3">
       <transition name="fade-flip" mode="out-in">
-        <div v-if="isHovered && page.id === 6" key="contact-info" class="contact-info">
-          <div class="contact-name">Antoine Guillard</div>
+        <div v-if="isHovered && page.id === 6" key="contact-info">
+          Antoine Guillard
           <div class="contact-detail">
             <v-icon icon="mdi-phone" size="small"></v-icon>
-            <span>06 42 40 29 16</span>
+            <div>06 42 40 29 16</div>
           </div>
           <div class="contact-detail">
             <v-icon icon="mdi-email" size="small"></v-icon>
@@ -134,17 +134,6 @@ const bubbleStyle = (index: number, total: number) => {
 }
 
 .page-name {
-  white-space: nowrap;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  font-size: 0.5em;
-  text-align: center;
   white-space: nowrap;
 }
 
