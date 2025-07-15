@@ -96,8 +96,8 @@ import { VIcon } from 'vuetify/components';
 
 
 .penta-container {
-  --element-width: 30%;
-  --element-width-hover: 33%;
+  --element-width: 28%;
+  --element-width-hover: 36%;
   --radius: 32.5%;
   --center-element-width: 15%;
   overflow: visible;
