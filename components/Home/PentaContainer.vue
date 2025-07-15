@@ -85,7 +85,7 @@
       id: 6,
       name:'Kafoo',
       active: false,
-      path: '/contact',
+      path: '/kafoo',
       icon: 'mdi-account',
       color: 'rgb(42, 42, 42)'
     },
@@ -145,7 +145,7 @@
   transform: translate(-50%, -50%);
 
   /* New variables for better maintainability */
-  --element-base-transition-duration: 0.2s;
+  --element-base-transition-duration: 0.25s;
   --element-hover-transition-duration: 0.15s;
   --element-active-transition-duration: 400ms;
   --element-base-font-size: 3vw;
@@ -270,11 +270,9 @@
   /* Visuals */
   --bg-opacity: 1;
   color: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 
   /* Transitions */
-  transition: all var(--element-active-transition-duration) ease-in-out, backdrop-filter 0s;
+  transition: all var(--element-active-transition-duration) ease-in-out;
 }
 
 .close{
