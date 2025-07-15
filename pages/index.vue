@@ -97,7 +97,8 @@ import { VIcon } from 'vuetify/components';
 
 .penta-container {
   --element-width: 30%;
-  --element-width-hover: 33%;
+  --radius: 32.5%;
+  --center-element-width: 15%;
   overflow: visible;
   width: 100%;
   max-width: 800px;
@@ -123,19 +124,19 @@ import { VIcon } from 'vuetify/components';
 
 @keyframes shaking-1 {
  from{
-  transform: rotate(0deg) translateY(-4px) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-4px) rotate(0deg);
  }
  to{
-  transform: rotate(360deg) translateY(-4px) rotate(-360deg);
+  transform: translate(-50%, -50%) rotate(360deg) translateY(-4px) rotate(-360deg);
  }
 }
 
 @keyframes shaking-2 {
  from{
-  transform: rotate(0deg) translateY(-4px) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-4px) rotate(0deg);
  }
  to{
-  transform: rotate(-360deg) translateY(-4px) rotate(360deg);
+  transform: translate(-50%, -50%) rotate(-360deg) translateY(-4px) rotate(360deg);
  }
 }
 
@@ -146,11 +147,11 @@ import { VIcon } from 'vuetify/components';
 .element{
   /* Positioning & Sizing */
   position: absolute;
-  width: var(--element-width);
   aspect-ratio : 1 / 1;
   border-radius: 1000px;
   cursor: pointer;
   z-index: 1;
+  transform: translate(-50%, -50%);
 
   /* Visuals */
   --bg-opacity: 0.85;
@@ -173,53 +174,63 @@ import { VIcon } from 'vuetify/components';
 }
 
 .element:hover{
-  width: var(--element-width-hover);
-  transition: var(--element-hover-transition-duration) ease-in-out;
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform var(--element-hover-transition-duration) ease-in-out;
   --bg-opacity: 1;
   box-shadow: var(--element-hover-box-shadow);
+  z-index: 2;
 }
 
 
+.element-1, .element-2, .element-3, .element-4, .element-5 {
+  width: var(--element-width);
+}
+
 .element-1{
-  top: 2.5%; /* Medium position */
-  left: calc(50% - var(--element-width)/2);
+  --angle: -90deg;
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
   background-color: rgba(58, 42, 26, var(--bg-opacity)); /* Much darker brown */
   animation: shaking-1 8s infinite linear;
 }
 
 .element-2{
-  top: 25.0%; /* Medium position */
-  left: 65.9%; /* Medium position */
+  --angle: -18deg; /* -90 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
   background-color: rgba(42, 26, 58, var(--bg-opacity)); /* Much darker purple */
   animation: shaking-2 7s infinite linear;
 }
 
 .element-3{
-  top: 61.3%; /* Medium position */
-  left: 54.1%; /* Medium position */
+  --angle: 54deg; /* -18 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
   background-color: rgba(58, 26, 26, var(--bg-opacity)); /* Much darker red */
   animation: shaking-1 5s infinite linear;
 }
 
 .element-4{
-  top: 61.3%; /* Medium position */
-  left: 15.9%; /* Medium position */
+  --angle: 126deg; /* 54 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
   background-color: rgba(26, 58, 42, var(--bg-opacity)); /* Much darker green */
   animation: shaking-2 9s infinite linear;
 }
 
 .element-5{
-  top: 25.0%; /* Medium position */
-  left: 4.1%; /* Medium position */
+  --angle: 198deg; /* 126 + 72 */
+  top: calc(50% + var(--radius) * sin(var(--angle)));
+  left: calc(50% + var(--radius) * cos(var(--angle)));
   background-color: rgba(26, 42, 58, var(--bg-opacity)); /* Much darker blue */
   animation: shaking-1 6s infinite linear;
 }
 
 .element-6{
   /* Positioning & Sizing */
-  width: 15%; /* Override base width */
-  top: 42.5%;
-  left: 42.5%;
+  width: var(--center-element-width);
+  top: 50%;
+  left: 50%;
   padding-left: 0px; /* Remove padding-left for better centering */
 
   /* Visuals */
@@ -244,36 +255,9 @@ import { VIcon } from 'vuetify/components';
   }
 }
 
-.element-1:hover{
-  top: 1.0%;
-  left: calc(50% - var(--element-width-hover)/2);
-}
-
-.element-2:hover{
-  top: 23.5%;
-  left: 64.4%;
-}
-
-.element-3:hover{
-  top: 59.8%;
-  left: 52.6%;
-}
-
-.element-4:hover{
-  top: 59.8%;
-  left: 14.4%;
-}
-
-.element-5:hover{
-  top: 23.5%;
-  left: 2.6%;
-}
 
 .element-6:hover{
-  --width: 60%;
-  width: var(--width);
-  left: calc(50% - var(--width)/2);
-  top: calc(50% - var(--width)/2);
+  transform: translate(-50%, -50%) scale(4);
   z-index: 0;
 }
 
