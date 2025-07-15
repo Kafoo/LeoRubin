@@ -1,7 +1,7 @@
 <template>
   <div
     class="element centering"
-    :class="['element-'+page.id, page.active ? 'active' : '']"
+    :class="['element-'+page.id, { active: page.active, 'is-hovered': isHovered }]"
     @click.stop="handleCircleClick"
     @mouseover="onMouseover"
     @mouseleave="onMouseleave"
@@ -129,7 +129,8 @@ const bubbleStyle = (index: number, total: number) => {
   transition: var(--element-base-transition-duration);
 }
 
-.element:hover{
+.element:hover,
+.element.is-hovered {
   width: var(--element-width-hover);
   transition: var(--element-hover-transition-duration) ease-in-out;
   --bg-opacity: 1;
