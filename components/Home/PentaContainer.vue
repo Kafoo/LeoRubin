@@ -35,7 +35,8 @@
       active: false,
       path: '/creation',
       icon: 'mdi-palette',
-      bubbles: ['mdi-brush', 'mdi-rocket-launch', 'mdi-lightbulb-on']
+      bubbles: ['mdi-brush', 'mdi-rocket-launch', 'mdi-lightbulb-on'],
+      color: 'rgb(58, 42, 26)'
     },
     {
       id: 2,
@@ -43,7 +44,8 @@
       active: false,
       path: '/projects',
       icon: 'mdi-briefcase',
-      bubbles: ['mdi-github', 'mdi-docker']
+      bubbles: ['mdi-github', 'mdi-docker'],
+      color: 'rgb(42, 26, 58)'
     },
     {
       id: 3,
@@ -51,7 +53,8 @@
       active: false,
       path: '/merci',
       icon: 'mdi-heart',
-      bubbles: ['mdi-youtube', 'mdi-patreon', 'mdi-discord']
+      bubbles: ['mdi-youtube', 'mdi-patreon', 'mdi-discord'],
+      color: 'rgb(58, 26, 26)'
     },
     {
       id: 4,
@@ -59,7 +62,8 @@
       active: false,
       path: '/faq',
       icon: 'mdi-help-circle',
-      bubbles: ['mdi-comment-question', 'mdi-book-open-variant', 'mdi-frequently-asked-questions']
+      bubbles: ['mdi-comment-question', 'mdi-book-open-variant', 'mdi-frequently-asked-questions'],
+      color: 'rgb(26, 58, 42)'
     },
     {
       id: 5,
@@ -67,14 +71,16 @@
       active: false,
       path: '/support',
       icon: 'mdi-lifebuoy',
-      bubbles: ['mdi-forum', 'mdi-email', 'mdi-phone', 'mdi-comment-account']
+      bubbles: ['mdi-forum', 'mdi-email', 'mdi-phone', 'mdi-comment-account'],
+      color: 'rgb(26, 42, 58)'
     },
     {
       id: 6,
       name:'Kafoo',
       active: false,
       path: '/kafoo',
-      icon: 'mdi-account'
+      icon: 'mdi-account',
+      color: 'rgb(42, 42, 42)'
     },
   ])
 

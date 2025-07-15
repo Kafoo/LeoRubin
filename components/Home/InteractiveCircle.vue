@@ -20,7 +20,7 @@
         class="bubble"
         :style="bubbleStyle(index, page.bubbles.length)"
       >
-        <v-icon :icon="bubbleIcon" class="bubble-icon"></v-icon>
+        <v-icon :icon="bubbleIcon" class="bubble-icon" :style="{ color: page.color }"></v-icon>
       </div>
     </transition-group>
   </div>
@@ -148,7 +148,6 @@ const bubbleStyle = (index: number, total: number) => {
 
 .bubble-icon {
   font-size: 1.5em;
-  color: rgb(255, 255, 255);
 }
 
 .bubble-spawn-enter-active,
