@@ -12,6 +12,17 @@
         <v-icon v-else :key="page.icon" :icon="page.icon" class="page-icon"></v-icon>
       </transition>
     </div>
+    <transition-group name="bubble-spawn" tag="div" class="bubbles-container">
+      <div
+        v-if="isHovered && page.bubbles"
+        v-for="(bubbleIcon, index) in page.bubbles"
+        :key="bubbleIcon"
+        class="bubble"
+        :style="bubbleStyle(index, page.bubbles.length)"
+      >
+        <v-icon :icon="bubbleIcon" class="bubble-icon"></v-icon>
+      </div>
+    </transition-group>
   </div>
 </template>
 
@@ -30,6 +41,13 @@ defineProps({
 });
 
 defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
+
+const bubbleStyle = (index: number, total: number) => {
+  const angle = (360 / total) * index;
+  return {
+    '--angle': `${angle}deg`
+  };
+};
 </script>
 
 <style scoped>
@@ -90,5 +108,47 @@ defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
 .fade-flip-leave-to {
   opacity: 0;
   transform: rotateY(90deg);
+}
+
+.bubbles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  aspect-ratio: 1/1;
+  margin-top: -17.5%;
+  margin-left: -17.5%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transform: rotate(var(--angle)) translateY(-140%) rotate(calc(-1 * var(--angle)));
+}
+
+.bubble-icon {
+  font-size: 1.5em;
+  color: white;
+}
+
+.bubble-spawn-enter-active,
+.bubble-spawn-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.bubble-spawn-enter-from,
+.bubble-spawn-leave-to {
+  opacity: 0;
+  transform: rotate(var(--angle)) translateY(-140%) rotate(calc(-1 * var(--angle))) scale(0);
 }
 </style>

@@ -34,35 +34,40 @@
       name:'Création',
       active: false,
       path: '/creation',
-      icon: 'mdi-palette'
+      icon: 'mdi-palette',
+      bubbles: ['mdi-brush', 'mdi-rocket-launch', 'mdi-lightbulb-on']
     },
     {
       id: 2,
       name:'Projets',
       active: false,
       path: '/projects',
-      icon: 'mdi-briefcase'
+      icon: 'mdi-briefcase',
+      bubbles: ['mdi-github', 'mdi-docker']
     },
     {
       id: 3,
       name:'Merci',
       active: false,
       path: '/merci',
-      icon: 'mdi-heart'
+      icon: 'mdi-heart',
+      bubbles: ['mdi-youtube', 'mdi-patreon', 'mdi-discord']
     },
     {
       id: 4,
       name:'FAQ',
       active: false,
       path: '/faq',
-      icon: 'mdi-help-circle'
+      icon: 'mdi-help-circle',
+      bubbles: ['mdi-comment-question', 'mdi-book-open-variant', 'mdi-frequently-asked-questions']
     },
     {
       id: 5,
       name:'Support',
       active: false,
       path: '/support',
-      icon: 'mdi-lifebuoy'
+      icon: 'mdi-lifebuoy',
+      bubbles: ['mdi-forum', 'mdi-email', 'mdi-phone', 'mdi-comment-account']
     },
     {
       id: 6,
