@@ -2,7 +2,7 @@
   <div
     class="element centering"
     :class="['element-'+page.id, page.active ? 'active' : '']"
-    @click="$emit('circleClick', page.id)"
+    @click.stop="$emit('circleClick', page.id)"
     @mouseover="onMouseover"
     @mouseleave="onMouseleave"
   >

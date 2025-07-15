@@ -7,7 +7,7 @@
     </div>
     -->
 
-    <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1" @load="imageLoaded = true">
+    <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1" @load="imageLoaded = true" @click="handleClickOutside">
 
       <template v-if="imageLoaded">
         <HomeInteractiveCircle
@@ -101,6 +101,12 @@
         const router = useRouter();
         router.push(page.path);
       }, 300);
+    }
+  };
+
+  const handleClickOutside = () => {
+    if (isMobile.value) {
+      hoveredId.value = null;
     }
   };
 
