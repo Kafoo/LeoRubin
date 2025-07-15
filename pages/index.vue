@@ -266,8 +266,8 @@ import { VIcon } from 'vuetify/components';
   /* Sizing & Positioning */
   width: 400%;
   z-index: var(--element-active-z-index);
-  top: -150%;
-  left: -150%;
+  top: 50%;
+  left: 50%;
 
   /* Visuals */
   --bg-opacity: 1;
