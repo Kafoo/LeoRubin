@@ -17,9 +17,11 @@
       @mouseover="hoveredId = page.id"
       @mouseleave="hoveredId = null"
       >
-        <div class="element-title ma-3 text-center">
-          <span v-if="hoveredId === page.id">{{ page.name }}</span>
-          <v-icon v-else :icon="page.icon" class="page-icon"></v-icon>
+        <div class="element-title ma-3">
+          <transition name="fade-flip" mode="out-in">
+            <span v-if="hoveredId === page.id" :key="page.name" class="page-name">{{ page.name }}</span>
+            <v-icon v-else :key="page.icon" :icon="page.icon" class="page-icon"></v-icon>
+          </transition>
         </div>
       </div>
 
@@ -186,6 +188,14 @@ import { VIcon } from 'vuetify/components';
   box-shadow: var(--element-hover-box-shadow);
 }
 
+.element-title {
+  perspective: 300px;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .element-1, .element-2, .element-3, .element-4, .element-5 {
   width: var(--element-width);
@@ -291,6 +301,21 @@ import { VIcon } from 'vuetify/components';
   font-size: 30px;
   z-index: 10000;
   cursor: pointer;
+}
+
+.page-name {
+  white-space: nowrap;
+}
+
+.fade-flip-enter-active,
+.fade-flip-leave-active {
+  transition: all 0.4s ease-in-out;
+}
+
+.fade-flip-enter-from,
+.fade-flip-leave-to {
+  opacity: 0;
+  transform: rotateY(90deg);
 }
 
 
