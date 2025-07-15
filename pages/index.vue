@@ -14,9 +14,12 @@
       :class="['element-'+page.id,
       pages[page.id-1]?.active?'active':'']"
       @click="newPage(page.id)"
+      @mouseover="hoveredId = page.id"
+      @mouseleave="hoveredId = null"
       >
         <div class="element-title ma-3 text-center">
-          <v-icon :icon="page.icon" class="page-icon"></v-icon>
+          <span v-if="hoveredId === page.id">{{ page.name }}</span>
+          <v-icon v-else :icon="page.icon" class="page-icon"></v-icon>
         </div>
       </div>
 
@@ -73,6 +76,8 @@ import { VIcon } from 'vuetify/components';
       icon: 'mdi-account'
     },
   ])
+
+  const hoveredId = ref<number | null>(null);
 
   const newPage = (page:number) => {
     pages[page-1].active = true
