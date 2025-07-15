@@ -179,7 +179,7 @@
 }
 
 .page-icon {
-  height: 22px !important;
+  font-size: 2.5em;
 }
 
 .element-1{
@@ -232,6 +232,14 @@
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
   letter-spacing: 3px; /* Override base letter-spacing */
+}
+
+.element-6 .element-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 
 @media (min-width: 1000px) {
