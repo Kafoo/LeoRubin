@@ -309,7 +309,7 @@ import { VIcon } from 'vuetify/components';
 
 .fade-flip-enter-active,
 .fade-flip-leave-active {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .fade-flip-enter-from,
