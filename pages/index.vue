@@ -28,39 +28,39 @@
   const pages = reactive([
     {
       id: 1,
-      name:'Pratiques',
+      name:'Création',
       active: false,
-      path: '/pratiques'
+      path: '/creation'
     },
     {
       id: 2,
-      name:'Actualités',
+      name:'Projets',
       active: false,
-      path: '/actualites'
+      path: '/projects'
     },
     {
       id: 3,
-      name:'Ressources',
+      name:'Merci',
       active: false,
-      path: '/ressources'
+      path: '/merci'
     },
     {
       id: 4,
-      name:'Contact',
+      name:'FAQ',
       active: false,
-      path: '/contact'
+      path: '/faq'
     },
     {
       id: 5,
-      name:'Témoignages',
+      name:'Support',
       active: false,
-      path: '/temoignages'
+      path: '/support'
     },
     {
       id: 6,
-      name:'Léo',
+      name:'Kafoo',
       active: false,
-      path: '/leo'
+      path: '/kafoo'
     },
   ])
 
@@ -162,12 +162,6 @@
   transition: var(--element-base-transition-duration);
 }
 
-@media (min-width: 1000px) {
-  .element {
-     font-size: 1.2em;
-  }
-}
-
 .element:hover{
   width: var(--element-width-hover);
   transition: var(--element-hover-transition-duration) ease-in-out;
@@ -223,13 +217,19 @@
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
 
   /* Typography */
-  font-size: 1.5vw; /* Override base font-size */
+  font-size: 2.5vw; /* Override base font-size */
   letter-spacing: 3px; /* Override base letter-spacing */
 }
 
 @media (min-width: 1000px) {
+  .element {
+     font-size: 1.5em;
+  }
+  .element:hover {
+     font-size: 1.6em;
+  }
   .element-6{
-     font-size: 1em;
+     font-size: 1.3em;
   }
 }
 
