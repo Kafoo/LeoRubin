@@ -7,23 +7,27 @@
     </div>
     -->
 
-    <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1">
+    <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1" @load="imageLoaded = true">
 
-      <HomeInteractiveCircle
-        v-for="page in pages"
-        :key="page.id"
-        :page="page"
-        :is-hovered="hoveredId === page.id"
-        @circle-click="newPage"
-        @circle-mouseover="hoveredId = page.id"
-        @circle-mouseleave="hoveredId = null"
-      />
+      <template v-if="imageLoaded">
+        <HomeInteractiveCircle
+          v-for="page in pages"
+          :key="page.id"
+          :page="page"
+          :is-hovered="hoveredId === page.id"
+          @circle-click="newPage"
+          @circle-mouseover="hoveredId = page.id"
+          @circle-mouseleave="hoveredId = null"
+        />
+      </template>
 
     </v-img>
   </div>
 </template>
 
 <script setup lang="ts">
+  const imageLoaded = ref(false);
+
   const pages = reactive([
     {
       id: 1,
