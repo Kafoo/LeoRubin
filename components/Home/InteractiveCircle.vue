@@ -251,13 +251,19 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
 
 @keyframes pulse {
   0% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  10% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  15% {
     transform: translate(-50%, -50%) scale(1);
   }
-  50% {
-    transform: translate(-50%, -50%) scale(1.05);
+  90% {
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }
 
@@ -314,7 +320,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
   cursor: pointer;
   color: black;
-  animation: pulse 2s infinite ease-in-out;
+  animation: pulse 2.5s infinite ease-in-out;
 
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
@@ -339,6 +345,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   width: 60%;
   z-index: 0;
   transition: all 500ms;
+  animation: none;;
 }
 
 .element.active{
