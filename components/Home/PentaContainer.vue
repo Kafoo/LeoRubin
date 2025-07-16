@@ -71,7 +71,7 @@
       active: false,
       path: '/projects',
       icon: 'mdi-briefcase-outline',
-      bubbles: ['mdi-monitor-cellphone-star', 'mdi-store-outline', 'mdi-post-outline'],
+      bubbles: ['mdi-monitor-cellphone-star', 'mdi-post-outline'],
       color: 'rgb(42, 26, 58)'
     },
     {
@@ -79,7 +79,7 @@
       name:'Merci',
       active: false,
       path: '/merci',
-      icon: 'mdi-book-open-variant',
+      icon: 'mdi-heart',
       bubbles: ['mdi-thumb-up-outline', 'mdi-star-outline', 'mdi-message-text-outline'],
       color: 'rgb(58, 26, 26)'
     },
