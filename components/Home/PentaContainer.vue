@@ -62,7 +62,7 @@
       active: false,
       path: '/creation',
       icon: 'mdi-xml',
-      bubbles: ['mdi-language-html5', 'mdi-language-css3', 'mdi-language-javascript'],
+      bubbles: ['mdi-vuejs', 'mdi-language-javascript', 'mdi-language-html5', 'mdi-language-css3'],
       color: 'rgb(58, 42, 26)'
     },
     {
@@ -70,8 +70,8 @@
       name:'Projets',
       active: false,
       path: '/projects',
-      icon: 'mdi-folder-multiple-image',
-      bubbles: ['mdi-github', 'mdi-docker'],
+      icon: 'mdi-briefcase-outline',
+      bubbles: ['mdi-monitor-cellphone-star', 'mdi-cart-outline', 'mdi-application-braces-outline'],
       color: 'rgb(42, 26, 58)'
     },
     {
@@ -89,7 +89,7 @@
       active: false,
       path: '/faq',
       icon: 'mdi-robot-outline',
-      bubbles: ['mdi-chat-question-outline', 'mdi-head-question-outline', 'mdi-frequently-asked-questions'],
+      bubbles: ['mdi-comment-question-outline', 'mdi-lightbulb-on-outline', 'mdi-book-open-page-variant-outline'],
       color: 'rgb(26, 58, 42)'
     },
     {
@@ -97,8 +97,8 @@
       name:'Support',
       active: false,
       path: '/support',
-      icon: 'mdi-face-agent',
-      bubbles: ['mdi-account-wrench-outline', 'mdi-server-network', 'mdi-school-outline', 'mdi-phone-outline'],
+      icon: 'mdi-cogs',
+      bubbles: ['mdi-code-braces', 'mdi-server-network', 'mdi-wrench-outline', 'mdi-shield-lock-outline'],
       color: 'rgb(26, 42, 58)'
     },
     {
