@@ -45,16 +45,18 @@ import { VIcon } from 'vuetify/components';
 
 const isMounted = ref(false);
 onMounted(() => {
-  if (props.page.id === 6) {
-    // The central circle is mounted immediately without animation.
-    isMounted.value = true;
-    return;
-  }
-
-  // Stagger the appearance of other circles.
-  setTimeout(() => {
-    isMounted.value = true;
-  }, props.index * 100);
+  setTimeout(() => {    
+    if (props.page.id === 6) {
+      // The central circle is mounted immediately without animation.
+      isMounted.value = true;
+      return;
+    }
+  
+    // Stagger the appearance of other circles.
+    setTimeout(() => {
+      isMounted.value = true;
+    }, props.index * 100);
+  }, 200);
 });
 
 const props = defineProps({
@@ -151,7 +153,6 @@ const bubbleStyle = (index: number, total: number) => {
   backdrop-filter: blur(5px) saturate(150%);
   -webkit-backdrop-filter: blur(5px) saturate(150%);
   box-shadow: var(--element-base-box-shadow);
-  filter: url(#glass-distortion);
 
   /* Typography */
   font-weight: bold;
@@ -161,16 +162,18 @@ const bubbleStyle = (index: number, total: number) => {
   text-shadow: none;
 
   /* Transitions */
-  transition: top 200ms ease-out, left 200ms ease-out, opacity 200ms ease-out, all var(--element-appears-duration);
+  transition: all var(--element-appears-duration);
 }
 
 .element:hover,
 .element.is-hovered {
   width: var(--element-width-hover);
-  transition: var(--element-hover-transition-duration) ease-in-out;
   --bg-opacity: 1;
   box-shadow: var(--element-hover-box-shadow);
   z-index: 5;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: width var(--element-hover-transition-duration) ease-in-out;
 }
 
 .element-title {
@@ -224,7 +227,7 @@ const bubbleStyle = (index: number, total: number) => {
 
 .fade-flip-enter-active,
 .fade-flip-leave-active {
-  transition: all 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .fade-flip-enter-from,
@@ -374,6 +377,7 @@ const bubbleStyle = (index: number, total: number) => {
 .element-6:hover{
   width: 60%;
   z-index: 0;
+  transition: all 500ms;
 }
 
 .element.active{
