@@ -110,8 +110,8 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
 <style scoped>
 .element{
   /* Variables */
-  --element-width: 25%;
-  --element-width-hover: 36%;
+  --element-width: 24%;
+  --element-width-hover: 32%;
   --element-base-transition-duration: 0.25s;
   --element-hover-transition-duration: 0.15s;
   --element-active-transition-duration: 500ms;
@@ -297,10 +297,11 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   padding-left: 0px; /* Remove padding-left for better centering */
 
   /* Visuals */
-  background-color: rgba(42, 42, 42); /* Much darker grey for central element */
+  background-color: rgb(212, 212, 212); /* Much darker grey for central element */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
   cursor: default;
+  color: black;
 
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
