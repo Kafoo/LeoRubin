@@ -8,18 +8,7 @@
   >
     <div class="element-title ma-3">
       <transition name="fade-flip" mode="out-in">
-        <div v-if="isHovered && page.id === 6" key="contact-info" class="contact-info">
-          <div class="contact-name">Antoine Guillard</div>
-          <div class="contact-detail">
-            <v-icon icon="mdi-phone" size="small"></v-icon>
-            <span>06 42 40 29 16</span>
-          </div>
-          <div class="contact-detail">
-            <v-icon icon="mdi-email" size="small"></v-icon>
-            <span>ant.guillard@gmail.com</span>
-          </div>
-          <div class="profil-button" @click.stop="$emit('circleClick', page.id, true)">Découvrir mon profil</div> 
-        </div>
+        <ContactInfo v-if="isHovered && page.id === 6" key="contact-info" @discoverProfile="handleDiscoverProfile" />
         <span v-else-if="isHovered" :key="page.name" class="page-name">
           {{ page.name }}
         </span>
@@ -42,22 +31,7 @@
 
 <script setup lang="ts">
 import { VIcon } from 'vuetify/components';
-
-const isMounted = ref(false);
-onMounted(() => {
-  setTimeout(() => {    
-    if (props.page.id === 6) {
-      // The central circle is mounted immediately without animation.
-      isMounted.value = true;
-      return;
-    }
-  
-    // Stagger the appearance of other circles.
-    setTimeout(() => {
-      isMounted.value = true;
-    }, props.index * 100);
-  }, 200);
-});
+import ContactInfo from './ContactInfo.vue';
 
 const props = defineProps({
   page: {
@@ -80,6 +54,22 @@ const props = defineProps({
 
 const emit = defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
 
+const isMounted = ref(false);
+onMounted(() => {
+  setTimeout(() => {    
+    if (props.page.id === 6) {
+      // The central circle is mounted immediately without animation.
+      isMounted.value = true;
+      return;
+    }
+  
+    // Stagger the appearance of other circles.
+    setTimeout(() => {
+      isMounted.value = true;
+    }, props.index * 100);
+  }, 200);
+});
+
 const handleCircleClick = () => {
   // On mobile, we want to trigger the hover state.
   if (props.isMobile) {
@@ -90,6 +80,10 @@ const handleCircleClick = () => {
   if (props.page.id !== 6) {
     emit('circleClick', props.page.id, false);
   }
+};
+
+const handleDiscoverProfile = () => {
+  emit('circleClick', props.page.id, true);
 };
 
 const onMouseover = () => {
@@ -187,43 +181,6 @@ const bubbleStyle = (index: number, total: number) => {
 .page-name {
   white-space: nowrap;
 }
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  font-size: 0.7em;
-  text-align: center;
-}
-
-.contact-name {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 0.5em;
-}
-
-.contact-detail {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  opacity: 0.9;
-  white-space: nowrap;
-}
-
-.profil-button {                                                                                                                                                             
-  margin-top: 1em;                                                                                                                                                            
-  padding: 0.5em 1em;                                                                                                                                                         
-  border: 1px solid rgba(255, 255, 255, 0.5);                                                                                                                                 
-  border-radius: 4px;                                                                                                                                                         
-  transition: background-color 0.2s;
-  cursor: pointer;
-}                                                                                                                                                                             
-                                                                                                                                                                              
-.profil-button:hover {                                                                                                                                                       
-  background-color: rgba(255, 255, 255, 0.1);                                                                                                                                 
-}       
 
 .fade-flip-enter-active,
 .fade-flip-leave-active {
