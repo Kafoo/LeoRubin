@@ -62,7 +62,11 @@
       active: false,
       path: '/creation',
       icon: 'mdi-xml',
-      bubbles: ['mdi-monitor-dashboard', 'mdi-storefront-outline', 'mdi-pencil'],
+      bubbles: [
+        { icon: 'mdi-monitor-dashboard', angle: 0, distance: 140 },
+        { icon: 'mdi-storefront-outline', angle: 120, distance: 140 },
+        { icon: 'mdi-pencil', angle: 240, distance: 140 }
+      ],
       color: 'rgb(58, 42, 26)'
     },
     {
@@ -71,7 +75,10 @@
       active: false,
       path: '/projects',
       icon: 'mdi-briefcase-outline',
-      bubbles: ['mdi-monitor-cellphone-star', 'mdi-post-outline'],
+      bubbles: [
+        { icon: 'mdi-monitor-cellphone-star', angle: 90, distance: 140 },
+        { icon: 'mdi-post-outline', angle: 270, distance: 140 }
+      ],
       color: 'rgb(42, 26, 58)'
     },
     {
@@ -80,7 +87,11 @@
       active: false,
       path: '/merci',
       icon: 'mdi-star-outline',
-      bubbles: ['mdi-thumb-up-outline', 'mdi-heart-outline', 'mdi-message-text-outline'],
+      bubbles: [
+        { icon: 'mdi-thumb-up-outline', angle: 0, distance: 140 },
+        { icon: 'mdi-heart-outline', angle: 120, distance: 140 },
+        { icon: 'mdi-message-text-outline', angle: 240, distance: 140 }
+      ],
       color: 'rgb(58, 26, 26)'
     },
     {
@@ -89,7 +100,11 @@
       active: false,
       path: '/faq',
       icon: 'mdi-help',
-      bubbles: ['mdi-robot-outline', 'mdi-lightbulb-on-outline', 'mdi-chat-question-outline'],
+      bubbles: [
+        { icon: 'mdi-robot-outline', angle: 0, distance: 140 },
+        { icon: 'mdi-lightbulb-on-outline', angle: 120, distance: 140 },
+        { icon: 'mdi-chat-question-outline', angle: 240, distance: 140 }
+      ],
       color: 'rgb(26, 58, 42)'
     },
     {
@@ -98,7 +113,11 @@
       active: false,
       path: '/support',
       icon: 'mdi-cogs',
-      bubbles: ['mdi-server-network', 'mdi-wrench-outline', 'mdi-shield-lock-outline'],
+      bubbles: [
+        { icon: 'mdi-server-network', angle: 0, distance: 140 },
+        { icon: 'mdi-wrench-outline', angle: 120, distance: 140 },
+        { icon: 'mdi-shield-lock-outline', angle: 240, distance: 140 }
+      ],
       color: 'rgb(26, 42, 58)'
     },
     {

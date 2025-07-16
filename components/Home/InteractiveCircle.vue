@@ -18,12 +18,12 @@
     <transition-group name="bubble-spawn" tag="div" class="bubbles-container">
       <div
         v-if="isHovered && page.bubbles && !page.active"
-        v-for="(bubbleIcon, index) in page.bubbles"
-        :key="bubbleIcon"
+        v-for="bubble in page.bubbles"
+        :key="bubble.icon"
         class="bubble"
-        :style="bubbleStyle(index, page.bubbles.length)"
+        :style="bubbleStyle(bubble)"
       >
-        <v-icon :icon="bubbleIcon" class="bubble-icon" :style="{ color: page.color }"></v-icon>
+        <v-icon :icon="bubble.icon" class="bubble-icon" :style="{ color: page.color }"></v-icon>
       </div>
     </transition-group>
   </div>
@@ -98,19 +98,10 @@ const onMouseleave = () => {
   }
 };
 
-const bubbleStyle = (index: number, total: number) => {
-  const baseAngle = (360 / total) * index;
-
-  // Pseudo-random but deterministic values
-  const seed = props.page.id * 100 + index;
-  const random1 = Math.sin(seed) * 10000;
-  const angleOffset = (random1 - Math.floor(random1) - 0.5) * 40; // -20 to 20 deg
-
-  const random2 = Math.sin(seed + 1) * 10000;
-  const distance = 140 + (random2 - Math.floor(random2) - 0.5) * 40; // 120% to 160%
+const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   return {
-    '--angle': `${baseAngle + angleOffset}deg`,
-    '--distance': `-${distance}%`
+    '--angle': `${bubble.angle}deg`,
+    '--distance': `-${bubble.distance}%`
   };
 };
 </script>
