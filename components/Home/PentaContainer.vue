@@ -62,7 +62,7 @@
       active: false,
       path: '/creation',
       icon: 'mdi-xml',
-      bubbles: ['mdi-vuejs', 'mdi-language-javascript', 'mdi-language-html5', 'mdi-language-css3'],
+      bubbles: ['mdi-monitor-dashboard', 'mdi-storefront-outline', 'mdi-newspaper-variant-outline', 'mdi-account-group-outline'],
       color: 'rgb(58, 42, 26)'
     },
     {
