@@ -1,7 +1,7 @@
 <template>
   <div
     class="element centering"
-    :class="['element-'+page.id, { active: page.active, 'is-hovered': isHovered }]"
+    :class="['element-'+page.id, { active: page.active, 'is-hovered': isHovered, 'is-mounted': isMounted }]"
     @click.stop="handleCircleClick"
     @mouseover="onMouseover"
     @mouseleave="onMouseleave"
@@ -42,6 +42,14 @@
 
 <script setup lang="ts">
 import { VIcon } from 'vuetify/components';
+
+const isMounted = ref(false);
+onMounted(() => {
+  // Use a timeout to ensure the transition is applied
+  setTimeout(() => {
+    isMounted.value = true;
+  }, 50);
+});
 
 const props = defineProps({
   page: {
@@ -142,7 +150,7 @@ const bubbleStyle = (index: number, total: number) => {
   text-shadow: none;
 
   /* Transitions */
-  transition: var(--element-base-transition-duration);
+  transition: top 200ms ease-out, left 200ms ease-out, opacity 200ms ease-out, all var(--element-base-transition-duration);
 }
 
 .element:hover,
@@ -253,6 +261,13 @@ const bubbleStyle = (index: number, total: number) => {
 .bubble-spawn-leave-to {
   opacity: 0;
   transform: rotate(var(--angle)) translateY(var(--distance, -140%)) rotate(calc(-1 * var(--angle))) scale(0);
+}
+
+.element:not(.is-mounted):not(.element-6) {
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: 0;
 }
 
 @keyframes shaking-1 {
