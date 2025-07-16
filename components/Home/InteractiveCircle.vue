@@ -48,7 +48,7 @@ onMounted(() => {
   // Use a timeout to ensure the transition is applied
   setTimeout(() => {
     isMounted.value = true;
-  }, 50);
+  }, 200);
 });
 
 const props = defineProps({
@@ -118,6 +118,7 @@ const bubbleStyle = (index: number, total: number) => {
   --element-base-transition-duration: 0.25s;
   --element-hover-transition-duration: 0.15s;
   --element-active-transition-duration: 500ms;
+  --element-appears-duration: 0.8s;
   --element-base-font-size: 3vw;
   --element-base-letter-spacing: 2px;
   --element-base-color: #e0e0e0;
@@ -150,7 +151,7 @@ const bubbleStyle = (index: number, total: number) => {
   text-shadow: none;
 
   /* Transitions */
-  transition: top 200ms ease-out, left 200ms ease-out, opacity 200ms ease-out, all var(--element-base-transition-duration);
+  transition: top 200ms ease-out, left 200ms ease-out, opacity 200ms ease-out, all var(--element-appears-duration);
 }
 
 .element:hover,
