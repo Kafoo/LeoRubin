@@ -11,9 +11,10 @@
 
       <template v-if="imageLoaded">
         <HomeInteractiveCircle
-          v-for="page in pages"
+          v-for="(page, index) in pages"
           :key="page.id"
           :page="page"
+          :index="index"
           :is-hovered="hoveredId === page.id"
           :is-mobile="isMobile"
           @circle-click="newPage"

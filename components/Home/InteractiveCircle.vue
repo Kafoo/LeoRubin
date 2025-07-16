@@ -45,15 +45,25 @@ import { VIcon } from 'vuetify/components';
 
 const isMounted = ref(false);
 onMounted(() => {
-  // Use a timeout to ensure the transition is applied
+  if (props.page.id === 6) {
+    // The central circle is mounted immediately without animation.
+    isMounted.value = true;
+    return;
+  }
+
+  // Stagger the appearance of other circles.
   setTimeout(() => {
     isMounted.value = true;
-  }, 200);
+  }, props.index * 100);
 });
 
 const props = defineProps({
   page: {
     type: Object,
+    required: true
+  },
+  index: {
+    type: Number,
     required: true
   },
   isHovered: {
