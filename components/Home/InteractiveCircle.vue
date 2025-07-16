@@ -249,6 +249,18 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
  }
 }
 
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .element-1{
   --angle: -90deg;
   top: calc(50% + var(--radius) * sin(var(--angle)));
@@ -300,8 +312,9 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   background-color: rgb(212, 212, 212); /* Much darker grey for central element */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
-  cursor: default;
+  cursor: pointer;
   color: black;
+  animation: pulse 2s infinite ease-in-out;
 
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
