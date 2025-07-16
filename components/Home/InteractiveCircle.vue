@@ -265,9 +265,9 @@ const bubbleStyle = (index: number, total: number) => {
 }
 
 .element:not(.is-mounted):not(.element-6) {
+  width: 0;
   top: 50%;
   left: 50%;
-  opacity: 0;
   z-index: 0;
 }
 
@@ -337,7 +337,7 @@ const bubbleStyle = (index: number, total: number) => {
   padding-left: 0px; /* Remove padding-left for better centering */
 
   /* Visuals */
-  background-color: rgba(42, 42, 42, var(--bg-opacity)); /* Much darker grey for central element */
+  background-color: rgba(42, 42, 42); /* Much darker grey for central element */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
   cursor: default;
