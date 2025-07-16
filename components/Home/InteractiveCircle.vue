@@ -8,7 +8,7 @@
   >
     <div class="element-title ma-3">
       <transition name="fade-flip" mode="out-in">
-        <ContactInfo v-if="isHovered && page.id === 6" key="contact-info" @discoverProfile="handleDiscoverProfile" />
+        <ContactInfo v-if="isHovered && page.id === 6" key="contact-info" :is-active="page.active" @discoverProfile="handleDiscoverProfile" />
         <span v-else-if="isHovered" :key="page.name" class="page-name">
           {{ page.name }}
         </span>
