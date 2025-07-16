@@ -116,6 +116,7 @@ const bubbleStyle = (index: number, total: number) => {
 };
 </script>
 
+
 <style scoped>
 .element{
   /* Variables */

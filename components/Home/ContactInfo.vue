@@ -56,4 +56,8 @@ defineEmits(['discoverProfile']);
 .profil-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.active .profil-button{
+  display: none;
+}
 </style>
