@@ -7,7 +7,7 @@
             user-select: none; /* Non-prefixed version, currently*/
 }
 
-.selectable-text, input, textarea{
+.selectable-text, .selectable-text *, input, textarea{
   -webkit-touch-callout: text !important; /* iOS Safari */
     -webkit-user-select: text !important; /* Safari */
      -khtml-user-select: text !important; /* Konqueror HTML */

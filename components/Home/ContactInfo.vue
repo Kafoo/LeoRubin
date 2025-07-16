@@ -54,7 +54,6 @@ defineProps({
   gap: 0.5em;
   opacity: 0.9;
   white-space: nowrap;
-  user-select: text;
 }
 
 .profil-button {
