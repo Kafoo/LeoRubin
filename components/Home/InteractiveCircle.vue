@@ -336,6 +336,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   width: 100%;
   height: 100%;
   z-index: -1;
+  cursor: default;
   border-radius: 1000px;
   background-color: rgb(212, 212, 212);
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7);
@@ -354,7 +355,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   z-index: -2;
   border-radius: 1000px;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: 1.5s ease-in-out;
+  transition: 1.3s ease-in-out;
 
 }
 
@@ -383,6 +384,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   width: 60%;
   z-index: 0;
   transition: all 500ms;
+  cursor: default;
 }
 
 .element-6.is-hovered::before,
