@@ -108,7 +108,6 @@ const bubbleStyle = (index: number, total: number) => {
 
   const random2 = Math.sin(seed + 1) * 10000;
   const distance = 140 + (random2 - Math.floor(random2) - 0.5) * 40; // 120% to 160%
-  console.log(`Bubble ${index} for page ${props.page.id}: angleOffset=${angleOffset}, distance=${distance}`);
   return {
     '--angle': `${baseAngle + angleOffset}deg`,
     '--distance': `-${distance}%`
@@ -163,7 +162,7 @@ const bubbleStyle = (index: number, total: number) => {
 .element:hover,
 .element.is-hovered {
   width: var(--element-width-hover);
-  --bg-opacity: 1;
+  --bg-opacity: 0.98;
   box-shadow: var(--element-hover-box-shadow);
   z-index: 5;
   backdrop-filter: none;

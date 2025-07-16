@@ -62,7 +62,7 @@
       active: false,
       path: '/creation',
       icon: 'mdi-xml',
-      bubbles: ['mdi-monitor-dashboard', 'mdi-storefront-outline', 'mdi-newspaper-variant-outline', 'mdi-account-group-outline'],
+      bubbles: ['mdi-monitor-dashboard', 'mdi-storefront-outline', 'mdi-pencil'],
       color: 'rgb(58, 42, 26)'
     },
     {
@@ -79,8 +79,8 @@
       name:'Merci',
       active: false,
       path: '/merci',
-      icon: 'mdi-heart',
-      bubbles: ['mdi-thumb-up-outline', 'mdi-star-outline', 'mdi-message-text-outline'],
+      icon: 'mdi-star-outline',
+      bubbles: ['mdi-thumb-up-outline', 'mdi-heart-outline', 'mdi-message-text-outline'],
       color: 'rgb(58, 26, 26)'
     },
     {
@@ -88,8 +88,8 @@
       name:'FAQ',
       active: false,
       path: '/faq',
-      icon: 'mdi-robot-outline',
-      bubbles: ['mdi-comment-question-outline', 'mdi-lightbulb-on-outline', 'mdi-book-open-page-variant-outline'],
+      icon: 'mdi-help',
+      bubbles: ['mdi-robot-outline', 'mdi-lightbulb-on-outline', 'mdi-chat-question-outline'],
       color: 'rgb(26, 58, 42)'
     },
     {
@@ -98,7 +98,7 @@
       active: false,
       path: '/support',
       icon: 'mdi-cogs',
-      bubbles: ['mdi-code-braces', 'mdi-server-network', 'mdi-wrench-outline', 'mdi-shield-lock-outline'],
+      bubbles: ['mdi-server-network', 'mdi-wrench-outline', 'mdi-shield-lock-outline'],
       color: 'rgb(26, 42, 58)'
     },
     {
