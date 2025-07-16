@@ -109,7 +109,7 @@ const bubbleStyle = (index: number, total: number) => {
   --element-width-hover: 36%;
   --element-base-transition-duration: 0.25s;
   --element-hover-transition-duration: 0.15s;
-  --element-active-transition-duration: 400ms;
+  --element-active-transition-duration: 500ms;
   --element-base-font-size: 3vw;
   --element-base-letter-spacing: 2px;
   --element-base-color: #e0e0e0;
@@ -129,8 +129,8 @@ const bubbleStyle = (index: number, total: number) => {
   /* Visuals */
   --bg-opacity: 0.85;
   background-color: rgba(34, 34, 34, var(--bg-opacity));
-  backdrop-filter: blur(8px) saturate(150%);
-  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  backdrop-filter: blur(5px) saturate(150%);
+  -webkit-backdrop-filter: blur(5px) saturate(150%);
   box-shadow: var(--element-base-box-shadow);
   filter: url(#glass-distortion);
 
@@ -365,6 +365,10 @@ const bubbleStyle = (index: number, total: number) => {
   filter: none;
 
   /* Transitions */
-  transition: all var(--element-active-transition-duration) ease-in-out;
+  transition: 
+    width var(--element-active-transition-duration) ease-in-out,
+    top var(--element-active-transition-duration) ease-in-out,
+    left var(--element-active-transition-duration) ease-in-out,
+  ;
 }
 </style>
