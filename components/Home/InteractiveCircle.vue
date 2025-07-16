@@ -360,6 +360,9 @@ const bubbleStyle = (index: number, total: number) => {
   /* Visuals */
   --bg-opacity: 1;
   color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  filter: none;
 
   /* Transitions */
   transition: all var(--element-active-transition-duration) ease-in-out;
