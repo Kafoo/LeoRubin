@@ -64,8 +64,8 @@
       icon: 'mdi-xml',
       bubbles: [
         { icon: 'mdi-monitor-dashboard', angle: 0, distance: 140 },
-        { icon: 'mdi-storefront-outline', angle: 120, distance: 140 },
-        { icon: 'mdi-pencil', angle: 240, distance: 140 }
+        { icon: 'mdi-storefront-outline', angle: 110, distance: 140 },
+        { icon: 'mdi-pencil', angle: 260, distance: 140 }
       ],
       color: 'rgb(58, 42, 26)'
     },
@@ -76,8 +76,9 @@
       path: '/projects',
       icon: 'mdi-briefcase-outline',
       bubbles: [
-        { icon: 'mdi-monitor-cellphone-star', angle: 90, distance: 140 },
-        { icon: 'mdi-post-outline', angle: 270, distance: 140 }
+        { icon: 'mdi-monitor-shimmer', angle: 20, distance: 140 },
+        { icon: 'mdi-check-bold', angle: 280, distance: 140 },
+        { icon: 'mdi-image-text', angle: 160, distance: 140 }
       ],
       color: 'rgb(42, 26, 58)'
     },
@@ -89,7 +90,7 @@
       icon: 'mdi-star-outline',
       bubbles: [
         { icon: 'mdi-thumb-up-outline', angle: 0, distance: 140 },
-        { icon: 'mdi-heart-outline', angle: 120, distance: 140 },
+        { icon: 'mdi-heart-outline', angle: 130, distance: 140 },
         { icon: 'mdi-message-text-outline', angle: 240, distance: 140 }
       ],
       color: 'rgb(58, 26, 26)'
@@ -101,7 +102,7 @@
       path: '/faq',
       icon: 'mdi-help',
       bubbles: [
-        { icon: 'mdi-robot-outline', angle: 0, distance: 140 },
+        { icon: 'mdi-robot-outline', angle: 20, distance: 140 },
         { icon: 'mdi-lightbulb-on-outline', angle: 120, distance: 140 },
         { icon: 'mdi-chat-question-outline', angle: 240, distance: 140 }
       ],
@@ -116,7 +117,7 @@
       bubbles: [
         { icon: 'mdi-server-network', angle: 0, distance: 140 },
         { icon: 'mdi-wrench-outline', angle: 120, distance: 140 },
-        { icon: 'mdi-shield-lock-outline', angle: 240, distance: 140 }
+        { icon: 'mdi-shield-lock-outline', angle: 220, distance: 140 }
       ],
       color: 'rgb(26, 42, 58)'
     },

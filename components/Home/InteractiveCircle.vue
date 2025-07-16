@@ -12,7 +12,7 @@
         <span v-else-if="isHovered" :key="page.name" class="page-name">
           {{ page.name }}
         </span>
-        <v-icon v-else :key="page.icon" :icon="page.icon" size="large"></v-icon>
+        <v-icon v-else :key="page.icon" :icon="page.icon" :size="isMobile?'x-large':'large'"></v-icon>
       </transition>
     </div>
     <transition-group name="bubble-spawn" tag="div" class="bubbles-container">
