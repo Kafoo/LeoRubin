@@ -249,21 +249,21 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
  }
 }
 
-@keyframes pulse {
+@keyframes pulse-scale {
   0% {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
   }
   10% {
-    transform: translate(-50%, -50%) scale(0.95);
+    transform: scale(0.95);
   }
   15% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
   }
   90% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
   }
 }
 
@@ -315,16 +315,41 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   padding-left: 0px; /* Remove padding-left for better centering */
 
   /* Visuals */
-  background-color: rgb(212, 212, 212); /* Much darker grey for central element */
+  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Unique border */
-  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7); /* Override base box-shadow */
   cursor: pointer;
   color: black;
-  animation: pulse 2.5s infinite ease-in-out;
 
   /* Typography */
   font-size: 2.5vw; /* Override base font-size */
   letter-spacing: 3px; /* Override base letter-spacing */
+}
+
+.element-6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 1000px;
+  background-color: rgb(212, 212, 212);
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7);
+  animation: pulse-scale 2.5s infinite ease-in-out;
+}
+
+.element-6::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 115%;
+  height: 115%;
+  z-index: -2;
+  border-radius: 1000px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (min-width: 1000px) {
@@ -345,7 +370,11 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   width: 60%;
   z-index: 0;
   transition: all 500ms;
-  animation: none;;
+}
+
+.element-6.is-hovered::before,
+.element-6:hover::before {
+  animation: none;
 }
 
 .element.active{
