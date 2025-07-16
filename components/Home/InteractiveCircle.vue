@@ -167,6 +167,8 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .page-name {
