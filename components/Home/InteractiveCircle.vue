@@ -249,17 +249,17 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
  }
 }
 
-@keyframes pulse-scale {
+@keyframes pulse {
   0% {
     transform: scale(1.1);
   }
   10% {
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
-  15% {
+  25% {
     transform: scale(1);
   }
-  90% {
+  92% {
     transform: scale(1);
   }
   100% {
@@ -325,6 +325,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   letter-spacing: 3px; /* Override base letter-spacing */
 }
 
+/* Pulsing Background for central circle */
 .element-6::before {
   content: '';
   position: absolute;
@@ -336,20 +337,30 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   border-radius: 1000px;
   background-color: rgb(212, 212, 212);
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7);
-  animation: pulse-scale 2.5s infinite ease-in-out;
+  animation: pulse 2.5s infinite ease-in-out;
 }
 
+/* Medium circle */
 .element-6::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 115%;
-  height: 115%;
+  width: 180%;
+  height: 180%;
   z-index: -2;
   border-radius: 1000px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: 1.5s ease-in-out;
+
+}
+
+.element-6.element.is-hovered::after,
+.element-6.element:hover::after {
+  width: 0;
+  height: 0;
+  transition: 200ms;
 }
 
 @media (min-width: 1000px) {
