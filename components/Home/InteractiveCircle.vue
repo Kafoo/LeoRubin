@@ -269,6 +269,11 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .element-1{
   --angle: -90deg;
   top: calc(50% + var(--radius) * sin(var(--angle)));
@@ -356,7 +361,8 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   border-radius: 1000px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   transition: 1.3s ease-in-out;
-
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1.4s forwards;
 }
 
 .element-6.element.is-hovered::after,
