@@ -108,7 +108,7 @@ const bubbleStyle = (index: number, total: number) => {
 
   const random2 = Math.sin(seed + 1) * 10000;
   const distance = 140 + (random2 - Math.floor(random2) - 0.5) * 40; // 120% to 160%
-
+  console.log(`Bubble ${index} for page ${props.page.id}: angleOffset=${angleOffset}, distance=${distance}`);
   return {
     '--angle': `${baseAngle + angleOffset}deg`,
     '--distance': `-${distance}%`
