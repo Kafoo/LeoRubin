@@ -1,4 +1,4 @@
-*{
+* {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -8,41 +8,39 @@
 }
 
 .selectable-text, input, textarea{
-  -webkit-touch-callout: text; /* iOS Safari */
-    -webkit-user-select: text; /* Safari */
-     -khtml-user-select: text; /* Konqueror HTML */
-       -moz-user-select: text; /* Old versions of Firefox */
-        -ms-user-select: text; /* Internet Explorer/Edge */
-            user-select: text; /* Non-prefixed version, currently*/
+  -webkit-touch-callout: text !important; /* iOS Safari */
+    -webkit-user-select: text !important; /* Safari */
+     -khtml-user-select: text !important; /* Konqueror HTML */
+       -moz-user-select: text !important; /* Old versions of Firefox */
+        -ms-user-select: text !important; /* Internet Explorer/Edge */
+            user-select: text !important; /* Non-prefixed version, currently*/
 }
 
-.v-application:not(.pratiques):not(.actualites):not(.ressources):not(.contact):not(.temoignages):not(.leo) {
-    background: linear-gradient(-45deg, #000000, #1a1a1a, #0a0a0a, #2a2a2a) !important;
-    background-size: 400% 400% !important;
-    animation: gradient 15s ease infinite !important;
+.v-application:not(.creation):not(.projects):not(.merci):not(.faq):not(.support):not(.kafoo) {
+    background: linear-gradient(-40deg, #000000, #1a1a1a, #0a0a0a, #2a2a2a) !important;
 }
 
-.v-application.pratiques{
+.v-application.creation{
   background-color: #3a2a1a !important; /* Matches element-1 */
 }
  
-.v-application.actualites{
+.v-application.projects{
   background-color: #2a1a3a !important; /* Matches element-2 */
 }
 
-.v-application.ressources{
+.v-application.merci{
   background-color: #3a1a1a !important; /* Matches element-3 */
 }
 
-.v-application.contact{
+.v-application.faq{
   background-color: #1a3a2a !important; /* Matches element-4 */
 }
 
-.v-application.temoignages{
+.v-application.support{
   background-color: #1a2a3a !important; /* Matches element-5 */
 }
 
-.v-application.leo{
+.v-application.kafoo{
   background-color: #2a2a2a !important; /* Matches element-6 */
 }
 
