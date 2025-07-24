@@ -56,18 +56,20 @@ defineProps({
 }
 
 .profil-button {
-  padding: 0.5em 1em;
-  border-radius: 10px;
-  letter-spacing: 4px;
-  transition: box-shadow 0.2s;
-  box-shadow: inset -2px -1px 4px rgb(0 0 0 / 22%);
+  padding: 0.5em 1.5em;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #333;
+  background-color: transparent;
   cursor: pointer;
   font-size: 0.9em;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .profil-button:hover {
-  box-shadow: inset -2px -1px 4px rgb(0 0 0 / 5%);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 
