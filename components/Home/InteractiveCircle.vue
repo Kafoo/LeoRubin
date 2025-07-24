@@ -344,7 +344,7 @@ const onMouseleave = () => {
   transition: 200ms;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .element {
      font-size: 1.5em;
   }
@@ -356,7 +356,7 @@ const onMouseleave = () => {
   }
 }
 
-@media (max-width: 999px) {
+@media (max-width: 799px) {
   .element {
     --element-width: 26%;
     --element-width-hover: 30%;
