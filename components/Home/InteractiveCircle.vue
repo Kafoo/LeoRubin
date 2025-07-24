@@ -3,8 +3,7 @@
     class="element centering"
     :class="['element-'+page.id, { active: page.active, 'is-hovered': isHovered, 'is-mounted': isMounted }]"
     @click.stop="handleCircleClick"
-    @mouseover="onMouseover"
-    @mouseleave="onMouseleave"
+    v-on="isMobile ? {} : { mouseover: onMouseover, mouseleave: onMouseleave }"
   >
     <div class="element-title ma-3">
       <transition name="fade-flip" mode="out-in">
@@ -86,15 +85,11 @@ const handleDiscoverProfile = () => {
 };
 
 const onMouseover = () => {
-  if (!props.isMobile) {
-    emit('circleMouseover', props.page.id);
-  }
+  emit('circleMouseover', props.page.id);
 };
 
 const onMouseleave = () => {
-  if (!props.isMobile) {
-    emit('circleMouseleave');
-  }
+  emit('circleMouseleave');
 };
 
 </script>
