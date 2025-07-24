@@ -363,9 +363,9 @@ const onMouseleave = () => {
 
 @media (max-width: 999px) {
   .element {
-    --element-width: 30%;
-    --element-width-hover: 40%;
-    --element-base-font-size: 4vw;
+    --element-width: 26%;
+    --element-width-hover: 30%;
+    --element-base-font-size: 3vw;
   }
 
   .element.is-hovered:not(.element-6), .element:hover:not(.element-6) {
