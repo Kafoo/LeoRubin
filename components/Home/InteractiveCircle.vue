@@ -391,17 +391,17 @@ const onMouseleave = () => {
 @media (max-width: 799px) {
   .element {
     --element-width: 26%; /* Adjust size for mobile. */
-    --element-width-hover: 30%;
-    --element-base-font-size: 3vw;
+    --element-width-hover: 36%;
+    --element-base-font-size: 3.5vw;
   }
 
   /* On hover, move circles slightly towards the center to prevent overflow. */
   .element.is-hovered:not(.element-6), .element:hover:not(.element-6) {
-    --radius: 30%;
+    --radius: 32%;
   }
 
   .element-6 {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 
   .element-6.is-hovered,
