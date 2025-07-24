@@ -8,6 +8,7 @@
 }
 
 .selectable-text, .selectable-text *, input, textarea{
+  cursor: text !important;;
   -webkit-touch-callout: text !important; /* iOS Safari */
     -webkit-user-select: text !important; /* Safari */
      -khtml-user-select: text !important; /* Konqueror HTML */
