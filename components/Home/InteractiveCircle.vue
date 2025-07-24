@@ -65,7 +65,7 @@ onMounted(() => {
     // Stagger the appearance of other circles.
     setTimeout(() => {
       isMounted.value = true;
-    }, props.index * 170);
+    }, props.index * 130);
   }, 200);
 });
 
@@ -329,8 +329,8 @@ const onMouseleave = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180%;
-  height: 180%;
+  width: 160%;
+  height: 160%;
   z-index: -2;
   border-radius: 1000px;
   border: 2px solid rgba(255, 255, 255, 0.2);
