@@ -10,6 +10,7 @@
     <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1" @load="imageLoaded = true">
 
       <template v-if="imageLoaded">
+        <div v-if="!animationsAreComplete" class="overlay"></div>
         <HomeInteractiveCircle
           v-for="(page, index) in pages"
           :key="page.id"
@@ -30,10 +31,14 @@
 <script setup lang="ts">
   const imageLoaded = ref(false);
   const isMobile = ref(false);
+  const animationsAreComplete = ref(false);
 
   onMounted(() => {
     // Simple check for touch support to identify mobile devices
     isMobile.value = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setTimeout(() => {
+      animationsAreComplete.value = true;
+    }, 1700);
   });
 
   const hoveredId = ref<number | null>(null);
@@ -168,7 +173,15 @@
 
 <style scoped>
 
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 50%;
+}
 
 .penta-container {
   --radius: 32.5%;
