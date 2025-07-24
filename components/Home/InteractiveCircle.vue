@@ -65,7 +65,7 @@ onMounted(() => {
     // Stagger the appearance of other circles.
     setTimeout(() => {
       isMounted.value = true;
-    }, props.index * 100);
+    }, props.index * 170);
   }, 200);
 });
 
@@ -162,6 +162,8 @@ const onMouseleave = () => {
   justify-content: center;
   position: relative;
   z-index: 1;
+  font-family: Philisopher, sans-serif;
+  letter-spacing: 0.15em;
 }
 
 .page-name {
