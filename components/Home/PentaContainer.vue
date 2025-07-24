@@ -38,7 +38,7 @@
     isMobile.value = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     setTimeout(() => {
       animationsAreComplete.value = true;
-    }, 1700);
+    }, 1300);
   });
 
   const hoveredId = ref<number | null>(null);
