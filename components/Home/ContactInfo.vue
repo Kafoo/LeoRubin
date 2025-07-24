@@ -31,6 +31,7 @@ defineProps({
 </script>
 
 <style scoped>
+/* Base styles for the contact information container. */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -55,6 +56,7 @@ defineProps({
   white-space: nowrap;
 }
 
+/* Styles for the "Mon Profil" button. */
 .profil-button {
   padding: 0.5em 1.5em;
   border-radius: 20px;
@@ -73,6 +75,7 @@ defineProps({
 }
 
 
+/* Responsive adjustments for smaller screens. */
 @media (max-width: 1000px) {
   
   .contact-info {

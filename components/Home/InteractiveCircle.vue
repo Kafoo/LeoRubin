@@ -31,63 +31,75 @@ import { VIcon } from 'vuetify/components';
 import ContactInfo from './ContactInfo.vue';
 import Bubble from './Bubble.vue';
 
+// Component properties definition
 const props = defineProps({
+  // The page object containing data for the circle (name, icon, etc.)
   page: {
     type: Object,
     required: true
   },
+  // The index of the circle, used for staggering the appearance animation
   index: {
     type: Number,
     required: true
   },
+  // Boolean to indicate if the circle is currently being hovered
   isHovered: {
     type: Boolean,
     default: false
   },
+  // Boolean to indicate if the view is on a mobile device
   isMobile: {
     type: Boolean,
     default: false
   }
 });
 
+// Definition of events emitted by the component
 const emit = defineEmits(['circleClick', 'circleMouseover', 'circleMouseleave']);
 
+// A ref to control the mounted state, used for the appearance animation
 const isMounted = ref(false);
 onMounted(() => {
+  // A short delay before starting the mounting animations
   setTimeout(() => {    
     if (props.page.id === 6) {
-      // The central circle is mounted immediately without animation.
+      // The central circle (id: 6) is mounted immediately without a staggered animation.
       isMounted.value = true;
       return;
     }
   
-    // Stagger the appearance of other circles.
+    // Stagger the appearance of other circles to create a sequential animation effect.
     setTimeout(() => {
       isMounted.value = true;
     }, props.index * 130);
   }, 200);
 });
 
+// Handles click events on the circle.
 const handleCircleClick = () => {
-  // On mobile, we want to trigger the hover state.
+  // On mobile, a click simulates a hover to show details before navigating.
   if (props.isMobile) {
     emit('circleClick', props.page.id, false);
     return;
   }
-  // On desktop, only non-central circles are clickable.
+  // On desktop, only non-central circles are clickable for navigation.
   if (props.page.id !== 6) {
     emit('circleClick', props.page.id, false);
   }
 };
 
+// Handles the click on the "Discover Profile" button inside the central circle.
 const handleDiscoverProfile = () => {
   emit('circleClick', props.page.id, true);
 };
 
+// Emits an event when the mouse enters the circle area (desktop only).
 const onMouseover = () => {
   emit('circleMouseover', props.page.id);
 };
 
+// Emits an event when the mouse leaves the circle area (desktop only).
 const onMouseleave = () => {
   emit('circleMouseleave');
 };
@@ -96,10 +108,11 @@ const onMouseleave = () => {
 
 
 <style scoped>
+/* Base styles for all interactive circles. */
 .element{
-  /* Variables */
-  --element-width: 24%;
-  --element-width-hover: 32%;
+  /* CSS variables for dynamic styling and transitions. */
+  --element-width: 24%; /* Default width of the circle. */
+  --element-width-hover: 32%; /* Width of the circle on hover. */
   --element-base-transition-duration: 0.25s;
   --element-hover-transition-duration: 0.15s;
   --element-active-transition-duration: 500ms;
@@ -109,7 +122,7 @@ const onMouseleave = () => {
   --element-base-color: #e0e0e0;
   --element-base-box-shadow: 0px 0px 20px 8px rgb(0 0 0 / 27%);;
   --element-hover-box-shadow: none;
-  --element-active-z-index: 10;
+  --element-active-z-index: 10; /* z-index when a circle is active/clicked. */
 
   /* Positioning & Sizing */
   position: absolute;
@@ -118,10 +131,10 @@ const onMouseleave = () => {
   border-radius: 1000px;
   cursor: pointer;
   z-index: 1;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Center the element on its coordinates. */
 
   /* Visuals */
-  --bg-opacity: 0.85;
+  --bg-opacity: 0.85; /* Default background opacity. */
   background-color: rgba(34, 34, 34, var(--bg-opacity));
   backdrop-filter: blur(5px) saturate(150%);
   -webkit-backdrop-filter: blur(5px) saturate(150%);
@@ -135,26 +148,29 @@ const onMouseleave = () => {
   text-shadow: none;
 
   /* Transitions */
-  transition: all var(--element-appears-duration);
+  transition: all var(--element-appears-duration); /* Transition for initial appearance. */
 }
 
+/* Styles for when a circle is hovered (or tapped on mobile). */
 .element:hover,
 .element.is-hovered {
-  width: var(--element-width-hover);
-  --bg-opacity: 0.98;
+  width: var(--element-width-hover); /* Increase size. */
+  --bg-opacity: 0.98; /* Make background more opaque. */
   box-shadow: var(--element-hover-box-shadow);
-  z-index: 5;
-  backdrop-filter: none;
+  z-index: 5; /* Bring to front. */
+  backdrop-filter: none; /* Remove blur to make text readable. */
   -webkit-backdrop-filter: none;
+  /* Smooth transition for size and position changes. */
   transition: 
     width var(--element-hover-transition-duration) ease-in-out,
     top var(--element-hover-transition-duration) ease-in-out,
     left var(--element-hover-transition-duration) ease-in-out;
 }
 
+/* Container for the icon or text inside the circle. */
 .element-title {
-  perspective: 300px;
-  min-height: 2.5em;
+  perspective: 300px; /* For 3D transform effects on children. */
+  min-height: 2.5em; /* Ensure consistent height. */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,17 +184,20 @@ const onMouseleave = () => {
   white-space: nowrap;
 }
 
+/* Transition for the content (icon/text) inside the circle. */
 .fade-flip-enter-active,
 .fade-flip-leave-active {
   transition: all 0.2s ease-in-out;
 }
 
+/* Defines the start and end states of the flip animation. */
 .fade-flip-enter-from,
 .fade-flip-leave-to {
   opacity: 0;
-  transform: rotateY(90deg);
+  transform: rotateY(90deg); /* Flip effect. */
 }
 
+/* Container for the small bubbles that appear on hover. */
 .bubbles-container {
   position: absolute;
   top: 0;
@@ -187,24 +206,29 @@ const onMouseleave = () => {
   height: 100%;
 }
 
+/* Transition for the appearance and disappearance of bubbles. */
 .bubble-spawn-enter-active,
 .bubble-spawn-leave-active {
   transition: all 0.3s ease-out;
 }
 
+/* Defines the start and end states for the bubble spawn animation. */
 .bubble-spawn-enter-from,
 .bubble-spawn-leave-to {
   opacity: 0;
+  /* Start from the center and scale up to their final position. */
   transform: rotate(var(--angle)) translateY(var(--distance, -140%)) rotate(calc(-1 * var(--angle))) scale(0);
 }
 
+/* Initial state for outer circles before they animate into place. */
 .element:not(.is-mounted):not(.element-6) {
-  width: 0;
-  top: 50%;
+  width: 0; /* Start with no width. */
+  top: 50%; /* Start from the center. */
   left: 50%;
   z-index: 0;
 }
 
+/* Keyframe animations for a subtle floating/shaking effect. */
 @keyframes shaking-1 {
  from{
   transform: translate(-50%, -50%) rotate(0deg) translateY(-4px) rotate(0deg);
@@ -246,8 +270,11 @@ const onMouseleave = () => {
   to { opacity: 1; }
 }
 
+/* Individual styles for each of the 5 outer circles. */
+/* Each has a unique position, color, and animation timing. */
 .element-1{
-  --angle: -90deg;
+  --angle: -90deg; /* Angle for positioning. */
+  /* Positioned using trigonometry relative to the container center. */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
   background-color: rgba(7, 61, 0, var(--bg-opacity));
@@ -286,6 +313,7 @@ const onMouseleave = () => {
   animation: shaking-1 6s infinite linear;
 }
 
+/* Styles for the central circle (element-6). */
 .element-6{
   /* Positioning & Sizing */
   width: var(--center-element-width);
@@ -305,6 +333,7 @@ const onMouseleave = () => {
 }
 
 /* Pulsing Background for central circle */
+/* Pulsing background effect for the central circle. */
 .element-6::before {
   content: '';
   position: absolute;
@@ -321,6 +350,7 @@ const onMouseleave = () => {
 }
 
 /* Medium circle */
+/* Decorative ring around the central circle. */
 .element-6::after {
   content: '';
   position: absolute;
@@ -344,6 +374,7 @@ const onMouseleave = () => {
   transition: 200ms;
 }
 
+/* Responsive styles for larger screens (desktop). */
 @media (min-width: 800px) {
   .element {
      font-size: 1.5em;
@@ -356,13 +387,15 @@ const onMouseleave = () => {
   }
 }
 
+/* Responsive styles for smaller screens (mobile). */
 @media (max-width: 799px) {
   .element {
-    --element-width: 26%;
+    --element-width: 26%; /* Adjust size for mobile. */
     --element-width-hover: 30%;
     --element-base-font-size: 3vw;
   }
 
+  /* On hover, move circles slightly towards the center to prevent overflow. */
   .element.is-hovered:not(.element-6), .element:hover:not(.element-6) {
     --radius: 30%;
   }
@@ -377,9 +410,10 @@ const onMouseleave = () => {
   }
 }
 
+/* Hover state for the central circle. */
 .element-6.is-hovered,
 .element-6:hover{
-  width: 60%;
+  width: 60%; /* Enlarge on hover. */
   z-index: 0;
   transition: all 500ms;
   cursor: default;
@@ -390,9 +424,10 @@ const onMouseleave = () => {
   animation: none;
 }
 
+/* Styles for when a circle is 'active' (clicked, before navigating). */
 .element.active{
   /* Sizing & Positioning */
-  width: 400%;
+  width: 400%; /* Greatly expand to fill the screen. */
   z-index: var(--element-active-z-index);
   top: 50%;
   left: 50%;
