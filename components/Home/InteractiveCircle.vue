@@ -358,6 +358,26 @@ const onMouseleave = () => {
   }
 }
 
+@media (max-width: 999px) {
+  .element {
+    --element-width: 33%;
+    --element-width-hover: 48%;
+    --element-base-font-size: 4.5vw;
+  }
+
+  .element.is-hovered:not(.element-6), .element:hover:not(.element-6) {
+    --radius: 26%;
+  }
+
+  .element-6 {
+    font-size: 3.5vw;
+  }
+
+  .element-6.is-hovered,
+  .element-6:hover {
+    width: 75%;
+  }
+}
 
 .element-6.is-hovered,
 .element-6:hover{
