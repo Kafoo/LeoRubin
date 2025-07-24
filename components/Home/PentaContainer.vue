@@ -63,9 +63,9 @@
       path: '/creation',
       icon: 'mdi-xml',
       bubbles: [
-        { icon: 'mdi-monitor-dashboard', angle: 0, distance: 140 },
-        { icon: 'mdi-storefront-outline', angle: 110, distance: 140 },
-        { icon: 'mdi-pencil', angle: 260, distance: 140 }
+        { icon: 'mdi-monitor-dashboard', angle: 45, distance: 140 },
+        { icon: 'mdi-storefront-outline', angle: 130, distance: 135 },
+        { icon: 'mdi-pencil', angle: 290, distance: 145 }
       ],
       color: 'rgb(58, 42, 26)'
     },
@@ -76,9 +76,9 @@
       path: '/projects',
       icon: 'mdi-briefcase-outline',
       bubbles: [
-        { icon: 'mdi-monitor-shimmer', angle: 20, distance: 140 },
-        { icon: 'mdi-check-bold', angle: 280, distance: 140 },
-        { icon: 'mdi-image-text', angle: 160, distance: 140 }
+        { icon: 'mdi-monitor-shimmer', angle: 20, distance: 145 },
+        { icon: 'mdi-check-bold', angle: 280, distance: 135 },
+        { icon: 'mdi-image-text', angle: 160, distance: 130 }
       ],
       color: 'rgb(42, 26, 58)'
     },
@@ -89,9 +89,9 @@
       path: '/merci',
       icon: 'mdi-star-outline',
       bubbles: [
-        { icon: 'mdi-thumb-up-outline', angle: 0, distance: 140 },
-        { icon: 'mdi-heart-outline', angle: 130, distance: 140 },
-        { icon: 'mdi-message-text-outline', angle: 240, distance: 140 }
+        { icon: 'mdi-thumb-up-outline', angle: 0, distance: 130 },
+        { icon: 'mdi-heart-outline', angle: 130, distance: 135 },
+        { icon: 'mdi-message-text-outline', angle: 240, distance: 145 }
       ],
       color: 'rgb(58, 26, 26)'
     },
@@ -102,9 +102,9 @@
       path: '/faq',
       icon: 'mdi-help',
       bubbles: [
-        { icon: 'mdi-robot-outline', angle: 20, distance: 140 },
-        { icon: 'mdi-lightbulb-on-outline', angle: 120, distance: 140 },
-        { icon: 'mdi-chat-question-outline', angle: 240, distance: 140 }
+        { icon: 'mdi-robot-outline', angle: 20, distance: 130 },
+        { icon: 'mdi-lightbulb-on-outline', angle: 120, distance: 145 },
+        { icon: 'mdi-chat-question-outline', angle: 240, distance: 135 }
       ],
       color: 'rgb(26, 58, 42)'
     },
@@ -115,8 +115,8 @@
       path: '/support',
       icon: 'mdi-cogs',
       bubbles: [
-        { icon: 'mdi-server-network', angle: 0, distance: 140 },
-        { icon: 'mdi-wrench-outline', angle: 120, distance: 140 },
+        { icon: 'mdi-server-network', angle: 0, distance: 145 },
+        { icon: 'mdi-wrench-outline', angle: 120, distance: 135 },
         { icon: 'mdi-shield-lock-outline', angle: 220, distance: 140 }
       ],
       color: 'rgb(26, 42, 58)'
@@ -172,10 +172,12 @@
 
 .penta-container {
   --radius: 32.5%;
-  --center-element-width: 15%;
+  --center-element-width: 17%;
   overflow: visible;
-  width: 100%;
-  max-width: 800px;
+  width: min(100%, 100vh);
+  max-height: 100vh;
+  aspect-ratio: 1;
+  max-width: 850px;
 
   /* Centering with absolute positioning */
   position: absolute;

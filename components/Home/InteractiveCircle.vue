@@ -202,7 +202,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   aspect-ratio: 1/1;
   margin-top: -17.5%;
   margin-left: -17.5%;
-  background-color: rgba(170, 170, 170, 0.795);
+  background-color: rgba(168, 168, 168, 0.521);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -258,10 +258,10 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   10% {
     transform: scale(0.98);
   }
-  25% {
+  15% {
     transform: scale(1);
   }
-  92% {
+  95% {
     transform: scale(1);
   }
   100% {
@@ -360,9 +360,9 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   z-index: -2;
   border-radius: 1000px;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: 1.3s ease-in-out;
+  transition: 1s ease-in-out;
   opacity: 0;
-  animation: fadeIn 1s ease-in-out 1.4s forwards;
+  animation: fadeIn 1s ease-in-out 1s forwards;
 }
 
 .element-6.element.is-hovered::after,
