@@ -32,6 +32,7 @@
   const imageLoaded = ref(false);
   const isMobile = ref(false);
   const animationsAreComplete = ref(false);
+  const isClickDisabled = ref(false);
 
   onMounted(() => {
     // Simple check for touch support to identify mobile devices
@@ -152,6 +153,8 @@
   };
 
   const newPage = (pageId: number, fromButton: boolean = false) => {
+    if (isClickDisabled.value) return;
+
     if (isMobile.value) {
       // On mobile, first tap shows bubbles, second tap navigates.
       if (hoveredId.value === pageId) {
@@ -168,6 +171,11 @@
         navigateToPage(pageId);
       }
     }
+
+    isClickDisabled.value = true;
+    setTimeout(() => {
+      isClickDisabled.value = false;
+    }, 300);
   }
 </script>
 
