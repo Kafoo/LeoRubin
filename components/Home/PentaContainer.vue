@@ -67,7 +67,7 @@
         { icon: 'mdi-storefront-outline', angle: 130, distance: 135 },
         { icon: 'mdi-pencil', angle: 290, distance: 145 }
       ],
-      color: 'rgb(58, 42, 26)'
+      color: 'rgb(7, 61, 0)'
     },
     {
       id: 2,
@@ -80,7 +80,7 @@
         { icon: 'mdi-check-bold', angle: 280, distance: 135 },
         { icon: 'mdi-image-text', angle: 160, distance: 130 }
       ],
-      color: 'rgb(42, 26, 58)'
+      color: 'rgb(24, 29, 87)'
     },
     {
       id: 3,
@@ -93,7 +93,7 @@
         { icon: 'mdi-heart-outline', angle: 130, distance: 135 },
         { icon: 'mdi-message-text-outline', angle: 240, distance: 145 }
       ],
-      color: 'rgb(58, 26, 26)'
+      color: 'rgb(101, 24, 24)'
     },
     {
       id: 4,
@@ -106,7 +106,7 @@
         { icon: 'mdi-lightbulb-on-outline', angle: 120, distance: 145 },
         { icon: 'mdi-chat-question-outline', angle: 240, distance: 135 }
       ],
-      color: 'rgb(26, 58, 42)'
+      color: 'rgb(101, 81, 23)'
     },
     {
       id: 5,
@@ -119,7 +119,7 @@
         { icon: 'mdi-wrench-outline', angle: 120, distance: 135 },
         { icon: 'mdi-shield-lock-outline', angle: 220, distance: 140 }
       ],
-      color: 'rgb(26, 42, 58)'
+      color: 'rgb(59, 57, 46)'
     },
     {
       id: 6,

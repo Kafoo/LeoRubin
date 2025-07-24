@@ -22,23 +22,23 @@
 }
 
 .v-application.creation{
-  background-color: #3a2a1a !important; /* Matches element-1 */
+  background-color: #073d00 !important; /* Matches element-1 */
 }
  
 .v-application.projects{
-  background-color: #2a1a3a !important; /* Matches element-2 */
+  background-color: #181d57 !important; /* Matches element-2 */
 }
 
 .v-application.merci{
-  background-color: #3a1a1a !important; /* Matches element-3 */
+  background-color: #651818 !important; /* Matches element-3 */
 }
 
 .v-application.faq{
-  background-color: #1a3a2a !important; /* Matches element-4 */
+  background-color: #655117 !important; /* Matches element-4 */
 }
 
 .v-application.support{
-  background-color: #1a2a3a !important; /* Matches element-5 */
+  background-color: #3b392e !important; /* Matches element-5 */
 }
 
 .v-application.kafoo{

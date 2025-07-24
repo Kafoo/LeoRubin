@@ -278,7 +278,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   --angle: -90deg;
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
-  background-color: rgba(58, 42, 26, var(--bg-opacity)); /* Much darker brown */
+  background-color: rgba(7, 61, 0, var(--bg-opacity));
   animation: shaking-1 8s infinite linear;
 }
 
@@ -286,7 +286,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   --angle: -18deg; /* -90 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
-  background-color: rgba(42, 26, 58, var(--bg-opacity)); /* Much darker purple */
+  background-color: rgba(24, 29, 87, var(--bg-opacity));
   animation: shaking-2 7s infinite linear;
 }
 
@@ -294,7 +294,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   --angle: 54deg; /* -18 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
-  background-color: rgba(58, 26, 26, var(--bg-opacity)); /* Much darker red */
+  background-color: rgba(101, 24, 24, var(--bg-opacity));
   animation: shaking-1 5s infinite linear;
 }
 
@@ -302,7 +302,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   --angle: 126deg; /* 54 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
-  background-color: rgba(26, 58, 42, var(--bg-opacity)); /* Much darker green */
+  background-color: rgba(101, 81, 23, var(--bg-opacity));
   animation: shaking-2 9s infinite linear;
 }
 
@@ -310,7 +310,7 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   --angle: 198deg; /* 126 + 72 */
   top: calc(50% + var(--radius) * sin(var(--angle)));
   left: calc(50% + var(--radius) * cos(var(--angle)));
-  background-color: rgba(26, 42, 58, var(--bg-opacity)); /* Much darker blue */
+  background-color: rgba(59, 57, 46, var(--bg-opacity));
   animation: shaking-1 6s infinite linear;
 }
 
