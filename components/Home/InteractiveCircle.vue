@@ -16,15 +16,13 @@
       </transition>
     </div>
     <transition-group name="bubble-spawn" tag="div" class="bubbles-container">
-      <div
+      <Bubble
         v-if="isHovered && page.bubbles && !page.active"
         v-for="bubble in page.bubbles"
         :key="bubble.icon"
-        class="bubble"
-        :style="bubbleStyle(bubble)"
-      >
-        <v-icon :icon="bubble.icon" class="bubble-icon"></v-icon>
-      </div>
+        :bubble="bubble"
+        :color="page.color"
+      />
     </transition-group>
   </div>
 </template>
@@ -32,6 +30,7 @@
 <script setup lang="ts">
 import { VIcon } from 'vuetify/components';
 import ContactInfo from './ContactInfo.vue';
+import Bubble from './Bubble.vue';
 
 const props = defineProps({
   page: {
@@ -98,14 +97,6 @@ const onMouseleave = () => {
   }
 };
 
-const bubbleStyle = (bubble: { angle: number, distance: number }) => {
-  const colorWithAlpha = props.page.color.replace('rgb', 'rgba').replace(')', ', 0.8)');
-  return {
-    '--angle': `${bubble.angle}deg`,
-    '--distance': `-${bubble.distance}%`,
-    'background-color': colorWithAlpha
-  };
-};
 </script>
 
 
@@ -194,28 +185,6 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.bubble {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 35%;
-  aspect-ratio: 1/1;
-  margin-top: -17.5%;
-  margin-left: -17.5%;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(4px);
-  filter: brightness(70%);
-  transform: rotate(var(--angle)) translateY(var(--distance, -140%)) rotate(calc(-1 * var(--angle)));
-}
-
-.bubble-icon {
-  font-size: 1.5em;
-  color: white;
 }
 
 .bubble-spawn-enter-active,
