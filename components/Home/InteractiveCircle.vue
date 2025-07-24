@@ -151,7 +151,10 @@ const onMouseleave = () => {
   z-index: 5;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  transition: width var(--element-hover-transition-duration) ease-in-out;
+  transition: 
+    width var(--element-hover-transition-duration) ease-in-out,
+    top var(--element-hover-transition-duration) ease-in-out,
+    left var(--element-hover-transition-duration) ease-in-out;
 }
 
 .element-title {
