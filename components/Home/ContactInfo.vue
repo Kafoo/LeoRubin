@@ -20,14 +20,17 @@
 <script setup lang="ts">
 import { VIcon } from 'vuetify/components';
 
+// Defines the custom events that this component can emit.
 defineEmits(['discoverProfile']);
 
-defineProps({                                                                                                                                                                 
-  isActive: {                                                                                                                                                                 
-    type: Boolean,                                                                                                                                                            
-    default: false                                                                                                                                                            
-  }                                                                                                                                                                           
-});  
+// Defines the properties that this component accepts.
+defineProps({
+  // A boolean to indicate if the parent circle is in its 'active' state.
+  isActive: {
+    type: Boolean,
+    default: false
+  }
+});
 </script>
 
 <style scoped>
