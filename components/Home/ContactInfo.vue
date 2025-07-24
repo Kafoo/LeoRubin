@@ -13,7 +13,7 @@
     v-if="!isActive"
     class="profil-button"
     @click.stop="$emit('discoverProfile')"
-    >Profil</div>
+    >Mon Profil</div>
   </div>
 </template>
 
@@ -57,16 +57,17 @@ defineProps({
 
 .profil-button {
   padding: 0.5em 1em;
-  border: 2px solid rgba(77, 77, 77, 0.5);
-  border-radius: 12px;
-  transition: background-color 0.2s;
+  border-radius: 10px;
+  letter-spacing: 4px;
+  transition: box-shadow 0.2s;
+  box-shadow: inset -2px -1px 4px rgb(0 0 0 / 22%);
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .profil-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset -2px -1px 4px rgb(0 0 0 / 5%);
 }
 
 
