@@ -99,7 +99,7 @@ const onMouseleave = () => {
 };
 
 const bubbleStyle = (bubble: { angle: number, distance: number }) => {
-  const colorWithAlpha = props.page.color.replace('rgb', 'rgba').replace(')', ', 0.7)');
+  const colorWithAlpha = props.page.color.replace('rgb', 'rgba').replace(')', ', 0.8)');
   return {
     '--angle': `${bubble.angle}deg`,
     '--distance': `-${bubble.distance}%`,
