@@ -23,7 +23,7 @@
         class="bubble"
         :style="bubbleStyle(bubble)"
       >
-        <v-icon :icon="bubble.icon" class="bubble-icon" :style="{ color: page.color }"></v-icon>
+        <v-icon :icon="bubble.icon" class="bubble-icon"></v-icon>
       </div>
     </transition-group>
   </div>
@@ -99,9 +99,11 @@ const onMouseleave = () => {
 };
 
 const bubbleStyle = (bubble: { angle: number, distance: number }) => {
+  const colorWithAlpha = props.page.color.replace('rgb', 'rgba').replace(')', ', 0.7)');
   return {
     '--angle': `${bubble.angle}deg`,
-    '--distance': `-${bubble.distance}%`
+    '--distance': `-${bubble.distance}%`,
+    'background-color': colorWithAlpha
   };
 };
 </script>
@@ -202,17 +204,18 @@ const bubbleStyle = (bubble: { angle: number, distance: number }) => {
   aspect-ratio: 1/1;
   margin-top: -17.5%;
   margin-left: -17.5%;
-  background-color: rgba(168, 168, 168, 0.521);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(4px);
+  filter: brightness(70%);
   transform: rotate(var(--angle)) translateY(var(--distance, -140%)) rotate(calc(-1 * var(--angle)));
 }
 
 .bubble-icon {
   font-size: 1.5em;
+  color: white;
 }
 
 .bubble-spawn-enter-active,
