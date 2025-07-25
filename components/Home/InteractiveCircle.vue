@@ -414,7 +414,7 @@ const onMouseleave = () => {
 
 .element-6.is-hovered::before,
 .element-6:hover::before {
-  animation: none;
+  animation-play-state: paused;
 }
 
 /* Styles for when a circle is 'active' (clicked, before navigating). */
