@@ -1,5 +1,5 @@
 <template>
-  <div class="penta-container centering">
+  <div class="penta-container centering" :class="{ 'center-hovered': hoveredId === 6 }">
 
     <!--
     <div class="cross">
@@ -238,5 +238,7 @@
   cursor: pointer;
 }
 
-
+.penta-container.center-hovered {                                                                                                                                            
+  --radius: 35%;                                                                                                                                                             
+}  
 </style>
