@@ -106,6 +106,7 @@
 
 <script setup lang="ts">
 import ContactInfo from '~/components/Home/ContactInfo.vue';
+import ContentCard from '~/components/ContentCard.vue';
 
 const icons = [
   { name: 'mdi-language-html5', size: 'x-large', transform: 'rotate(-15deg)', position: { top: '15%', left: '10%', animationDelay: '0s', animationDuration: '5s' } },
