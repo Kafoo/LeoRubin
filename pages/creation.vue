@@ -25,6 +25,20 @@
           </v-list>
         </ContentCard>
 
+        <ContentCard title="Un autre besoin ?" v-motion-slide-visible-once-bottom>
+          <p class="text-body-1 text-center pa-4">
+            Votre projet concerne une <strong>reprise</strong>, une <strong>maintenance</strong>, une <strong>refonte</strong>, de l'<strong>accompagnement</strong>, un <strong>audit</strong> ou l'<strong>optimisation</strong> d'un site existant ?
+            <br><br>
+            Je vous invite à consulter la page dédiée à ces services.
+          </p>
+          <div class="text-center mb-2">
+            <v-btn to="/support" color="primary" variant="flat">
+              <v-icon start>mdi-face-agent</v-icon>
+              Services de support
+            </v-btn>
+          </div>
+        </ContentCard>
+
         <ContentCard title="Ma démarche">
           <v-list lines="two" bg-color="transparent">
             <v-list-item prepend-icon="mdi-ear-hearing" title="Analyse des besoins" subtitle="Écoute et analyse de votre projet pour proposer une solution technique adaptée."></v-list-item>
