@@ -332,7 +332,6 @@ const onMouseleave = () => {
   letter-spacing: 3px; /* Override base letter-spacing */
 }
 
-/* Pulsing Background for central circle */
 /* Pulsing background effect for the central circle. */
 .element-6::before {
   content: '';
@@ -349,7 +348,6 @@ const onMouseleave = () => {
   animation: pulse 2.5s infinite ease-in-out;
 }
 
-/* Medium circle */
 /* Decorative ring around the central circle. */
 .element-6::after {
   content: '';
@@ -402,11 +400,6 @@ const onMouseleave = () => {
 
   .element-6 {
     font-size: 3vw;
-  }
-
-  .element-6.is-hovered,
-  .element-6:hover {
-    width: 75%;
   }
 }
 
