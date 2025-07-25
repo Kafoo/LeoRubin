@@ -2,14 +2,14 @@
   <v-container class="py-10">
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12" v-motion-fade-visible-once :delay="200">
           <h1 class="text-h2 font-weight-bold mb-4" style="color: white;">Création</h1>
           <p class="text-h6 font-weight-light" style="color: #f0f0f0;">
             Développement de solutions web sur-mesure.
           </p>
         </div>
 
-        <v-card class="content-card mb-10">
+        <v-card class="content-card mb-10" v-motion-slide-visible-once-bottom>
           <v-card-text class="pa-5">
             <h2 class="text-h4 mb-4">Ma démarche</h2>
             <v-list lines="two" bg-color="transparent">
@@ -25,7 +25,7 @@
         </v-card>
 
         <!-- Section: Processus -->
-        <div class="mb-12">
+        <div class="mb-12" v-motion-slide-visible-once-bottom>
             <h2 class="text-h4 text-center mb-8" style="color: white;">Le processus</h2>
             <v-timeline align="start" side="end" theme="dark">
                 <v-timeline-item dot-color="primary" size="small">
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Section: Contact -->
-        <v-card class="content-card text-center">
+        <v-card class="content-card text-center" v-motion-slide-visible-once-bottom>
           <v-card-text class="pa-5">
             <h2 class="text-h4 mb-4">Contact</h2>
             <p class="mb-4">Discutons de votre projet. Le premier échange est sans engagement.</p>
