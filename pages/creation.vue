@@ -3,13 +3,28 @@
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8">
         <div class="hero-section text-center" v-motion-fade-visible-once :delay="200">
-          <div>
+          <div class="floating-icons">
+            <div
+              v-for="(icon, i) in icons"
+              :key="i"
+              :style="icon.position"
+              class="floating-icon-wrapper"
+            >
+              <v-icon
+                :icon="icon.name"
+                :size="icon.size"
+                :style="{ transform: icon.transform }"
+                color="rgba(255, 255, 255, 0.3)"
+              ></v-icon>
+            </div>
+          </div>
+          <div style="z-index: 1;">
             <h1 class="text-h3 text-md-h1 font-weight-bold mb-6" style="color: white;">Création</h1>
             <p class="text-h6 text-md-h5 font-weight-light" style="color: #f0f0f0;">
               Développement de solutions web sur-mesure.
             </p>
           </div>
-          <div class="scroll-indicator">
+          <div class="scroll-indicator" style="z-index: 2;">
             <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
           </div>
         </div>
@@ -77,6 +92,17 @@
 
 <script setup lang="ts">
 import ContactInfo from '~/components/Home/ContactInfo.vue';
+
+const icons = [
+  { name: 'mdi-language-html5', size: 'x-large', transform: 'rotate(-15deg)', position: { top: '15%', left: '10%', animationDelay: '0s', animationDuration: '5s' } },
+  { name: 'mdi-language-css3', size: 'large', transform: 'rotate(10deg)', position: { top: '20%', right: '12%', animationDelay: '1s', animationDuration: '7s' } },
+  { name: 'mdi-language-javascript', size: 'x-large', transform: 'rotate(5deg)', position: { top: '60%', left: '5%', animationDelay: '2s', animationDuration: '6s' } },
+  { name: 'mdi-wordpress', size: 'large', transform: 'rotate(-10deg)', position: { top: '75%', right: '8%', animationDelay: '0.5s', animationDuration: '8s' } },
+  { name: 'mdi-database', size: 'large', transform: 'rotate(15deg)', position: { bottom: '10%', left: '20%', animationDelay: '1.5s', animationDuration: '5s' } },
+  { name: 'mdi-cellphone-link', size: 'large', transform: 'rotate(20deg)', position: { top: '40%', right: '20%', animationDelay: '2.5s', animationDuration: '7s' } },
+  { name: 'mdi-language-php', size: 'x-large', transform: 'rotate(-5deg)', position: { bottom: '15%', right: '25%', animationDelay: '3s', animationDuration: '6s' } },
+  { name: 'mdi-sitemap', size: 'large', transform: 'rotate(-20deg)', position: { top: '50%', left: '18%', animationDelay: '1.2s', animationDuration: '8s' } },
+];
 </script>
 
 <style scoped>
@@ -88,6 +114,35 @@ import ContactInfo from '~/components/Home/ContactInfo.vue';
   align-items: center;
   position: relative;
   margin-bottom: 6rem;
+  overflow: hidden; /* Hide parts of icons that go outside */
+}
+
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-icon-wrapper {
+  position: absolute;
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 
 .scroll-indicator {
