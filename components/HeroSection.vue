@@ -28,6 +28,22 @@
 </template>
 
 <script setup lang="ts">
+import type { PropType } from 'vue';
+
+interface Icon {
+  name: string;
+  size: string;
+  transform: string;
+  position: {
+    top?: string;
+    left?: string;
+    right?: string;
+    bottom?: string;
+    animationDelay: string;
+    animationDuration: string;
+  };
+}
+
 defineProps({
   title: {
     type: String,
@@ -37,22 +53,11 @@ defineProps({
     type: String,
     required: true,
   },
+  icons: {
+    type: Array as PropType<Icon[]>,
+    default: () => [],
+  },
 });
-
-const icons = [
-  { name: 'mdi-language-html5', size: 'x-large', transform: 'rotate(-15deg)', position: { top: '15%', left: '10%', animationDelay: '0s', animationDuration: '5s' } },
-  { name: 'mdi-language-css3', size: 'large', transform: 'rotate(10deg)', position: { top: '20%', right: '12%', animationDelay: '1s', animationDuration: '7s' } },
-  { name: 'mdi-language-javascript', size: 'x-large', transform: 'rotate(5deg)', position: { top: '65%', left: '5%', animationDelay: '2s', animationDuration: '6s' } },
-  { name: 'mdi-wordpress', size: 'large', transform: 'rotate(-10deg)', position: { top: '75%', right: '8%', animationDelay: '0.5s', animationDuration: '8s' } },
-  { name: 'mdi-database', size: 'large', transform: 'rotate(15deg)', position: { bottom: '10%', left: '20%', animationDelay: '1.5s', animationDuration: '5s' } },
-  { name: 'mdi-cellphone-link', size: 'large', transform: 'rotate(20deg)', position: { top: '40%', right: '20%', animationDelay: '2.5s', animationDuration: '7s' } },
-  { name: 'mdi-language-php', size: 'x-large', transform: 'rotate(-5deg)', position: { bottom: '15%', right: '25%', animationDelay: '3s', animationDuration: '6s' } },
-  { name: 'mdi-sitemap', size: 'large', transform: 'rotate(-20deg)', position: { top: '50%', left: '12%', animationDelay: '1.2s', animationDuration: '8s' } },
-  { name: 'mdi-vuejs', size: 'x-large', transform: 'rotate(12deg)', position: { top: '35%', left: '30%', animationDelay: '0.8s', animationDuration: '7.5s' } },
-  { name: 'mdi-laravel', size: 'large', transform: 'rotate(-8deg)', position: { top: '65%', right: '35%', animationDelay: '2.2s', animationDuration: '5.5s' } },
-  { name: 'mdi-git', size: 'large', transform: 'rotate(18deg)', position: { bottom: '15%', left: '45%', animationDelay: '3.5s', animationDuration: '8s' } },
-  { name: 'mdi-rocket-launch-outline', size: 'large', transform: 'rotate(-12deg)', position: { top: '10%', right: '30%', animationDelay: '0.2s', animationDuration: '6.5s' } },
-];
 </script>
 
 <style scoped>
