@@ -1,5 +1,13 @@
 <template>
   <v-container class="py-10">
+    <v-btn
+      icon="mdi-home-outline"
+      to="/"
+      class="home-button"
+      variant="flat"
+      color="rgba(255, 255, 255, 0.15)"
+      title="Retour à l'accueil"
+    ></v-btn>
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8">
         <div class="hero-section text-center" v-motion-fade-visible-once :delay="200">
@@ -102,10 +110,21 @@ const icons = [
   { name: 'mdi-cellphone-link', size: 'large', transform: 'rotate(20deg)', position: { top: '40%', right: '20%', animationDelay: '2.5s', animationDuration: '7s' } },
   { name: 'mdi-language-php', size: 'x-large', transform: 'rotate(-5deg)', position: { bottom: '15%', right: '25%', animationDelay: '3s', animationDuration: '6s' } },
   { name: 'mdi-sitemap', size: 'large', transform: 'rotate(-20deg)', position: { top: '50%', left: '18%', animationDelay: '1.2s', animationDuration: '8s' } },
+  { name: 'mdi-vuejs', size: 'x-large', transform: 'rotate(12deg)', position: { top: '35%', left: '30%', animationDelay: '0.8s', animationDuration: '7.5s' } },
+  { name: 'mdi-laravel', size: 'large', transform: 'rotate(-8deg)', position: { top: '65%', right: '35%', animationDelay: '2.2s', animationDuration: '5.5s' } },
+  { name: 'mdi-git', size: 'large', transform: 'rotate(18deg)', position: { bottom: '5%', left: '45%', animationDelay: '3.5s', animationDuration: '8s' } },
+  { name: 'mdi-rocket-launch-outline', size: 'large', transform: 'rotate(-12deg)', position: { top: '10%', right: '30%', animationDelay: '0.2s', animationDuration: '6.5s' } },
 ];
 </script>
 
 <style scoped>
+.home-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+}
+
 .hero-section {
   min-height: 86vh;
   display: flex;
