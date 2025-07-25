@@ -107,7 +107,7 @@ const icons = [
 
 <style scoped>
 .hero-section {
-  min-height: 85vh;
+  min-height: 86vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
