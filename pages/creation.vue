@@ -2,11 +2,16 @@
   <v-container class="py-10">
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8">
-        <div class="text-center mb-12" v-motion-fade-visible-once :delay="200">
-          <h1 class="text-h2 font-weight-bold mb-4" style="color: white;">Création</h1>
-          <p class="text-h6 font-weight-light" style="color: #f0f0f0;">
-            Développement de solutions web sur-mesure.
-          </p>
+        <div class="hero-section text-center" v-motion-fade-visible-once :delay="200">
+          <div>
+            <h1 class="text-h3 text-md-h1 font-weight-bold mb-6" style="color: white;">Création</h1>
+            <p class="text-h6 text-md-h5 font-weight-light" style="color: #f0f0f0;">
+              Développement de solutions web sur-mesure.
+            </p>
+          </div>
+          <div class="scroll-indicator">
+            <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
+          </div>
         </div>
 
         <v-card class="content-card mb-10" v-motion-slide-visible-once-bottom>
@@ -75,6 +80,34 @@ import ContactInfo from '~/components/Home/ContactInfo.vue';
 </script>
 
 <style scoped>
+.hero-section {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
 .content-card {
   background-color: rgba(255, 255, 255, 0.9);
   color: #3a3a3a;
