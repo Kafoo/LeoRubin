@@ -1,7 +1,7 @@
 <template>
 
-  <OrganHeader v-if="page !== 'home'"/>
-  <OrganHomeHeader v-if="page == 'home'"/>
+  <!-- <OrganHeader v-if="page !== 'home'"/>
+  <OrganHomeHeader v-if="page == 'home'"/> -->
 
   <v-main>
     <slot/>

@@ -1,7 +1,7 @@
 <template>
   <div class="centering-column mt-100">
-    <h1>Témoignages</h1>
-    <v-btn class="mt-8 " size="small" color="#3a3a3a" to="/">Retour à l'accueil</v-btn>
+    <h1>[[ Support ]]</h1>
+    <v-btn class="mt-8 " size="small" color="#3a3a3a" to="/">Retour</v-btn>
   </div>
 </template>
 

@@ -249,19 +249,22 @@ const onMouseleave = () => {
 
 @keyframes pulse {
   0% {
-    transform: scale(1.1);
-  }
-  10% {
-    transform: scale(0.98);
-  }
-  15% {
     transform: scale(1);
   }
-  95% {
+  45% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.98);
+  }
+  65% {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
@@ -346,6 +349,7 @@ const onMouseleave = () => {
   background-color: rgb(212, 212, 212);
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7);
   animation: pulse 2.5s infinite ease-in-out;
+  pointer-events: none;
 }
 
 /* Decorative ring around the central circle. */
@@ -363,6 +367,7 @@ const onMouseleave = () => {
   transition: 1s ease-in-out;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 1s forwards;
+  pointer-events: none;
 }
 
 .element-6.element.is-hovered::after,
@@ -414,7 +419,7 @@ const onMouseleave = () => {
 
 .element-6.is-hovered::before,
 .element-6:hover::before {
-  animation-play-state: paused;
+  animation: none;
 }
 
 /* Styles for when a circle is 'active' (clicked, before navigating). */

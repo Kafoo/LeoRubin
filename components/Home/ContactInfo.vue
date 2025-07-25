@@ -45,6 +45,7 @@ defineProps({
   text-align: center;
   font-weight: normal;
   font-family: 'Philosopher', sans-serif;
+  margin-top: 1em;
 }
 
 .contact-name {
@@ -61,34 +62,28 @@ defineProps({
 
 /* Styles for the "Mon Profil" button. */
 .profil-button {
-  padding: 0.5em 1.5em;
-  border-radius: 20px;
+  padding: 0.3em 1em;
+  border-radius: 15px;
   letter-spacing: 1px;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: #333;
   background-color: transparent;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 1.1em;
+  margin-top: 0.5em;
 }
 
 .profil-button:hover {
   background-color: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.4);
 }
 
 
 /* Responsive adjustments for smaller screens. */
-@media (max-width: 1000px) {
+@media (max-width: 799px) {
   
   .contact-info {
-    font-size: 0.95em;
-  }
-  .contact-name{
-    margin-bottom: 0.5em;;
-  }
-  .contact-detail{
-    margin-bottom: 0.5em;
+    font-size: 1em;
   }
   .profil-button {
     border-radius: 8px;

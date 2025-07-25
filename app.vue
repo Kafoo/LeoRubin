@@ -18,18 +18,18 @@ const backgroundClass = computed({
 
     if (page == '/') {
       return 'home'
-    } else if (page == '/pratiques') {
-      return 'pratiques'
-    } else if (page == '/actualites') {
-      return 'actualites'
-    } else if (page == '/ressources') {
-      return 'ressources'
-    } else if (page == '/contact') {
-      return 'contact'
-    } else if (page == '/temoignages') {
-      return 'temoignages'
-    } else if (page == '/leo') {
-      return 'leo'
+    } else if (page == '/creation') {
+      return 'creation'
+    } else if (page == '/projects') {
+      return 'projects'
+    } else if (page == '/merci') {
+      return 'merci'
+    } else if (page == '/faq') {
+      return 'faq'
+    } else if (page == '/support') {
+      return 'support'
+    } else if (page == '/kafoo') {
+      return 'kafoo'
     } else {
       return null
     }
