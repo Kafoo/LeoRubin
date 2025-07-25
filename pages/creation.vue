@@ -37,32 +37,26 @@
           </div>
         </div>
 
-        <v-card class="content-card mb-10" v-motion-slide-visible-once-bottom>
-          <v-card-text class="pa-5">
-            <h2 class="text-h4 mb-4">Vos besoins</h2>
-            <v-list lines="two" bg-color="transparent">
-              <v-list-item prepend-icon="mdi-rocket-launch-outline" title="Lancer une nouvelle activité" subtitle="Créer une présence en ligne professionnelle pour démarrer votre projet."></v-list-item>
-              <v-list-item prepend-icon="mdi-autorenew" title="Moderniser un site existant" subtitle="Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel."></v-list-item>
-              <v-list-item prepend-icon="mdi-cart-outline" title="Vendre en ligne" subtitle="Mettre en place une boutique e-commerce performante et sécurisée."></v-list-item>
-              <v-list-item prepend-icon="mdi-tools" title="Développer un outil sur-mesure" subtitle="Créer une application web ou un intranet pour répondre à un besoin métier spécifique."></v-list-item>
-            </v-list>
-          </v-card-text>
-        </v-card>
+        <ContentCard title="Vos besoins">
+          <v-list lines="two" bg-color="transparent">
+            <v-list-item prepend-icon="mdi-rocket-launch-outline" title="Lancer une nouvelle activité" subtitle="Créer une présence en ligne professionnelle pour démarrer votre projet."></v-list-item>
+            <v-list-item prepend-icon="mdi-autorenew" title="Moderniser un site existant" subtitle="Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel."></v-list-item>
+            <v-list-item prepend-icon="mdi-cart-outline" title="Vendre en ligne" subtitle="Mettre en place une boutique e-commerce performante et sécurisée."></v-list-item>
+            <v-list-item prepend-icon="mdi-tools" title="Développer un outil sur-mesure" subtitle="Créer une application web ou un intranet pour répondre à un besoin métier spécifique."></v-list-item>
+          </v-list>
+        </ContentCard>
 
-        <v-card class="content-card mb-10" v-motion-slide-visible-once-bottom>
-          <v-card-text class="pa-5">
-            <h2 class="text-h4 mb-4">Ma démarche</h2>
-            <v-list lines="two" bg-color="transparent">
-              <v-list-item prepend-icon="mdi-ear-hearing" title="Analyse des besoins" subtitle="Écoute et analyse de votre projet pour proposer une solution technique adaptée."></v-list-item>
-              <v-list-item prepend-icon="mdi-cogs" title="Approche technique flexible" subtitle="Développement sur-mesure (Nuxt, Laravel) ou intégration de CMS (WordPress) selon vos objectifs."></v-list-item>
-              <v-list-item prepend-icon="mdi-devices" title="Conception responsive" subtitle="Une expérience utilisateur optimale sur ordinateur, tablette et mobile."></v-list-item>
-              <v-list-item prepend-icon="mdi-lightbulb-on-outline" title="Tout type de projet" subtitle="Site vitrine, e-commerce, application métier (SaaS), intranet..."></v-list-item>
-            </v-list>
-            <p class="text-body-1 mt-4 text-center">
-              Consultez mes <nuxt-link to="/projects" class="text-link">projets</nuxt-link> pour voir des exemples concrets.
-            </p>
-          </v-card-text>
-        </v-card>
+        <ContentCard title="Ma démarche">
+          <v-list lines="two" bg-color="transparent">
+            <v-list-item prepend-icon="mdi-ear-hearing" title="Analyse des besoins" subtitle="Écoute et analyse de votre projet pour proposer une solution technique adaptée."></v-list-item>
+            <v-list-item prepend-icon="mdi-cogs" title="Approche technique flexible" subtitle="Développement sur-mesure (Nuxt, Laravel) ou intégration de CMS (WordPress) selon vos objectifs."></v-list-item>
+            <v-list-item prepend-icon="mdi-devices" title="Conception responsive" subtitle="Une expérience utilisateur optimale sur ordinateur, tablette et mobile."></v-list-item>
+            <v-list-item prepend-icon="mdi-lightbulb-on-outline" title="Tout type de projet" subtitle="Site vitrine, e-commerce, application métier (SaaS), intranet..."></v-list-item>
+          </v-list>
+          <p class="text-body-1 mt-4 text-center">
+            Consultez mes <nuxt-link to="/projects" class="text-link">projets</nuxt-link> pour voir des exemples concrets.
+          </p>
+        </ContentCard>
 
         <!-- Section: Processus -->
         <div class="mb-12" v-motion-slide-visible-once-bottom>
