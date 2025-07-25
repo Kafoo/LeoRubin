@@ -27,8 +27,8 @@
             </div>
           </div>
           <div style="z-index: 1;">
-            <h1 class="text-h3 text-md-h1 font-weight-bold mb-6" style="color: white;">Création</h1>
-            <p class="text-h6 text-md-h5 font-weight-light" style="color: #f0f0f0;">
+            <h1 class="text-h3 text-md-h1 mb-6 page-title" style="color: white;">Création</h1>
+            <p class="text-h6 text-md-h5 font-weight-light page-subtitle" style="color: #f0f0f0;">
               Développement de solutions web sur-mesure.
             </p>
           </div>
@@ -111,15 +111,15 @@ import ContentCard from '~/components/ContentCard.vue';
 const icons = [
   { name: 'mdi-language-html5', size: 'x-large', transform: 'rotate(-15deg)', position: { top: '15%', left: '10%', animationDelay: '0s', animationDuration: '5s' } },
   { name: 'mdi-language-css3', size: 'large', transform: 'rotate(10deg)', position: { top: '20%', right: '12%', animationDelay: '1s', animationDuration: '7s' } },
-  { name: 'mdi-language-javascript', size: 'x-large', transform: 'rotate(5deg)', position: { top: '60%', left: '5%', animationDelay: '2s', animationDuration: '6s' } },
+  { name: 'mdi-language-javascript', size: 'x-large', transform: 'rotate(5deg)', position: { top: '65%', left: '5%', animationDelay: '2s', animationDuration: '6s' } },
   { name: 'mdi-wordpress', size: 'large', transform: 'rotate(-10deg)', position: { top: '75%', right: '8%', animationDelay: '0.5s', animationDuration: '8s' } },
   { name: 'mdi-database', size: 'large', transform: 'rotate(15deg)', position: { bottom: '10%', left: '20%', animationDelay: '1.5s', animationDuration: '5s' } },
   { name: 'mdi-cellphone-link', size: 'large', transform: 'rotate(20deg)', position: { top: '40%', right: '20%', animationDelay: '2.5s', animationDuration: '7s' } },
   { name: 'mdi-language-php', size: 'x-large', transform: 'rotate(-5deg)', position: { bottom: '15%', right: '25%', animationDelay: '3s', animationDuration: '6s' } },
-  { name: 'mdi-sitemap', size: 'large', transform: 'rotate(-20deg)', position: { top: '50%', left: '18%', animationDelay: '1.2s', animationDuration: '8s' } },
+  { name: 'mdi-sitemap', size: 'large', transform: 'rotate(-20deg)', position: { top: '50%', left: '12%', animationDelay: '1.2s', animationDuration: '8s' } },
   { name: 'mdi-vuejs', size: 'x-large', transform: 'rotate(12deg)', position: { top: '35%', left: '30%', animationDelay: '0.8s', animationDuration: '7.5s' } },
   { name: 'mdi-laravel', size: 'large', transform: 'rotate(-8deg)', position: { top: '65%', right: '35%', animationDelay: '2.2s', animationDuration: '5.5s' } },
-  { name: 'mdi-git', size: 'large', transform: 'rotate(18deg)', position: { bottom: '5%', left: '45%', animationDelay: '3.5s', animationDuration: '8s' } },
+  { name: 'mdi-git', size: 'large', transform: 'rotate(18deg)', position: { bottom: '15%', left: '45%', animationDelay: '3.5s', animationDuration: '8s' } },
   { name: 'mdi-rocket-launch-outline', size: 'large', transform: 'rotate(-12deg)', position: { top: '10%', right: '30%', animationDelay: '0.2s', animationDuration: '6.5s' } },
 ];
 </script>
@@ -173,7 +173,7 @@ const icons = [
 
 .scroll-indicator {
   position: absolute;
-  bottom: 20px;
+  bottom: -5px;
   animation: bounce 2s infinite;
 }
 
@@ -189,11 +189,6 @@ const icons = [
   }
 }
 
-.content-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #3a3a3a;
-}
-
 .text-link {
   color: #1976D2; /* Vuetify primary color */
   text-decoration: none;
@@ -202,5 +197,14 @@ const icons = [
 
 .text-link:hover {
   text-decoration: underline;
+}
+
+.page-title {
+  font-family: 'Philosopher', sans-serif;
+  letter-spacing: 8px !important;
+}
+
+.page-subtitle{
+  font-family: monospace;
 }
 </style>
