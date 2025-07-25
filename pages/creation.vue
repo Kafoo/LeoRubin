@@ -9,7 +9,7 @@
       title="Retour à l'accueil"
     ></v-btn>
     <v-row justify="center">
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12" md="10" lg="10">
         <HeroSection
           title="Création"
           subtitle="Développement de solutions web sur-mesure."
