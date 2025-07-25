@@ -39,6 +39,18 @@
 
         <v-card class="content-card mb-10" v-motion-slide-visible-once-bottom>
           <v-card-text class="pa-5">
+            <h2 class="text-h4 mb-4">Vos besoins</h2>
+            <v-list lines="two" bg-color="transparent">
+              <v-list-item prepend-icon="mdi-rocket-launch-outline" title="Lancer une nouvelle activité" subtitle="Créer une présence en ligne professionnelle pour démarrer votre projet."></v-list-item>
+              <v-list-item prepend-icon="mdi-autorenew" title="Moderniser un site existant" subtitle="Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel."></v-list-item>
+              <v-list-item prepend-icon="mdi-cart-outline" title="Vendre en ligne" subtitle="Mettre en place une boutique e-commerce performante et sécurisée."></v-list-item>
+              <v-list-item prepend-icon="mdi-tools" title="Développer un outil sur-mesure" subtitle="Créer une application web ou un intranet pour répondre à un besoin métier spécifique."></v-list-item>
+            </v-list>
+          </v-card-text>
+        </v-card>
+
+        <v-card class="content-card mb-10" v-motion-slide-visible-once-bottom>
+          <v-card-text class="pa-5">
             <h2 class="text-h4 mb-4">Ma démarche</h2>
             <v-list lines="two" bg-color="transparent">
               <v-list-item prepend-icon="mdi-ear-hearing" title="Analyse des besoins" subtitle="Écoute et analyse de votre projet pour proposer une solution technique adaptée."></v-list-item>
