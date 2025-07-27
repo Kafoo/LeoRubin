@@ -1,6 +1,17 @@
 <template>
   <div class="hero-section text-center">
-    <div class="floating-icons" v-motion-fade-visible-once :delay="200">
+    <div
+      class="floating-icons"
+      v-motion
+      :delay="200"
+      :initial="{ opacity: 0 }"
+      :visible-once="{
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      }"
+    >
       <div
         v-for="(icon, i) in icons"
         :key="i"
