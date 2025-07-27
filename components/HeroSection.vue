@@ -4,11 +4,9 @@
       class="floating-icons"
       v-motion
       :initial="{
-        y: 100,
         opacity: 0,
       }"
       :enter="{
-        y: 100,
         opacity: 1,
         transition: {
           duration: 900,
@@ -90,10 +88,12 @@ defineProps({
 
 .floating-icons {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  height: 80vh;
+  transform: translate(-50%, -50%) translateY(100px);
+  opacity: 0;
   pointer-events: none;
 }
 
