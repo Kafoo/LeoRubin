@@ -1,7 +1,6 @@
 <template>
-  <div class="hero-section text-center centering">
-    <div class="hero-container" style="width: 80%; margin: auto; height: 100vh;">
-      <div
+  <div class="hero-section text-center">
+    <div
       class="floating-icons"
       v-motion
       :initial="{
@@ -15,30 +14,29 @@
           ease: 'easeIn',
         },
       }"
+    >
+      <div
+        v-for="(icon, i) in icons"
+        :key="i"
+        :style="icon.position"
+        class="floating-icon-wrapper"
       >
-        <div
-          v-for="(icon, i) in icons"
-          :key="i"
-          :style="icon.position"
-          class="floating-icon-wrapper"
-        >
-          <v-icon
-            :icon="icon.name"
-            :size="icon.size"
-            :style="{ transform: icon.transform }"
-            color="rgba(255, 255, 255, 0.3)"
-          ></v-icon>
-        </div>
+        <v-icon
+          :icon="icon.name"
+          :size="icon.size"
+          :style="{ transform: icon.transform }"
+          color="rgba(255, 255, 255, 0.3)"
+        ></v-icon>
       </div>
-      <div style="z-index: 1;" v-motion-fade-visible-once :delay="100">
-        <h1 class="text-h3 text-md-h1 mb-6 page-title" style="color: white;">{{ title }}</h1>
-        <p class="text-h6 text-md-h5 font-weight-light page-subtitle" style="color: #f0f0f0;">
-          {{ subtitle }}
-        </p>
-      </div>
-      <div class="scroll-indicator" style="z-index: 2;" v-motion-fade-visible-once :delay="800">
-        <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
-      </div>
+    </div>
+    <div style="z-index: 1;" v-motion-fade-visible-once :delay="100">
+      <h1 class="text-h3 text-md-h1 mb-6 page-title" style="color: white;">{{ title }}</h1>
+      <p class="text-h6 text-md-h5 font-weight-light page-subtitle" style="color: #f0f0f0;">
+        {{ subtitle }}
+      </p>
+    </div>
+    <div class="scroll-indicator" style="z-index: 2;" v-motion-fade-visible-once :delay="800">
+      <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
     </div>
   </div>
 </template>
@@ -80,7 +78,6 @@ defineProps({
 .hero-section {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -92,6 +89,9 @@ defineProps({
   position: absolute;
   height: 100%;
   width: 100%;
+  max-width: 1000px;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
 }
@@ -118,6 +118,8 @@ defineProps({
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   animation: bounce 2s infinite;
 }
 
