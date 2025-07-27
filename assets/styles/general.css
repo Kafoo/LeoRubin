@@ -17,8 +17,19 @@
   user-select: text !important; /* Non-prefixed version, currently*/
 }
 
-.v-application:not(.creation):not(.projects):not(.merci):not(.faq):not(.support):not(.kafoo) {
+.montserrat {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.v-application{
     background: linear-gradient(-40deg, #000000, #1a1a1a, #0a0a0a, #2a2a2a) !important;
+    background-size: 100vw 1500px !important;
+    
+}
+
+.creation-header{
+  background: linear-gradient(135deg, rgba(7, 61, 0, 0.8), rgba(7, 61, 0, 0.8)) !important;
+  background-size: cover !important;
 }
 
 .v-application.creation{
