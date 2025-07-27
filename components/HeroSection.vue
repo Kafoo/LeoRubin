@@ -2,10 +2,19 @@
   <div class="hero-section text-center">
     <div
       class="floating-icons"
-      v-motion-fade-visible-once
-      :delay="200"
-      :transition="{
-        duration: 2,
+      v-motion
+      :initial="{
+        y: 100,
+        opacity: 0,
+      }"
+      :enter="{
+        y: 100,
+        opacity: 1,
+        transition: {
+          duration: 900,
+          type: 'keyframes',
+          ease: 'easeIn',
+        },
       }"
     >
       <div
