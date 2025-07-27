@@ -139,9 +139,24 @@ defineProps({
 
 .page-title {
   font-family: 'Philosopher', sans-serif;
-  letter-spacing: 1rem;
-  font-size: 7rem;
   margin-bottom: 0 !important;
+  /* Responsive styles (mobile-first) */
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
+}
+
+@media (min-width: 600px) { /* For tablets (sm) and up */
+  .page-title {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+@media (min-width: 960px) { /* For desktops (md) and up */
+  .page-title {
+    font-size: 7rem;
+    letter-spacing: 1rem;
+  }
 }
 
 .page-subtitle{
