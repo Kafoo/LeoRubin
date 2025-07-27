@@ -1,5 +1,5 @@
 <template>
-  <v-container class="py-10">
+  <div>
     <v-btn
       icon="mdi-home-outline"
       to="/"
@@ -8,15 +8,16 @@
       color="rgba(255, 255, 255, 0.15)"
       title="Retour à l'accueil"
     ></v-btn>
+    <HeroSection
+      class="creation-header"
+      title="Création"
+      subtitle="Développement de solutions web sur-mesure."
+      :icons="creationIcons"
+      />
+    <div class="creation-headertail"/>
     <v-row justify="center">
       <v-col cols="12" md="10" lg="10">
-        <HeroSection
-          title="Création"
-          subtitle="Développement de solutions web sur-mesure."
-          :icons="creationIcons"
-        />
-
-        <ContentCard title="Vos besoins">
+        <ContentCard title="Votre projet" style="margin-top: -200px;">
           <v-list lines="two" bg-color="transparent">
             <v-list-item title="Lancer une nouvelle activité" subtitle="Créer une présence en ligne professionnelle pour démarrer votre projet.">
               <template v-slot:prepend>
@@ -120,7 +121,7 @@
         </div>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -160,5 +161,12 @@ const creationIcons = [
 
 .text-link:hover {
   text-decoration: underline;
+}
+
+.creation-headertail{
+  height: 250px;
+  background-color: #073d00; /* Matches element-1 */
+  position: relative;
+  width: 100%;
 }
 </style>
