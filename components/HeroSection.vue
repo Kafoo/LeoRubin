@@ -1,6 +1,6 @@
 <template>
-  <div class="hero-section text-center" v-motion-fade-visible-once :delay="200">
-    <div class="floating-icons">
+  <div class="hero-section text-center">
+    <div class="floating-icons" v-motion-fade-visible-once :delay="200">
       <div
         v-for="(icon, i) in icons"
         :key="i"
@@ -15,13 +15,13 @@
         ></v-icon>
       </div>
     </div>
-    <div style="z-index: 1;">
+    <div style="z-index: 1;" v-motion-fade-visible-once :delay="100">
       <h1 class="text-h3 text-md-h1 mb-6 page-title" style="color: white;">{{ title }}</h1>
       <p class="text-h6 text-md-h5 font-weight-light page-subtitle" style="color: #f0f0f0;">
         {{ subtitle }}
       </p>
     </div>
-    <div class="scroll-indicator" style="z-index: 2;">
+    <div class="scroll-indicator" style="z-index: 2;" v-motion-fade-visible-once :delay="800">
       <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
     </div>
   </div>
@@ -62,7 +62,7 @@ defineProps({
 
 <style scoped>
 .hero-section {
-  min-height: 86vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +102,7 @@ defineProps({
 
 .scroll-indicator {
   position: absolute;
-  bottom: -5px;
+  bottom: 40px;
   animation: bounce 2s infinite;
 }
 
