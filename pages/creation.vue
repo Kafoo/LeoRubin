@@ -18,38 +18,20 @@
     <v-row justify="center">
       <v-col cols="12" md="10" lg="10">
         <ContentCard title="Votre projet" style="margin-top: -200px;">
-          <v-list lines="two" bg-color="transparent">
-            <v-list-item title="Lancer une nouvelle activité" subtitle="Créer une présence en ligne professionnelle pour démarrer votre projet.">
-              <template v-slot:prepend>
-                <v-icon icon="mdi-rocket-launch-outline" size="x-large"></v-icon>
-              </template>
-            </v-list-item>
-            <v-list-item title="Moderniser un site existant" subtitle="Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel.">
-              <template v-slot:prepend>
-                <v-icon icon="mdi-autorenew" size="x-large"></v-icon>
-              </template>
-            </v-list-item>
-            <v-list-item title="Vendre en ligne" subtitle="Mettre en place une boutique e-commerce performante et sécurisée.">
-              <template v-slot:prepend>
-                <v-icon icon="mdi-cart-outline" size="x-large"></v-icon>
-              </template>
-            </v-list-item>
-            <v-list-item title="Développer un outil sur-mesure" subtitle="Créer une application web ou un intranet pour répondre à un besoin métier spécifique.">
-              <template v-slot:prepend>
-                <v-icon icon="mdi-tools" size="x-large"></v-icon>
-              </template>
-            </v-list-item>
-            <v-list-item title="Créer un blog ou un portfolio" subtitle="Partager vos idées, vos créations ou présenter votre travail de manière professionnelle.">
-              <template v-slot:prepend>
-                <v-icon icon="mdi-post-outline" size="x-large"></v-icon>
-              </template>
-            </v-list-item>
-            <v-list-item title="Automatiser un processus métier" subtitle="Gagner en efficacité en créant un outil qui automatise des tâches répétitives.">
-              <template v-slot:prepend>
-                <v-icon icon="mdi-robot-industrial-outline" size="x-large"></v-icon>
-              </template>
-            </v-list-item>
-          </v-list>
+          <v-row class="pa-2">
+            <v-col
+              v-for="(item, i) in projectItems"
+              :key="i"
+              cols="12"
+              md="6"
+              lg="4"
+              class="text-center pa-5"
+            >
+              <v-icon :icon="item.icon" size="64" class="mb-4" color="primary"></v-icon>
+              <h3 class="text-h6 mb-2">{{ item.title }}</h3>
+              <p class="text-body-1">{{ item.subtitle }}</p>
+            </v-col>
+          </v-row>
         </ContentCard>
 
         <ContentCard title="Un autre besoin ?" v-motion-slide-visible-once-bottom>
@@ -128,6 +110,39 @@
 import ContactInfo from '~/components/Home/ContactInfo.vue';
 import ContentCard from '~/components/ContentCard.vue';
 import HeroSection from '~/components/HeroSection.vue';
+
+const projectItems = [
+  {
+    icon: 'mdi-rocket-launch-outline',
+    title: 'Lancer une nouvelle activité',
+    subtitle: 'Créer une présence en ligne professionnelle pour démarrer votre projet.'
+  },
+  {
+    icon: 'mdi-autorenew',
+    title: 'Moderniser un site existant',
+    subtitle: 'Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel.'
+  },
+  {
+    icon: 'mdi-cart-outline',
+    title: 'Vendre en ligne',
+    subtitle: 'Mettre en place une boutique e-commerce performante et sécurisée.'
+  },
+  {
+    icon: 'mdi-tools',
+    title: 'Développer un outil sur-mesure',
+    subtitle: 'Créer une application web ou un intranet pour répondre à un besoin métier spécifique.'
+  },
+  {
+    icon: 'mdi-post-outline',
+    title: 'Créer un blog ou un portfolio',
+    subtitle: 'Partager vos idées, vos créations ou présenter votre travail de manière professionnelle.'
+  },
+  {
+    icon: 'mdi-robot-industrial-outline',
+    title: 'Automatiser un processus métier',
+    subtitle: 'Gagner en efficacité en créant un outil qui automatise des tâches répétitives.'
+  }
+];
 
 const creationIcons = [
   { name: 'mdi-language-html5', size: 'x-large', transform: 'rotate(-15deg)', position: { top: '15%', left: '10%', animationDelay: '0s', animationDuration: '5s' } },
