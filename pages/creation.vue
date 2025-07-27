@@ -20,32 +20,32 @@
           <v-list lines="two" bg-color="transparent">
             <v-list-item title="Lancer une nouvelle activité" subtitle="Créer une présence en ligne professionnelle pour démarrer votre projet.">
               <template v-slot:prepend>
-                <v-icon icon="mdi-rocket-launch-outline" size="large" class="mr-4"></v-icon>
+                <v-icon icon="mdi-rocket-launch-outline" size="x-large"></v-icon>
               </template>
             </v-list-item>
             <v-list-item title="Moderniser un site existant" subtitle="Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel.">
               <template v-slot:prepend>
-                <v-icon icon="mdi-autorenew" size="large" class="mr-4"></v-icon>
+                <v-icon icon="mdi-autorenew" size="x-large"></v-icon>
               </template>
             </v-list-item>
             <v-list-item title="Vendre en ligne" subtitle="Mettre en place une boutique e-commerce performante et sécurisée.">
               <template v-slot:prepend>
-                <v-icon icon="mdi-cart-outline" size="large" class="mr-4"></v-icon>
+                <v-icon icon="mdi-cart-outline" size="x-large"></v-icon>
               </template>
             </v-list-item>
             <v-list-item title="Développer un outil sur-mesure" subtitle="Créer une application web ou un intranet pour répondre à un besoin métier spécifique.">
               <template v-slot:prepend>
-                <v-icon icon="mdi-tools" size="large" class="mr-4"></v-icon>
+                <v-icon icon="mdi-tools" size="x-large"></v-icon>
               </template>
             </v-list-item>
             <v-list-item title="Créer un blog ou un portfolio" subtitle="Partager vos idées, vos créations ou présenter votre travail de manière professionnelle.">
               <template v-slot:prepend>
-                <v-icon icon="mdi-post-outline" size="large" class="mr-4"></v-icon>
+                <v-icon icon="mdi-post-outline" size="x-large"></v-icon>
               </template>
             </v-list-item>
             <v-list-item title="Automatiser un processus métier" subtitle="Gagner en efficacité en créant un outil qui automatise des tâches répétitives.">
               <template v-slot:prepend>
-                <v-icon icon="mdi-robot-industrial-outline" size="large" class="mr-4"></v-icon>
+                <v-icon icon="mdi-robot-industrial-outline" size="x-large"></v-icon>
               </template>
             </v-list-item>
           </v-list>
