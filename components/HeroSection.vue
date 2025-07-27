@@ -30,8 +30,8 @@
       </div>
     </div>
     <div style="z-index: 1;" v-motion-fade-visible-once :delay="100">
-      <h1 class="text-h3 text-md-h1 mb-6 page-title" style="color: white;">{{ title }}</h1>
-      <p class="text-h6 text-md-h5 font-weight-light page-subtitle" style="color: #f0f0f0;">
+      <h1 class="mb-6 page-title">{{ title }}</h1>
+      <p class="text-h6 text-md-h5 font-weight-light page-subtitle" v-motion-fade-visible-once :delay="600">
         {{ subtitle }}
       </p>
     </div>
@@ -81,8 +81,8 @@ defineProps({
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 6rem;
   overflow: hidden; /* Hide parts of icons that go outside */
+  color: white;
 }
 
 .floating-icons {
@@ -139,7 +139,9 @@ defineProps({
 
 .page-title {
   font-family: 'Philosopher', sans-serif;
-  letter-spacing: 8px !important;
+  letter-spacing: 1rem;
+  font-size: 7rem;
+  margin-bottom: 0 !important;
 }
 
 .page-subtitle{
