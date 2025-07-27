@@ -2,14 +2,10 @@
   <div class="hero-section text-center">
     <div
       class="floating-icons"
-      v-motion
+      v-motion-fade-visible-once
       :delay="200"
-      :initial="{ opacity: 0 }"
-      :visible-once="{
-        opacity: 1,
-        transition: {
-          duration: 2,
-        },
+      :transition="{
+        duration: 2,
       }"
     >
       <div
