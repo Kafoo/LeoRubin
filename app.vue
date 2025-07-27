@@ -1,7 +1,7 @@
 <template>
   <v-app :class="backgroundClass">
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" />
     </NuxtLayout>
   </v-app>
 </template>
@@ -51,4 +51,16 @@ const backgroundClass = computed({
   position: relative; /* Establish positioning context for absolute children */
 }
 
+</style>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
 </style>
