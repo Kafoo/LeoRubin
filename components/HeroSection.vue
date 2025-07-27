@@ -1,6 +1,7 @@
 <template>
-  <div class="hero-section text-center">
-    <div
+  <div class="hero-section text-center centering">
+    <div class="hero-container" style="width: 80%; margin: auto; height: 100vh;">
+      <div
       class="floating-icons"
       v-motion
       :initial="{
@@ -14,29 +15,30 @@
           ease: 'easeIn',
         },
       }"
-    >
-      <div
-        v-for="(icon, i) in icons"
-        :key="i"
-        :style="icon.position"
-        class="floating-icon-wrapper"
       >
-        <v-icon
-          :icon="icon.name"
-          :size="icon.size"
-          :style="{ transform: icon.transform }"
-          color="rgba(255, 255, 255, 0.3)"
-        ></v-icon>
+        <div
+          v-for="(icon, i) in icons"
+          :key="i"
+          :style="icon.position"
+          class="floating-icon-wrapper"
+        >
+          <v-icon
+            :icon="icon.name"
+            :size="icon.size"
+            :style="{ transform: icon.transform }"
+            color="rgba(255, 255, 255, 0.3)"
+          ></v-icon>
+        </div>
       </div>
-    </div>
-    <div style="z-index: 1;" v-motion-fade-visible-once :delay="100">
-      <h1 class="text-h3 text-md-h1 mb-6 page-title" style="color: white;">{{ title }}</h1>
-      <p class="text-h6 text-md-h5 font-weight-light page-subtitle" style="color: #f0f0f0;">
-        {{ subtitle }}
-      </p>
-    </div>
-    <div class="scroll-indicator" style="z-index: 2;" v-motion-fade-visible-once :delay="800">
-      <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
+      <div style="z-index: 1;" v-motion-fade-visible-once :delay="100">
+        <h1 class="text-h3 text-md-h1 mb-6 page-title" style="color: white;">{{ title }}</h1>
+        <p class="text-h6 text-md-h5 font-weight-light page-subtitle" style="color: #f0f0f0;">
+          {{ subtitle }}
+        </p>
+      </div>
+      <div class="scroll-indicator" style="z-index: 2;" v-motion-fade-visible-once :delay="800">
+        <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
+      </div>
     </div>
   </div>
 </template>
@@ -88,11 +90,8 @@ defineProps({
 
 .floating-icons {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80vw;
-  height: 80vh;
-  transform: translate(-50%, -50%) translateY(100px);
+  height: 100%;
+  width: 100%;
   opacity: 0;
   pointer-events: none;
 }
