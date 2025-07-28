@@ -89,7 +89,7 @@ defineProps({
 .floating-icons {
   position: absolute;
   height: 100%;
-  width: 130%;
+  width: 160%;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -137,11 +137,10 @@ defineProps({
 }
 
 .page-title {
-  font-family: 'Philosopher', sans-serif;
+  font-family: 'Recursive', sans-serif;
   margin-bottom: 0 !important;
   /* Responsive styles (mobile-first) */
   font-size: 3.5rem;
-  letter-spacing: 0.2rem;
 }
 
 @media (min-width: 600px) { /* For tablets (sm) and up */
@@ -159,6 +158,6 @@ defineProps({
 }
 
 .page-subtitle{
-  font-family: monospace;
+  font-family: 'monospace';
 }
 </style>

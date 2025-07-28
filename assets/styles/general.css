@@ -23,13 +23,11 @@
 
 .v-application{
     background: linear-gradient(-40deg, #000000, #1a1a1a, #0a0a0a, #2a2a2a) !important;
-    background-size: 100vw 1500px !important;
     
 }
 
 .creation-header{
-  background: linear-gradient(135deg, rgba(7, 61, 0, 0.8), rgba(7, 61, 0, 0.8)) !important;
-  background-size: cover !important;
+  background-color: #073d00 !important; /* Matches element-1 */
 }
 
 .v-application.creation{

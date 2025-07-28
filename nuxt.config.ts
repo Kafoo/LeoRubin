@@ -35,7 +35,11 @@ export default defineNuxtConfig({
       families: {
         //'Dancing Script': true,
         'Caveat': true,
+        'Caveat Brush': true,
         'Philosopher': true,
+        'Yeseva One': true,
+        'Montserrat': true,
+        'Recursive': true,
         //'Satisfy': true,
         'Courgette': true,
         download: true,

@@ -119,8 +119,7 @@ import { creationIcons } from '~/ts/data/creationIcons';
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.15);
-  z-index: -1;
+  background-color: rgb(236, 236, 236);
 }
 
 .home-button {

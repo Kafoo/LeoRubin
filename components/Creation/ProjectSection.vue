@@ -1,5 +1,5 @@
 <template>
-  <ContentCard title="Votre projet" class="mx-5 mb-10" style="margin-top: -150px;">
+  <ContentCard class="mx-3 mb-10" style="margin-top: -150px;">
     <v-row class="pa-2">
       <v-col
         v-for="(item, i) in projectItems"
@@ -16,10 +16,15 @@
     </v-row>
     <template #footer>
       <div class="text-center centering-column">
-        <p class="footer-text pa-6">
-          Quel que soit votre projet, un premier contact n'engage à rien et permettra de savoir si nous avons envie de nous lancer dans cette aventure ensemble.
-        </p>
-        <div class="d-flex justify-center ga-4 my-3">
+        <div class="footer-text my-6">
+          <p class="mb-3" style="font-weight: bold; font-size: 1.6rem; font-family: 'Recursive';">
+            Quel que soit votre projet
+          </p>
+          <p>
+            N'hésitez pas à m'appeler ou m'écrire, un premier contact n'engage à rien et permettra de savoir si nous avons envie de nous lancer ensemble dans l'aventure !
+          </p>
+        </div>
+        <div class="d-flex justify-center ga-4 mt-2 mb-3">
           <v-tooltip text="ant.guillard@gmail.com" location="top">
             <template #activator="{ props }">
               <v-btn v-bind="props" icon href="mailto:ant.guillard@gmail.com" size="large" color="white" elevation="2">
@@ -90,15 +95,11 @@ const projectItems = [
   color: #0d490d;
 }
 
-.project-subtitle {
-  font-style: italic;
-}
-
 .footer-text{
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 1px;
   font-size: 1.2rem;
-  max-width: 700px;
+  max-width: 750px;
 }
 
 </style>

@@ -1,12 +1,6 @@
 <template>
   <div class="penta-container centering" :class="{ 'center-hovered': hoveredId === 6 }">
 
-    <!--
-    <div class="cross">
-      <MdiIcon icon="mdiClose" class="close" @click="close"/>
-    </div>
-    -->
-
     <v-img src="~/public/circle2.png" width="100%" aspect-ratio="1" @load="imageLoaded = true">
 
       <template v-if="imageLoaded">
@@ -153,7 +147,7 @@
       setTimeout(() => {
         const router = useRouter();
         router.push(page.path);
-      }, 300); // Delay navigation to allow animation to play
+      }, 280); // Delay navigation to allow animation to play
     }
   };
 

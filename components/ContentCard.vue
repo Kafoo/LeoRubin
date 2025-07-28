@@ -1,9 +1,6 @@
 <template>
   <v-card class="content-card" rounded="xl" elevation="0">
-    <v-card-text class="pa-5">
-      <div class="centering text-center">
-        <h2 v-if="title" class="mb-10">{{ title }}</h2>
-      </div>
+    <v-card-text class="px-5 pt-12 pb-14 content-card-text">
       <slot></slot>
     </v-card-text>
     <div v-if="$slots.footer" class="footer-slot pa-5">
@@ -13,34 +10,30 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  title: {
-    type: String,
-    default: ''
-  }
-})
+
 </script>
 
 
 <style scoped>
 
 h2{
-  font-family: "Caveat";
+  font-family: "Caveat Brush";
   font-size: 3.5rem;
   font-weight: normal;
   letter-spacing: 0.5rem;
-  text-decoration: underline;
-  text-underline-offset: 0.4rem;
-  text-decoration-thickness: 0.2rem;
+  color: rgb(75, 75, 75);
 }
 
 .content-card {
-  background-color: rgb(219, 219, 219);
+  background-color: rgb(231, 231, 231);
   overflow: hidden;
 }
-
 .footer-slot {
-  background-color: #cccccc;
+  background-color: #2f2f2f;
+  color: white;
+  border: 2px solid rgb(228, 228, 228);
+  border-top: none;;
+  border-radius: 0 0 24px 24px;
 }
 
 @media screen and (max-width: 600px) {
