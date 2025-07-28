@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="creation-page-container">
 
     <v-btn
       icon="mdi-home-outline"
@@ -107,6 +107,22 @@ import { creationIcons } from '~/ts/data/creationIcons';
 </script>
 
 <style scoped>
+.creation-page-container {
+  position: relative;
+}
+
+.creation-page-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: -1;
+}
+
 .home-button {
   position: fixed;
   top: 2rem;
