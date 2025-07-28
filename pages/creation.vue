@@ -157,18 +157,18 @@ const projectItems = [
 
 const creationIcons = [
   // Inner circle - large icons, closer
-  { name: 'mdi-language-html5', size: 'x-large', opacity: 0.35, transform: 'rotate(-15deg)', position: { top: '50.00%', left: '75.00%', animationDelay: '0s', animationDuration: '5s' } },
+  { name: 'mdi-language-html5', size: 'x-large', opacity: 0.35, transform: 'rotate(-15deg)', position: { top: '42.00%', left: '75.00%', animationDelay: '0s', animationDuration: '5s' } },
   { name: 'mdi-language-css3', size: 'x-large', opacity: 0.35, transform: 'rotate(10deg)', position: { top: '71.65%', left: '62.50%', animationDelay: '1s', animationDuration: '7s' } },
   { name: 'mdi-language-javascript', size: 'x-large', opacity: 0.35, transform: 'rotate(5deg)', position: { top: '71.65%', left: '37.50%', animationDelay: '2s', animationDuration: '6s' } },
-  { name: 'mdi-wordpress', size: 'x-large', opacity: 0.35, transform: 'rotate(-10deg)', position: { top: '50.00%', left: '25.00%', animationDelay: '0.5s', animationDuration: '8s' } },
-  { name: 'mdi-database', size: 'x-large', opacity: 0.35, transform: 'rotate(15deg)', position: { top: '28.35%', left: '37.50%', animationDelay: '1.5s', animationDuration: '5s' } },
+  { name: 'mdi-laravel', size: 'x-large', opacity: 0.35, transform: 'rotate(-10deg)', position: { top: '50.00%', left: '25.00%', animationDelay: '0.5s', animationDuration: '8s' } },
+  { name: 'mdi-database', size: 'x-large', opacity: 0.35, transform: 'rotate(15deg)', position: { top: '35.35%', left: '37.50%', animationDelay: '1.5s', animationDuration: '5s' } },
   { name: 'mdi-cellphone-link', size: 'x-large', opacity: 0.35, transform: 'rotate(20deg)', position: { top: '28.35%', left: '62.50%', animationDelay: '2.5s', animationDuration: '7s' } },
 
   // Middle circle
-  { name: 'mdi-language-php', size: 'large', opacity: 0.25, transform: 'rotate(-5deg)', position: { top: '69.00%', left: '83.00%', animationDelay: '3s', animationDuration: '6s' } },
+  { name: 'mdi-language-php', size: 'large', opacity: 0.25, transform: 'rotate(-5deg)', position: { top: '60.00%', left: '83.00%', animationDelay: '3s', animationDuration: '6s' } },
   { name: 'mdi-sitemap', size: 'large', opacity: 0.25, transform: 'rotate(-20deg)', position: { top: '88.00%', left: '50.00%', animationDelay: '1.2s', animationDuration: '8s' } },
   { name: 'mdi-vuejs', size: 'large', opacity: 0.25, transform: 'rotate(12deg)', position: { top: '69.00%', left: '17.00%', animationDelay: '0.8s', animationDuration: '7.5s' } },
-  { name: 'mdi-laravel', size: 'large', opacity: 0.25, transform: 'rotate(-8deg)', position: { top: '31.00%', left: '17.00%', animationDelay: '2.2s', animationDuration: '5.5s' } },
+  { name: 'mdi-wordpress', size: 'large', opacity: 0.25, transform: 'rotate(-8deg)', position: { top: '31.00%', left: '17.00%', animationDelay: '2.2s', animationDuration: '5.5s' } },
   { name: 'mdi-git', size: 'large', opacity: 0.25, transform: 'rotate(18deg)', position: { top: '12.00%', left: '50.00%', animationDelay: '3.5s', animationDuration: '8s' } },
   { name: 'mdi-rocket-launch-outline', size: 'large', opacity: 0.25, transform: 'rotate(-12deg)', position: { top: '31.00%', left: '83.00%', animationDelay: '0.2s', animationDuration: '6.5s' } },
 
