@@ -6,6 +6,9 @@
       </div>
       <slot></slot>
     </v-card-text>
+    <div v-if="$slots.footer" class="footer-slot pa-5">
+      <slot name="footer"></slot>
+    </div>
   </v-card>
 </template>
 
@@ -33,6 +36,11 @@ h2{
 
 .content-card {
   background-color: rgb(219, 219, 219);
+  overflow: hidden;
+}
+
+.footer-slot {
+  background-color: #cccccc;
 }
 
 @media screen and (max-width: 600px) {

@@ -19,7 +19,7 @@
 
     <v-row justify="center">
       <v-col cols="12" md="11" lg="9">
-        <ContentCard title="Votre projet" class="mx-5 pa-5 mb-10" style="margin-top: -150px;">
+        <ContentCard title="Votre projet" class="mx-5 mb-10" style="margin-top: -150px;">
           <v-row class="pa-2">
             <v-col
               v-for="(item, i) in projectItems"
@@ -34,6 +34,17 @@
               <p class="text-body-1">{{ item.subtitle }}</p>
             </v-col>
           </v-row>
+          <template #footer>
+            <div class="text-center">
+              <p class="text-body-1 mb-4">
+                Quel que soit votre projet, la première étape est de prendre contact pour que nous puissions définir ensemble la meilleure solution.
+              </p>
+              <v-btn href="#contact" color="primary" variant="flat">
+                <v-icon start>mdi-send-outline</v-icon>
+                Me contacter
+              </v-btn>
+            </div>
+          </template>
         </ContentCard>
 
 
@@ -95,7 +106,7 @@
         </div>
 
         <!-- Section: Contact -->
-        <v-card class="content-card text-center" v-motion-slide-visible-once-bottom>
+        <v-card id="contact" class="content-card text-center" v-motion-slide-visible-once-bottom>
           <v-card-text class="pa-5">
             <h2 class="text-h4 mb-4">Contact</h2>
             <p class="mb-4">Discutons de votre projet. Le premier échange est sans engagement.</p>
