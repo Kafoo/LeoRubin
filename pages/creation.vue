@@ -106,7 +106,7 @@
         </div>
 
         <!-- Section: Contact -->
-        <v-card id="contact" class="content-card text-center" v-motion-slide-visible-once-bottom>
+        <v-card class="content-card text-center" v-motion-slide-visible-once-bottom>
           <v-card-text class="pa-5">
             <h2 class="text-h4 mb-4">Contact</h2>
             <p class="mb-4">Discutons de votre projet. Le premier échange est sans engagement.</p>
