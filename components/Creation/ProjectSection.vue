@@ -20,15 +20,27 @@
           Quel que soit votre projet, un premier contact n'engage à rien et permettra de savoir si nous avons envie de nous lancer dans cette aventure ensemble.
         </p>
         <div class="d-flex justify-center ga-4 my-3">
-          <v-btn icon href="mailto:contact@votredomaine.com" size="large" color="white" elevation="2">
-            <v-icon color="#0d490d">mdi-email-outline</v-icon>
-          </v-btn>
-          <v-btn icon href="tel:+33000000000" size="large" color="white" elevation="2">
-            <v-icon color="#0d490d">mdi-phone-outline</v-icon>
-          </v-btn>
-          <v-btn icon href="#contact" size="large" color="white" elevation="2">
-            <v-icon color="#0d490d">mdi-send-outline</v-icon>
-          </v-btn>
+          <v-tooltip text="Mon mail" location="top" :disabled="smAndDown">
+            <template #activator="{ props }">
+              <v-btn v-bind="props" icon href="mailto:contact@votredomaine.com" size="large" color="white" elevation="2">
+                <v-icon color="#0d490d">mdi-email-outline</v-icon>
+              </v-btn>
+            </template>
+          </v-tooltip>
+          <v-tooltip text="Mon numéro" location="top" :disabled="smAndDown">
+            <template #activator="{ props }">
+              <v-btn v-bind="props" icon href="tel:+33000000000" size="large" color="white" elevation="2">
+                <v-icon color="#0d490d">mdi-phone-outline</v-icon>
+              </v-btn>
+            </template>
+          </v-tooltip>
+          <v-tooltip text="M'écrire" location="top" :disabled="smAndDown">
+            <template #activator="{ props }">
+              <v-btn v-bind="props" icon href="#contact" size="large" color="white" elevation="2">
+                <v-icon color="#0d490d">mdi-send-outline</v-icon>
+              </v-btn>
+            </template>
+          </v-tooltip>
         </div>
       </div>
     </template>
@@ -37,6 +49,9 @@
 
 <script setup lang="ts">
 import ContentCard from '~/components/ContentCard.vue';
+import { useDisplay } from 'vuetify';
+
+const { smAndDown } = useDisplay();
 
 const projectItems = [
   {
