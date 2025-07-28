@@ -9,17 +9,17 @@
         lg="4"
         class="text-center pa-5"
       >
-        <v-icon :icon="item.icon" size="64" class="mb-4" :color="item.color"></v-icon>
-        <h3 class="text-h6 mb-2">{{ item.title }}</h3>
-        <p class="text-body-1">{{ item.subtitle }}</p>
+        <v-icon :icon="item.icon" size="64" class="mb-4" color="grey-darken-1"></v-icon>
+        <h3 class="text-h6 mb-2 project-title">{{ item.title }}</h3>
+        <p class="text-body-1 project-subtitle">{{ item.subtitle }}</p>
       </v-col>
     </v-row>
     <template #footer>
-      <div class="text-center">
-        <p class="text-body-1 mb-4">
-          Quel que soit votre projet, la première étape est de prendre contact pour que nous puissions définir ensemble la meilleure solution.
+      <div class="text-center centering-column">
+        <p class="footer-text pa-6">
+          Quel que soit votre projet, un premier contact n'engage à rien et permettra de savoir si nous avons envie de nous lancer dans cette aventure ensemble.
         </p>
-        <v-btn href="#contact" color="primary" variant="flat" size="large" rounded="lg">
+        <v-btn class="ma-3" color="primary" variant="flat" size="large" rounded="lg">
           Discutons de votre projet
         </v-btn>
       </div>
@@ -35,37 +35,50 @@ const projectItems = [
     icon: 'mdi-rocket-launch-outline',
     title: 'Lancer une nouvelle activité',
     subtitle: 'Créer une présence en ligne professionnelle pour démarrer votre projet.',
-    color: 'primary'
   },
   {
     icon: 'mdi-autorenew',
     title: 'Moderniser un site existant',
     subtitle: 'Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel.',
-    color: 'teal'
   },
   {
     icon: 'mdi-cart-outline',
     title: 'Vendre en ligne',
     subtitle: 'Mettre en place une boutique e-commerce performante et sécurisée.',
-    color: 'green'
   },
   {
     icon: 'mdi-tools',
     title: 'Développer un outil sur-mesure',
     subtitle: 'Créer une application web ou un intranet pour répondre à un besoin métier spécifique.',
-    color: 'deep-orange'
   },
   {
     icon: 'mdi-post-outline',
     title: 'Créer un blog ou un portfolio',
     subtitle: 'Partager vos idées, vos créations ou présenter votre travail de manière professionnelle.',
-    color: 'blue-grey'
   },
   {
     icon: 'mdi-robot-industrial-outline',
     title: 'Automatiser un processus',
     subtitle: 'Gagner en efficacité en créant un outil qui automatise des tâches répétitives.',
-    color: 'purple'
   }
 ];
 </script>
+
+<style scoped>
+
+.project-title {
+  color: #0d490d;
+}
+
+.project-subtitle {
+  font-style: italic;
+}
+
+.footer-text{
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+</style>
