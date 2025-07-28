@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <v-btn
       icon="mdi-home-outline"
       to="/"
@@ -15,9 +16,10 @@
       :icons="creationIcons"
       />
     <div class="creation-headertail"/>
+
     <v-row justify="center">
-      <v-col cols="12" md="10" lg="10">
-        <ContentCard title="Votre projet" style="margin-top: -200px;">
+      <v-col cols="12" md="11" lg="9">
+        <ContentCard title="Votre projet" class="mx-5 pa-5 mb-10" style="margin-top: -150px;">
           <v-row class="pa-2">
             <v-col
               v-for="(item, i) in projectItems"
@@ -27,12 +29,16 @@
               lg="4"
               class="text-center pa-5"
             >
-              <v-icon :icon="item.icon" size="64" class="mb-4" color="primary"></v-icon>
+              <v-icon :icon="item.icon" size="64" class="mb-4" color="grey-darken-2"></v-icon>
               <h3 class="text-h6 mb-2">{{ item.title }}</h3>
               <p class="text-body-1">{{ item.subtitle }}</p>
             </v-col>
           </v-row>
         </ContentCard>
+
+
+        <div style="height: 1000px;"></div>
+
 
         <ContentCard title="Un autre besoin ?" v-motion-slide-visible-once-bottom>
           <p class="text-body-1 text-center pa-4">
@@ -139,7 +145,7 @@ const projectItems = [
   },
   {
     icon: 'mdi-robot-industrial-outline',
-    title: 'Automatiser un processus métier',
+    title: 'Automatiser un processus',
     subtitle: 'Gagner en efficacité en créant un outil qui automatise des tâches répétitives.'
   }
 ];
@@ -179,7 +185,8 @@ const creationIcons = [
 }
 
 .creation-headertail{
-  height: 250px;
+  top: -5px;
+  height: 200px;
   background-color: #073d00; /* Matches element-1 */
   position: relative;
   width: 100%;
