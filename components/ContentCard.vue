@@ -32,4 +32,10 @@ h2{
   background-color: rgb(219, 219, 219);
 }
 
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+  }
+}
 </style>
