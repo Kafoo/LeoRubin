@@ -53,7 +53,6 @@ interface Icon {
     left?: string;
     right?: string;
     bottom?: string;
-    transform?: string;
     animationDelay: string;
     animationDuration: string;
   };
@@ -103,17 +102,18 @@ defineProps({
   animation-name: float;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes float {
 	0% {
-		transform: translateY(0px);
+		transform: translate(-50%, -50%) translateY(0px);
 	}
 	50% {
-		transform: translateY(-20px);
+		transform: translate(-50%, -50%) translateY(-20px);
 	}
 	100% {
-		transform: translateY(0px);
+		transform: translate(-50%, -50%) translateY(0px);
 	}
 }
 
