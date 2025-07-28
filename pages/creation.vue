@@ -19,6 +19,7 @@
 
     <v-row justify="center">
       <v-col cols="12" md="11" lg="9">
+        
         <ProjectSection />
 
 
