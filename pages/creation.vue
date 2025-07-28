@@ -151,18 +151,29 @@ const projectItems = [
 ];
 
 const creationIcons = [
-  { name: 'mdi-language-html5', size: 'x-large', transform: 'rotate(-15deg)', position: { top: '15%', left: '10%', animationDelay: '0s', animationDuration: '5s' } },
-  { name: 'mdi-language-css3', size: 'large', transform: 'rotate(10deg)', position: { top: '20%', right: '12%', animationDelay: '1s', animationDuration: '7s' } },
-  { name: 'mdi-language-javascript', size: 'x-large', transform: 'rotate(5deg)', position: { top: '65%', left: '5%', animationDelay: '2s', animationDuration: '6s' } },
-  { name: 'mdi-wordpress', size: 'large', transform: 'rotate(-10deg)', position: { top: '75%', right: '8%', animationDelay: '0.5s', animationDuration: '8s' } },
-  { name: 'mdi-database', size: 'large', transform: 'rotate(15deg)', position: { bottom: '10%', left: '20%', animationDelay: '1.5s', animationDuration: '5s' } },
-  { name: 'mdi-cellphone-link', size: 'large', transform: 'rotate(20deg)', position: { top: '40%', right: '20%', animationDelay: '2.5s', animationDuration: '7s' } },
-  { name: 'mdi-language-php', size: 'x-large', transform: 'rotate(-5deg)', position: { bottom: '15%', right: '25%', animationDelay: '3s', animationDuration: '6s' } },
-  { name: 'mdi-sitemap', size: 'large', transform: 'rotate(-20deg)', position: { top: '50%', left: '12%', animationDelay: '1.2s', animationDuration: '8s' } },
-  { name: 'mdi-vuejs', size: 'x-large', transform: 'rotate(12deg)', position: { top: '35%', left: '30%', animationDelay: '0.8s', animationDuration: '7.5s' } },
-  { name: 'mdi-laravel', size: 'large', transform: 'rotate(-8deg)', position: { top: '65%', right: '35%', animationDelay: '2.2s', animationDuration: '5.5s' } },
-  { name: 'mdi-git', size: 'large', transform: 'rotate(18deg)', position: { bottom: '15%', left: '45%', animationDelay: '3.5s', animationDuration: '8s' } },
-  { name: 'mdi-rocket-launch-outline', size: 'large', transform: 'rotate(-12deg)', position: { top: '10%', right: '30%', animationDelay: '0.2s', animationDuration: '6.5s' } },
+  // Inner circle - large icons, closer
+  { name: 'mdi-language-html5', size: 'x-large', opacity: 0.35, transform: 'rotate(-15deg)', position: { top: '50.00%', left: '75.00%', transform: 'translate(-50%, -50%)', animationDelay: '0s', animationDuration: '5s' } },
+  { name: 'mdi-language-css3', size: 'x-large', opacity: 0.35, transform: 'rotate(10deg)', position: { top: '71.65%', left: '62.50%', transform: 'translate(-50%, -50%)', animationDelay: '1s', animationDuration: '7s' } },
+  { name: 'mdi-language-javascript', size: 'x-large', opacity: 0.35, transform: 'rotate(5deg)', position: { top: '71.65%', left: '37.50%', transform: 'translate(-50%, -50%)', animationDelay: '2s', animationDuration: '6s' } },
+  { name: 'mdi-wordpress', size: 'x-large', opacity: 0.35, transform: 'rotate(-10deg)', position: { top: '50.00%', left: '25.00%', transform: 'translate(-50%, -50%)', animationDelay: '0.5s', animationDuration: '8s' } },
+  { name: 'mdi-database', size: 'x-large', opacity: 0.35, transform: 'rotate(15deg)', position: { top: '28.35%', left: '37.50%', transform: 'translate(-50%, -50%)', animationDelay: '1.5s', animationDuration: '5s' } },
+  { name: 'mdi-cellphone-link', size: 'x-large', opacity: 0.35, transform: 'rotate(20deg)', position: { top: '28.35%', left: '62.50%', transform: 'translate(-50%, -50%)', animationDelay: '2.5s', animationDuration: '7s' } },
+
+  // Middle circle
+  { name: 'mdi-language-php', size: 'large', opacity: 0.25, transform: 'rotate(-5deg)', position: { top: '69.00%', left: '83.00%', transform: 'translate(-50%, -50%)', animationDelay: '3s', animationDuration: '6s' } },
+  { name: 'mdi-sitemap', size: 'large', opacity: 0.25, transform: 'rotate(-20deg)', position: { top: '88.00%', left: '50.00%', transform: 'translate(-50%, -50%)', animationDelay: '1.2s', animationDuration: '8s' } },
+  { name: 'mdi-vuejs', size: 'large', opacity: 0.25, transform: 'rotate(12deg)', position: { top: '69.00%', left: '17.00%', transform: 'translate(-50%, -50%)', animationDelay: '0.8s', animationDuration: '7.5s' } },
+  { name: 'mdi-laravel', size: 'large', opacity: 0.25, transform: 'rotate(-8deg)', position: { top: '31.00%', left: '17.00%', transform: 'translate(-50%, -50%)', animationDelay: '2.2s', animationDuration: '5.5s' } },
+  { name: 'mdi-git', size: 'large', opacity: 0.25, transform: 'rotate(18deg)', position: { top: '12.00%', left: '50.00%', transform: 'translate(-50%, -50%)', animationDelay: '3.5s', animationDuration: '8s' } },
+  { name: 'mdi-rocket-launch-outline', size: 'large', opacity: 0.25, transform: 'rotate(-12deg)', position: { top: '31.00%', left: '83.00%', transform: 'translate(-50%, -50%)', animationDelay: '0.2s', animationDuration: '6.5s' } },
+
+  // Outer circle - small icons, further away
+  { name: 'mdi-nuxt', size: 'default', opacity: 0.15, transform: 'rotate(8deg)', position: { top: '50.00%', left: '100.00%', transform: 'translate(-50%, -50%)', animationDelay: '1.3s', animationDuration: '9s' } },
+  { name: 'mdi-tailwind', size: 'default', opacity: 0.15, transform: 'rotate(-18deg)', position: { top: '93.30%', left: '75.00%', transform: 'translate(-50%, -50%)', animationDelay: '2.1s', animationDuration: '7.3s' } },
+  { name: 'mdi-api', size: 'default', opacity: 0.15, transform: 'rotate(3deg)', position: { top: '93.30%', left: '25.00%', transform: 'translate(-50%, -50%)', animationDelay: '3.3s', animationDuration: '8.5s' } },
+  { name: 'mdi-server', size: 'default', opacity: 0.15, transform: 'rotate(14deg)', position: { top: '50.00%', left: '0.00%', transform: 'translate(-50%, -50%)', animationDelay: '0.7s', animationDuration: '6.2s' } },
+  { name: 'mdi-palette', size: 'default', opacity: 0.15, transform: 'rotate(-9deg)', position: { top: '6.70%', left: '25.00%', transform: 'translate(-50%, -50%)', animationDelay: '2.6s', animationDuration: '9.2s' } },
+  { name: 'mdi-shield-check-outline', size: 'default', opacity: 0.15, transform: 'rotate(22deg)', position: { top: '6.70%', left: '75.00%', transform: 'translate(-50%, -50%)', animationDelay: '1.6s', animationDuration: '7.8s' } },
 ];
 </script>
 

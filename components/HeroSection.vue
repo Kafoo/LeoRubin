@@ -25,7 +25,7 @@
           :icon="icon.name"
           :size="icon.size"
           :style="{ transform: icon.transform }"
-          color="rgba(255, 255, 255, 0.3)"
+          :color="`rgba(255, 255, 255, ${icon.opacity || 0.3})`"
         ></v-icon>
       </div>
     </div>
@@ -53,9 +53,11 @@ interface Icon {
     left?: string;
     right?: string;
     bottom?: string;
+    transform?: string;
     animationDelay: string;
     animationDuration: string;
   };
+  opacity?: number;
 }
 
 defineProps({
