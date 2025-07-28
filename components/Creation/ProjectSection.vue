@@ -19,9 +19,17 @@
         <p class="footer-text pa-6">
           Quel que soit votre projet, un premier contact n'engage à rien et permettra de savoir si nous avons envie de nous lancer dans cette aventure ensemble.
         </p>
-        <v-btn class="ma-3" color="primary" variant="flat" size="large" rounded="lg">
-          Discutons de votre projet
-        </v-btn>
+        <div class="d-flex justify-center ga-4 my-3">
+          <v-btn icon href="mailto:contact@votredomaine.com" size="large" color="white" elevation="2">
+            <v-icon color="#0d490d">mdi-email-outline</v-icon>
+          </v-btn>
+          <v-btn icon href="tel:+33000000000" size="large" color="white" elevation="2">
+            <v-icon color="#0d490d">mdi-phone-outline</v-icon>
+          </v-btn>
+          <v-btn icon href="#contact" size="large" color="white" elevation="2">
+            <v-icon color="#0d490d">mdi-send-outline</v-icon>
+          </v-btn>
+        </div>
       </div>
     </template>
   </ContentCard>
