@@ -40,8 +40,7 @@ h2{
 }
 
 .footer-slot {
-  background-color: #757575;
-  color: white;;
+  background-color: #cccccc;
 }
 
 @media screen and (max-width: 600px) {
