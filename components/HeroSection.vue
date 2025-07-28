@@ -90,10 +90,8 @@ defineProps({
 .floating-icons {
   position: absolute;
   height: 100%;
-  width: 100%;
-  max-width: 1000px;
-  left: 0;
-  right: 0;
+  width: 130%;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
