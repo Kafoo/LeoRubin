@@ -34,6 +34,11 @@
               <p class="text-body-1">{{ item.subtitle }}</p>
             </v-col>
           </v-row>
+          <v-row>
+            <v-col cols="12" class="text-center">
+              lol
+            </v-col>
+          </v-row>
         </ContentCard>
 
 
