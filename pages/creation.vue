@@ -179,6 +179,10 @@ const creationIcons = [
   { name: 'mdi-server', size: 'default', opacity: 0.15, transform: 'rotate(14deg)', position: { top: '50.00%', left: '0.00%', animationDelay: '0.7s', animationDuration: '6.2s' } },
   { name: 'mdi-palette', size: 'default', opacity: 0.15, transform: 'rotate(-9deg)', position: { top: '6.70%', left: '25.00%', animationDelay: '2.6s', animationDuration: '9.2s' } },
   { name: 'mdi-shield-check-outline', size: 'default', opacity: 0.15, transform: 'rotate(22deg)', position: { top: '6.70%', left: '75.00%', animationDelay: '1.6s', animationDuration: '7.8s' } },
+  { name: 'mdi-search-web', size: 'default', opacity: 0.15, transform: 'rotate(-25deg)', position: { top: '5%', left: '5%', animationDelay: '0.4s', animationDuration: '8.2s' } },
+  { name: 'mdi-brush', size: 'default', opacity: 0.15, transform: 'rotate(25deg)', position: { top: '5%', right: '5%', animationDelay: '1.8s', animationDuration: '7.1s' } },
+  { name: 'mdi-chart-line', size: 'default', opacity: 0.15, transform: 'rotate(15deg)', position: { bottom: '5%', left: '5%', animationDelay: '2.8s', animationDuration: '9.5s' } },
+  { name: 'mdi-lock-outline', size: 'default', opacity: 0.15, transform: 'rotate(-15deg)', position: { bottom: '5%', right: '5%', animationDelay: '3.1s', animationDuration: '6.8s' } },
 ];
 </script>
 
