@@ -26,6 +26,9 @@ h2{
   font-size: 3.5rem;
   font-weight: normal;
   letter-spacing: 0.5rem;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 0.2rem;
 }
 
 .content-card {
