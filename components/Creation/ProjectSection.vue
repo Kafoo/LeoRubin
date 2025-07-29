@@ -17,7 +17,7 @@
     <template #footer>
       <div class="text-center centering-column">
         <div class="footer-text my-6">
-          <p class="mb-3" style="font-weight: bold; font-size: 1.6rem; font-family: 'Recursive';">
+          <p class="mb-3" style="font-size: 1.6rem; font-family: 'Recursive';">
             Quel que soit votre projet
           </p>
           <p>
