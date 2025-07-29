@@ -2,8 +2,8 @@
   <div
     class="info-bubble-wrapper"
     v-motion
-    :initial="{scaleX: 0 }"
-    :visible-once="{scaleX: 1, transition: { duration: 500, delay: 100 } }"
+    :initial="{ opacity: 0, scaleX: 0 }"
+    :visible-once="{ opacity: 1, scaleX: 1, transition: { duration: 500, delay: 100 } }"
   >
     <v-card class="info-bubble-card" elevation="8">
       <v-card-title class="text-h6 bubble-title">{{ title }}</v-card-title>
@@ -30,6 +30,7 @@ defineProps({
   width: 100%;
   margin-bottom: 8rem;
   position: relative;
+  backface-visibility: hidden;
 }
 
 .info-bubble-card {
