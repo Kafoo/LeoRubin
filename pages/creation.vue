@@ -22,9 +22,16 @@
         
         <ProjectSection />
 
-
-        <div style="height: 1000px;"></div>
-
+        <div class="bubbles-container my-16">
+          <InfoBubble
+            v-for="(bubble, index) in bubbles"
+            :key="index"
+            :title="bubble.title"
+            :side="bubble.side"
+          >
+            <p>{{ bubble.content }}</p>
+          </InfoBubble>
+        </div>
 
         <ContentCard title="Un autre besoin ?" v-motion-slide-visible-once-bottom>
           <p class="text-body-1 text-center pa-4">
@@ -40,45 +47,6 @@
           </div>
         </ContentCard>
 
-        <ContentCard title="Ma démarche">
-          <v-list lines="two" bg-color="transparent">
-            <v-list-item prepend-icon="mdi-ear-hearing" title="Analyse des besoins" subtitle="Écoute et analyse de votre projet pour proposer une solution technique adaptée."></v-list-item>
-            <v-list-item prepend-icon="mdi-cogs" title="Approche technique flexible" subtitle="Développement sur-mesure (Nuxt, Laravel) ou intégration de CMS (WordPress) selon vos objectifs."></v-list-item>
-            <v-list-item prepend-icon="mdi-devices" title="Conception responsive" subtitle="Une expérience utilisateur optimale sur ordinateur, tablette et mobile."></v-list-item>
-            <v-list-item prepend-icon="mdi-lightbulb-on-outline" title="Tout type de projet" subtitle="Site vitrine, e-commerce, application métier (SaaS), intranet..."></v-list-item>
-          </v-list>
-          <p class="text-body-1 mt-4 text-center">
-            Consultez mes <nuxt-link to="/projects" class="text-link">projets</nuxt-link> pour voir des exemples concrets.
-          </p>
-        </ContentCard>
-
-        <!-- Section: Processus -->
-        <div class="mb-12" v-motion-slide-visible-once-bottom>
-            <h2 class="text-h4 text-center mb-8" style="color: white;">Le processus</h2>
-            <v-timeline align="start" side="end" theme="dark">
-                <v-timeline-item dot-color="primary" size="small">
-                    <template v-slot:opposite><span class="font-weight-bold">Étape 1</span></template>
-                    <v-card class="content-card">
-                      <v-card-title class="text-h6">Contact & Devis</v-card-title>
-                      <v-card-text>Discussion sur votre projet, vos objectifs et proposition d'un devis gratuit.</v-card-text>
-                    </v-card>
-                </v-timeline-item>
-                <v-timeline-item dot-color="primary" size="small">
-                    <template v-slot:opposite><span class="font-weight-bold">Étape 2</span></template>
-                    <v-card class="content-card">
-                      <v-card-title class="text-h6">Développement</v-card-title>
-                      <v-card-text>Création et développement de la solution, avec des points d'étape réguliers.</v-card-text>
-                    </v-card>
-                </v-timeline-item>
-                <v-timeline-item dot-color="primary" size="small">
-                    <template v-slot:opposite><span class="font-weight-bold">Étape 3</span></template>
-                    <v-card class="content-card">
-                      <v-card-title class="text-h6">Mise en ligne & Suivi</v-card-title>
-                      <v-card-text>Déploiement de votre site. Je propose aussi des solutions de <nuxt-link to="/support" class="text-link">maintenance</nuxt-link> pour la suite.</v-card-text>
-                    </v-card>
-                </v-timeline-item>
-            </v-timeline>
-        </div>
 
         <!-- Section: Contact -->
         <v-card class="content-card text-center" v-motion-slide-visible-once-bottom>
@@ -103,10 +71,45 @@ import ContactInfo from '~/components/Home/ContactInfo.vue';
 import ContentCard from '~/components/ContentCard.vue';
 import HeroSection from '~/components/HeroSection.vue';
 import ProjectSection from '~/components/Creation/ProjectSection.vue';
+import InfoBubble from '~/components/Creation/InfoBubble.vue';
 import { creationIcons } from '~/ts/data/creationIcons';
+
+const bubbles = [
+  {
+    side: 'left',
+    title: 'Analyse des besoins',
+    content: 'Écoute et analyse de votre projet pour proposer une solution technique adaptée.'
+  },
+  {
+    side: 'right',
+    title: 'Approche technique flexible',
+    content: 'Développement sur-mesure (Nuxt, Laravel) ou intégration de CMS (WordPress) selon vos objectifs.'
+  },
+  {
+    side: 'left',
+    title: 'Développement & Suivi',
+    content: 'Création et développement de la solution, avec des points d\'étape réguliers, suivi du déploiement de votre site. Des solutions de maintenance sont aussi proposées pour la suite.'
+  },
+  {
+    side: 'right',
+    title: 'Mes outils de prédilection',
+    content: 'Nuxt.js, Vue.js, et Vuetify pour le front-end. Laravel/PHP pour le back-end. J\'utilise aussi WordPress quand c\'est la solution la plus adaptée.'
+  },
+  {
+    side: 'left',
+    title: 'Conception responsive',
+    content: 'Une expérience utilisateur optimale sur ordinateur, tablette et mobile.'
+  },
+];
 </script>
 
 <style scoped>
+.bubbles-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .creation-page-container {
   position: relative;
 }
