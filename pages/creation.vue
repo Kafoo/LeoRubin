@@ -27,7 +27,6 @@
             v-for="(bubble, index) in bubbles"
             :key="index"
             :title="bubble.title"
-            :side="bubble.side"
           >
             <p>{{ bubble.content }}</p>
           </InfoBubble>
@@ -76,27 +75,22 @@ import { creationIcons } from '~/ts/data/creationIcons';
 
 const bubbles = [
   {
-    side: 'left',
     title: 'Analyse des besoins',
     content: 'Écoute et analyse de votre projet pour proposer une solution technique adaptée.'
   },
   {
-    side: 'right',
     title: 'Approche technique flexible',
     content: 'Développement sur-mesure (Nuxt, Laravel) ou intégration de CMS (WordPress) selon vos objectifs.'
   },
   {
-    side: 'left',
     title: 'Développement & Suivi',
     content: 'Création et développement de la solution, avec des points d\'étape réguliers, suivi du déploiement de votre site. Des solutions de maintenance sont aussi proposées pour la suite.'
   },
   {
-    side: 'right',
     title: 'Mes outils de prédilection',
     content: 'Nuxt.js, Vue.js, et Vuetify pour le front-end. Laravel/PHP pour le back-end. J\'utilise aussi WordPress quand c\'est la solution la plus adaptée.'
   },
   {
-    side: 'left',
     title: 'Conception responsive',
     content: 'Une expérience utilisateur optimale sur ordinateur, tablette et mobile.'
   },
