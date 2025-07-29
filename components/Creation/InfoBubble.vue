@@ -2,10 +2,9 @@
   <div
     class="info-bubble-wrapper"
     v-motion
-    :initial="{ opacity: 0, y: 50 }"
-    :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
+    :initial="{ opacity: 0, scaleX: 0 }"
+    :visible-once="{ opacity: 1, scaleX: 1, transition: { duration: 500, delay: 100 } }"
   >
-    <div class="info-bubble-dot"></div>
     <v-card class="info-bubble-card" elevation="8">
       <v-card-title class="text-h6 bubble-title">{{ title }}</v-card-title>
       <v-card-text class="bubble-text">
@@ -33,24 +32,10 @@ defineProps({
   position: relative;
 }
 
-.info-bubble-dot {
-  width: 20px;
-  height: 20px;
-  background-color: #1976D2; /* Vuetify primary color */
-  border-radius: 50%;
-  border: 3px solid #073d00;
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
 .info-bubble-card {
   max-width: 450px;
   border-radius: 16px;
   background-color: #f5f5f5;
-  margin-top: 20px;
 }
 
 .bubble-title {
