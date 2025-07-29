@@ -9,7 +9,7 @@
         lg="4"
         class="text-center pa-5"
       >
-        <v-icon :icon="item.icon" size="64" class="mb-4" color="#574836"></v-icon>
+        <v-icon :icon="item.icon" size="64" class="mb-4" :color="item.color"></v-icon>
         <h3 class="text-h6 mb-2 project-title">{{ item.title }}</h3>
         <div class="text-body-1 project-subtitle">{{ item.subtitle }}</div>
       </v-col>
@@ -61,31 +61,37 @@ const projectItems = [
     icon: 'mdi-rocket-launch-outline',
     title: 'Lancer une nouvelle activité',
     subtitle: 'Créer une présence en ligne professionnelle pour démarrer votre projet.',
+    color: '#b37224',
   },
   {
     icon: 'mdi-autorenew',
     title: 'Moderniser un site existant',
     subtitle: 'Mettre à jour le design, la technologie ou les fonctionnalités de votre site actuel.',
+    color: '#1d7d29',
   },
   {
     icon: 'mdi-cart-outline',
     title: 'Vendre en ligne',
     subtitle: 'Mettre en place une boutique e-commerce performante et sécurisée.',
+    color: '#2a3691',
   },
   {
     icon: 'mdi-tools',
     title: 'Développer sur-mesure',
     subtitle: 'Créer une application web ou un intranet pour répondre à un besoin métier spécifique.',
+    color: '#6D4C41', // brown
   },
   {
-    icon: 'mdi-post-outline',
+    icon: 'mdi-feather',
     title: 'Créer un blog ou un portfolio',
     subtitle: 'Partager vos idées, vos créations ou présenter votre travail de manière professionnelle.',
+    color: '#8b852f',
   },
   {
-    icon: 'mdi-robot-industrial-outline',
+    icon: 'mdi-cogs',
     title: 'Automatiser un processus',
     subtitle: 'Gagner en efficacité en créant un outil qui automatise des tâches répétitives.',
+    color: '#931212',
   }
 ];
 </script>
