@@ -5,7 +5,7 @@
     :initial="{ opacity: 0, scaleX: 0 }"
     :visible-once="{ opacity: 1, scaleX: 1, transition: { duration: 500, delay: 100 } }"
   >
-    <v-card class="info-bubble-card" elevation="8">
+    <v-card class="info-bubble-card pa-8" elevation="8">
       <v-card-title class="text-h6 bubble-title">{{ title }}</v-card-title>
       <v-card-text class="bubble-text">
         <slot></slot>
