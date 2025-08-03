@@ -51,7 +51,7 @@ const headerReady = ref(false);
 onMounted(() => {
   setTimeout(() => {
     headerReady.value = true;
-  }, 500);
+  }, 200);
 });
 
 const bubbles = [

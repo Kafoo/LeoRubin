@@ -29,7 +29,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, #073d00, #021e00);
+  background: radial-gradient(ellipse at center, rgb(8, 71, 0), #021e00);
   opacity: 0;
   transition: opacity 700ms ease-in;
   pointer-events: none;

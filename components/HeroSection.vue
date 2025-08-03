@@ -36,7 +36,7 @@
       </p>
     </div>
     <div class="scroll-indicator" style="z-index: 2;" v-motion-fade-visible-once :delay="800">
-      <v-icon size="x-large" color="white">mdi-chevron-down</v-icon>
+      <v-icon size="50" color="white">mdi-chevron-down</v-icon>
     </div>
   </div>
 </template>
