@@ -28,10 +28,16 @@ h2{
   background-color: rgb(231, 231, 231);
   overflow: hidden;
 }
+
+.content-card-text{
+    background-image: url('texture_white.jpeg');
+}
+
 .footer-slot {
-  background-color: #2f2f2f;
-  color: white;
-  border: 2px solid rgb(228, 228, 228);
+  background: url('texture_noir.jpg');
+  background-size: cover;
+  color: rgb(233, 233, 233);
+  border: 1px solid rgb(228, 228, 228);
   border-top: none;;
   border-radius: 0 0 24px 24px;
 }

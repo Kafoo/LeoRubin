@@ -1,5 +1,5 @@
 <template>
-  <ContentCard class="mx-3">
+  <ContentCard class="project-section">
     <v-row class="pa-2">
       <v-col
         v-for="(item, i) in projectItems"
@@ -40,7 +40,7 @@
               </v-btn>
             </template>
           </v-tooltip>
-          <v-tooltip text="M'écrire" location="top">
+          <v-tooltip text="M'écrire directement" location="top">
             <template #activator="{ props }">
               <v-btn v-bind="props" icon href="/contact" size="large" color="white" elevation="2">
                 <v-icon>mdi-send-outline</v-icon>
@@ -82,7 +82,7 @@ const projectItems = [
     color: '#6D4C41', // brown
   },
   {
-    icon: 'mdi-feather',
+    icon: 'mdi-monitor-dashboard',
     title: 'Créer un blog ou un portfolio',
     subtitle: 'Partager vos idées, vos créations ou présenter votre travail de manière professionnelle.',
     color: '#8b852f',
@@ -98,6 +98,10 @@ const projectItems = [
 
 <style scoped>
 
+.project-section{
+  max-width: 1200px;
+}
+
 .project-title {
   font-family: 'Recursive', sans-serif;
   letter-spacing : -0.5px !important;
@@ -112,6 +116,7 @@ const projectItems = [
   letter-spacing: 0.5px;
   font-size: 1.1rem;
   max-width: 750px;
+  line-height: 1.7;
 }
 
 .footer-catchphrase{

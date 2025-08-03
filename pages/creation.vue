@@ -17,9 +17,9 @@
     />
     <div class="centering-column">
 
-      <ProjectSection class="project-section mb-100" style="margin-top: -150px;"/>
+      <ProjectSection class="mx-3 mb-100" style="margin-top: -150px;"/>
 
-      <ServicesSection class="my-16" />
+      <ServicesSection class="mx-3 my-16" />
 
     </div>    
 

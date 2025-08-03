@@ -40,6 +40,7 @@ export default defineNuxtConfig({
         'Yeseva One': true,
         'Montserrat': true,
         'Recursive': true,
+        'Geist': true,
         //'Satisfy': true,
         'Courgette': true,
         download: true,

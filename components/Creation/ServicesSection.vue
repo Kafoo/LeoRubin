@@ -1,14 +1,14 @@
 <template>
-  <div class="bubbles-container">
+  <div class="services-section">
     <v-card
-      class="info-bubble-card pa-md-12 pa-8"
+      class="services-card pa-md-10 pa-8"
       elevation="8"
       v-motion
       :initial="{ opacity: 0, y: 50 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
     >
-      <v-card-title class="bubble-title">Une prise en charge de A à Z</v-card-title>
-      <v-card-text class="bubble-text">
+      <v-card-title class="services-title">Prise en charge totale</v-card-title>
+      <v-card-text class="services-text">
         <p class="mb-8">
           De la conception à la mise en ligne, je peux piloter toutes les étapes de la création de votre site web pour vous offrir une solution clé en main.
         </p>
@@ -47,40 +47,39 @@
 </script>
 
 <style scoped>
-.bubbles-container {
+.services-section {
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.info-bubble-card {
+.services-card {
   max-width: 750px;
   border-radius: 24px;
-  background-image: url('texture_white.jpeg');
   background-color: #f5f5f5;
   backface-visibility: hidden;
   border: 1px solid rgba(0,0,0,0.05);
 }
 
-.bubble-title {
-  color: #0d490d;
+.services-title {
   font-family: 'Recursive', sans-serif;
   justify-content: center;
   text-align: center;
   padding-bottom: 1.5rem;
-  font-size: 1.75rem !important;
+  font-size: 2.1rem !important;
   font-weight: 500;
   line-height: 1.3;
 }
 
-.bubble-text {
+.services-text {
   font-size: 1.1rem;
-  line-height: 1.7;
+  font-family: "Montserrat", sans-serif;
   color: #333;
   text-align: center;
 }
 
 .service-list .v-list-item {
+  font-family: 'Recursive', sans-serif;
   margin-bottom: 1rem;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -105,6 +104,7 @@
 .flexibility-text {
   font-size: 1rem;
   font-style: italic;
+  color: rgb(85, 85, 85);
   opacity: 0.9;
   max-width: 90%;
   margin: 0 auto;

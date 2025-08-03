@@ -33,7 +33,7 @@
         ></v-icon>
       </div>
     </div>
-    <div class="mx-3 hero-content-wrapper" v-motion-fade-visible-once :delay="100">
+    <div class="mx-5 hero-content-wrapper" v-motion-fade-visible-once :delay="100">
       <h1 class="mb-6 page-title">{{ title }}</h1>
       <p class="text-h6 text-md-h5 font-weight-light page-subtitle" v-motion-fade-visible-once :delay="600">
         {{ subtitle }}
@@ -121,7 +121,8 @@ defineProps({
 
 .floating-icons {
   position: absolute;
-  height: 100%;
+  top: 0;
+  height: 100vh;
   width: 160%;
   max-width: 1400px;
   margin-left: auto;
