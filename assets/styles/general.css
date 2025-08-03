@@ -21,8 +21,25 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
+.creation-header-wrapper {
+  position: relative;
+  background-color: #073d00;
+}
+.creation-header-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #073d00, #021e00);
+  opacity: 0;
+  transition: opacity 700ms ease-in;
+  pointer-events: none;
+}
+.creation-header-wrapper.gradient-active::before {
+  opacity: 1;
+}
+
 .creation-header{
-  background-color: #073d00 !important; /* Matches element-1 */
+  background-color: transparent !important;
 }
 
 .v-application.projects{
