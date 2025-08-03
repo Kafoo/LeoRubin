@@ -21,11 +21,6 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
-.v-application{
-    background: linear-gradient(-40deg, #000000, #1a1a1a, #0a0a0a, #2a2a2a) !important;
-    
-}
-
 .creation-header{
   background-color: #073d00 !important; /* Matches element-1 */
 }
