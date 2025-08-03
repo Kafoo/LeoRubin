@@ -106,7 +106,7 @@ defineProps({
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 40%, black);
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.514));
   opacity: 0;
   transition: opacity 700ms ease-in;
   pointer-events: none;
