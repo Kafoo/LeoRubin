@@ -17,7 +17,7 @@
     />
     <div class="centering-column">
 
-      <ProjectSection class="project-section mb-12" style="margin-top: -150px;"/>
+      <ProjectSection class="project-section mb-100" style="margin-top: -150px;"/>
 
       <div class="bubbles-container my-16">
         <v-card
@@ -70,6 +70,7 @@ import { creationIcons } from '~/ts/data/creationIcons';
 .info-bubble-card {
   max-width: 450px;
   border-radius: 16px;
+  background-image: url('texture_white.jpeg');
   background-color: #f5f5f5;
   backface-visibility: hidden;
 }
