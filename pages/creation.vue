@@ -20,13 +20,27 @@
       <ProjectSection class="project-section mb-12" style="margin-top: -150px;"/>
 
       <div class="bubbles-container my-16">
-        <InfoBubble
-          v-for="(bubble, index) in bubbles"
-          :key="index"
-          :title="bubble.title"
+        <v-card
+          class="info-bubble-card pa-8"
+          elevation="8"
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
         >
-          <p>{{ bubble.content }}</p>
-        </InfoBubble>
+          <v-card-title class="text-h6 bubble-title">Ma boîte à outils</v-card-title>
+          <v-card-text class="bubble-text">
+            <p class="mb-4">
+              Je sélectionne les technologies les plus adaptées pour répondre aux besoins spécifiques de chaque projet. Voici mes outils de prédilection :
+            </p>
+            <ul class="tool-list">
+              <li>Vue.js, Vuetify</li>
+              <li>Laravel, PHP</li>
+              <li>APIs REST</li>
+              <li>CMS (WordPress, Strapi...)</li>
+              <li>Assistance par IA</li>
+            </ul>
+          </v-card-text>
+        </v-card>
       </div>
 
     </div>    
@@ -38,15 +52,7 @@
 <script setup lang="ts">
 import HeroSection from '~/components/HeroSection.vue';
 import ProjectSection from '~/components/Creation/ProjectSection.vue';
-import InfoBubble from '~/components/Creation/InfoBubble.vue';
 import { creationIcons } from '~/ts/data/creationIcons';
-
-const bubbles = [
-  {
-    title: 'Analyse des besoins',
-    content: 'Écoute et analyse de votre projet pour proposer une solution technique adaptée.'
-  }
-];
 </script>
 
 <style scoped>
@@ -57,8 +63,39 @@ const bubbles = [
 
 .bubbles-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   position: relative;
+}
+
+.info-bubble-card {
+  max-width: 450px;
+  border-radius: 16px;
+  background-color: #f5f5f5;
+  backface-visibility: hidden;
+}
+
+.bubble-title {
+  color: #0d490d;
+  font-family: 'Recursive', sans-serif;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.bubble-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+.tool-list {
+  list-style-type: '✔  ';
+  padding-left: 1.5rem;
+}
+
+.tool-list li {
+  margin-bottom: 0.5rem;
 }
 
 .creation-page-container {
