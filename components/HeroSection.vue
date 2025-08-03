@@ -1,5 +1,9 @@
 <template>
-  <div class="hero-section text-center">
+  <div
+    class="hero-section text-center"
+    :class="{ 'gradient-active': gradientReady }"
+    :style="{ backgroundColor: backgroundColor }"
+  >
     <div
       class="floating-icons"
       v-motion
@@ -42,7 +46,15 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue';
+import { ref, onMounted, PropType } from 'vue';
+
+const gradientReady = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    gradientReady.value = true;
+  }, 200);
+});
 
 interface Icon {
   name: string;
@@ -72,6 +84,10 @@ defineProps({
     type: Array as PropType<Icon[]>,
     default: () => [],
   },
+  backgroundColor: {
+    type: String,
+    default: 'transparent',
+  },
 });
 </script>
 
@@ -84,6 +100,20 @@ defineProps({
   position: relative;
   overflow: hidden; /* Hide parts of icons that go outside */
   color: white;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, black);
+  opacity: 0;
+  transition: opacity 700ms ease-in;
+  pointer-events: none;
+}
+
+.hero-section.gradient-active::before {
+  opacity: 1;
 }
 
 .floating-icons {

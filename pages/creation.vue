@@ -9,15 +9,13 @@
       color="rgba(255, 255, 255, 0.15)"
       title="Retour à l'accueil"
     ></v-btn>
-    <div class="creation-header-wrapper" :class="{ 'gradient-active': headerReady }">
-      <HeroSection
-        class="creation-header"
-        title="Création"
-        subtitle="Développement de solutions web sur-mesure."
-        :icons="creationIcons"
-        />
-      <div class="creation-headertail"/>
-    </div>
+    <HeroSection
+      title="Création"
+      subtitle="Développement de solutions web sur-mesure."
+      :icons="creationIcons"
+      background-color="#073d00"
+    />
+    <div class="creation-headertail"/>
 
     <div class="centering-column">
 
@@ -40,19 +38,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
 import HeroSection from '~/components/HeroSection.vue';
 import ProjectSection from '~/components/Creation/ProjectSection.vue';
 import InfoBubble from '~/components/Creation/InfoBubble.vue';
 import { creationIcons } from '~/ts/data/creationIcons';
-
-const headerReady = ref(false);
-
-onMounted(() => {
-  setTimeout(() => {
-    headerReady.value = true;
-  }, 200);
-});
 
 const bubbles = [
   {
@@ -125,7 +114,7 @@ const bubbles = [
 .creation-headertail{
   top: -5px;
   height: 200px;
-  background-color: transparent;
+  background-color: #073d00;
   position: relative;
   width: 100%;
 }
