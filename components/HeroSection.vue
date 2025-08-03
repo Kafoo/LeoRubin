@@ -33,7 +33,7 @@
         ></v-icon>
       </div>
     </div>
-    <div class="mx-3" v-motion-fade-visible-once :delay="100">
+    <div class="mx-3 hero-content-wrapper" v-motion-fade-visible-once :delay="100">
       <h1 class="mb-6 page-title">{{ title }}</h1>
       <p class="text-h6 text-md-h5 font-weight-light page-subtitle" v-motion-fade-visible-once :delay="600">
         {{ subtitle }}
@@ -92,8 +92,11 @@ defineProps({
 </script>
 
 <style scoped>
+.hero-content-wrapper {
+  transform: translateY(-100px);
+}
 .hero-section {
-  min-height: 100vh;
+  min-height: calc(100vh + 200px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +109,7 @@ defineProps({
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.514));
+  background: radial-gradient(ellipse at center 50vh, transparent 50%, rgba(0, 0, 0, 0.514));
   opacity: 0;
   transition: opacity 700ms ease-in;
   pointer-events: none;
@@ -149,7 +152,7 @@ defineProps({
 
 .scroll-indicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 240px;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
 }
