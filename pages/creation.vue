@@ -17,57 +17,28 @@
       />
     <div class="creation-headertail"/>
 
-    <v-row justify="center">
-      <v-col cols="12" md="11" lg="9">
-        
-        <ProjectSection />
+    <div class="centering-column">
 
-        <div class="bubbles-container my-16">
-          <InfoBubble
-            v-for="(bubble, index) in bubbles"
-            :key="index"
-            :title="bubble.title"
-          >
-            <p>{{ bubble.content }}</p>
-          </InfoBubble>
-        </div>
+      <ProjectSection class="project-section mb-12" style="margin-top: -150px;"/>
 
-        <ContentCard title="Un autre besoin ?" v-motion-slide-visible-once-bottom>
-          <p class="text-body-1 text-center pa-4">
-            Votre projet concerne une <strong>reprise</strong>, une <strong>maintenance</strong>, une <strong>refonte</strong>, de l'<strong>accompagnement</strong>, un <strong>audit</strong> ou l'<strong>optimisation</strong> d'un site existant ?
-            <br><br>
-            Je vous invite à consulter la page dédiée à ces services.
-          </p>
-          <div class="text-center mb-2">
-            <v-btn to="/support" color="primary" variant="flat">
-              <v-icon start>mdi-face-agent</v-icon>
-              Services de support
-            </v-btn>
-          </div>
-        </ContentCard>
+      <div class="bubbles-container my-16">
+        <InfoBubble
+          v-for="(bubble, index) in bubbles"
+          :key="index"
+          :title="bubble.title"
+        >
+          <p>{{ bubble.content }}</p>
+        </InfoBubble>
+      </div>
+
+    </div>    
 
 
-        <!-- Section: Contact -->
-        <v-card class="content-card text-center" v-motion-slide-visible-once-bottom>
-          <v-card-text class="pa-5">
-            <h2 class="text-h4 mb-4">Contact</h2>
-            <p class="mb-4">Discutons de votre projet. Le premier échange est sans engagement.</p>
-            <p class="mb-4">Pour en savoir plus sur moi, c'est par <nuxt-link to="/kafoo" class="text-link">ici</nuxt-link>. Vous pouvez aussi lire les <nuxt-link to="/merci" class="text-link">avis</nuxt-link> de mes clients.</p>
-            <ContactInfo />
-          </v-card-text>
-        </v-card>
-
-        <div class="text-center mt-12">
-          <v-btn size="small" color="#3a3a3a" to="/">Retour à l'accueil</v-btn>
-        </div>
-      </v-col>
-    </v-row>
   </div>
 </template>
 
 <script setup lang="ts">
-import ContactInfo from '~/components/Home/ContactInfo.vue';
-import ContentCard from '~/components/ContentCard.vue';
+
 import HeroSection from '~/components/HeroSection.vue';
 import ProjectSection from '~/components/Creation/ProjectSection.vue';
 import InfoBubble from '~/components/Creation/InfoBubble.vue';
@@ -98,6 +69,11 @@ const bubbles = [
 </script>
 
 <style scoped>
+
+.project-section{
+  max-width: 1200px;
+}
+
 .bubbles-container {
   display: flex;
   flex-direction: column;
