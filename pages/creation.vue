@@ -15,8 +15,6 @@
       :icons="creationIcons"
       background-color="#073d00"
     />
-    <div class="creation-headertail"/>
-
     <div class="centering-column">
 
       <ProjectSection class="project-section mb-12" style="margin-top: -150px;"/>
@@ -47,23 +45,7 @@ const bubbles = [
   {
     title: 'Analyse des besoins',
     content: 'Écoute et analyse de votre projet pour proposer une solution technique adaptée.'
-  },
-  {
-    title: 'Approche technique flexible',
-    content: 'Développement sur-mesure (Nuxt, Laravel) ou intégration de CMS (WordPress) selon vos objectifs.'
-  },
-  {
-    title: 'Développement & Suivi',
-    content: 'Création et développement de la solution, avec des points d\'étape réguliers, suivi du déploiement de votre site. Des solutions de maintenance sont aussi proposées pour la suite.'
-  },
-  {
-    title: 'Mes outils de prédilection',
-    content: 'Nuxt.js, Vue.js, et Vuetify pour le front-end. Laravel/PHP pour le back-end. J\'utilise aussi WordPress quand c\'est la solution la plus adaptée.'
-  },
-  {
-    title: 'Conception responsive',
-    content: 'Une expérience utilisateur optimale sur ordinateur, tablette et mobile.'
-  },
+  }
 ];
 </script>
 
@@ -101,21 +83,4 @@ const bubbles = [
   z-index: 10;
 }
 
-.text-link {
-  color: #1976D2; /* Vuetify primary color */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.text-link:hover {
-  text-decoration: underline;
-}
-
-.creation-headertail{
-  top: -5px;
-  height: 200px;
-  background-color: #073d00;
-  position: relative;
-  width: 100%;
-}
 </style>
