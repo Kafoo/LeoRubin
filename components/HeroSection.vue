@@ -53,7 +53,7 @@ const gradientReady = ref(false);
 onMounted(() => {
   setTimeout(() => {
     gradientReady.value = true;
-  }, 200);
+  }, 100);
 });
 
 interface Icon {
@@ -93,7 +93,7 @@ defineProps({
 
 <style scoped>
 .hero-content-wrapper {
-  transform: translateY(-100px);
+  transform: translateY(-100px) !important;
 }
 .hero-section {
   min-height: calc(100vh + 200px);
@@ -109,7 +109,7 @@ defineProps({
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center 50vh, transparent 50%, rgba(0, 0, 0, 0.514));
+  background: radial-gradient(ellipse at center 50vh, transparent 40%, rgba(0, 0, 0, 0.548));
   opacity: 0;
   transition: opacity 700ms ease-in;
   pointer-events: none;
