@@ -47,7 +47,9 @@ const backgroundClass = computed({
 <style scoped>
 
 .v-application {
-  background-color: #1a1a1a; /* Darker, modern background */
+  background: url('test1bis.jpg');
+  background-size: cover;
+  background-position: center;
   position: relative; /* Establish positioning context for absolute children */
 }
 
